@@ -1,0 +1,9 @@
+import { CTA, PageHero } from "../components/SiteChrome";
+export const metadata = { title: "Hizmetler" };
+const items=[
+ {id:"yerinde",kicker:"YERİNDE ÜRETİM",title:"Mutfağınızda, sizin operasyonunuza göre üretim.",text:"Profesyonel ekip, hijyen standartları ve proje ihtiyaçlarına uygun mutfak organizasyonuyla üretim doğrudan işletme sahasında gerçekleştirilir.",image:"/images/site/service-onsite.webp",bullets:["İşletmeye özel menü planlaması","Sahada profesyonel üretim ekibi","Günlük kalite ve hijyen takibi"]},
+ {id:"tasimali",kicker:"TAŞIMALI YEMEK",title:"Merkezi üretimden planlı ve kontrollü sevkiyat.",text:"Yemekler üretim merkezinde hazırlanır, uygun taşıma koşullarında planlanan servis saatine göre sahaya ulaştırılır.",image:"/images/site/service-delivery.webp",bullets:["Planlı sevkiyat rotası","Sıcaklık ve zaman kontrolü","Vardiya saatlerine uygun teslimat"]},
+ {id:"paket",kicker:"PAKET YEMEK",title:"Hijyenik paketleme, kontrollü porsiyon, pratik servis.",text:"Dağıtım ve servis kolaylığı gereken operasyonlar için porsiyon standardı korunarak paketli yemek çözümleri sunulur.",image:"/images/site/service-pack.webp",bullets:["Standart porsiyonlama","Hijyenik ambalajlama","Hızlı dağıtıma uygun yapı"]},
+];
+export default function Services(){return <main><PageHero eyebrow="HİZMET MODELLERİMİZ" title="Her ihtiyaca uygun, esnek yemek çözümleri." text="Hizmet modelini kişi sayısı, lokasyon, vardiya ve mutfak altyapısına göre birlikte belirliyoruz." image="/images/site/service-onsite.webp"/>
+<section className="section wrap serviceDetailList">{items.map((x,i)=><article id={x.id} className={`serviceDetail ${i%2?"reverse":""}`} key={x.id}><div className="serviceDetailImage"><img src={x.image} alt=""/><span>0{i+1}</span></div><div><p className="eyebrow red">{x.kicker}</p><h2>{x.title}</h2><p>{x.text}</p><ul>{x.bullets.map(b=><li key={b}>{b}</li>)}</ul></div></article>)}</section><CTA/></main>}
