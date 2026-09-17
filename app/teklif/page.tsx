@@ -1,0 +1,3 @@
+import QuoteForm from "../components/QuoteForm";
+export const metadata = { title: "Teklif Al" };
+export default function QuotePage(){return <main><section className="quotePage"><div className="wrap quotePageGrid"><div className="quotePageIntro"><p className="eyebrow">HIZLI TEKLİF</p><h1>Projenizi anlatın,<br/>doğru modeli birlikte planlayalım.</h1><p>Günlük kişi sayısı, lokasyon ve hizmet modelinizi paylaşın. Talebiniz teklif havuzumuza kaydedilsin ve operasyon ekibimiz değerlendirsin.</p><div className="contactBox"><b>Doğrudan iletişim</b><a href="tel:+905466953914">+90 546 695 3914</a><a href="tel:+905418043274">+90 541 804 3274</a><span>İskenderun / Hatay</span></div></div><QuoteForm/></div></section></main>}
