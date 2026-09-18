@@ -12,6 +12,7 @@ const nav = [
 
 export function Header() {
   return (
+    <>
     <header className="siteHeader">
       <div className="headerInner">
         <Link className="brand" href="/" aria-label="Öznur Yemek ana sayfa">
@@ -31,9 +32,22 @@ export function Header() {
           </Link>
         </nav>
 
-        <MobileNav links={nav} />
+        <div className="mobileHeaderActions">
+          <Link className="mobileHeaderCta" href="/teklif">Teklif Al</Link>
+          <MobileNav links={nav} />
+        </div>
       </div>
     </header>
+
+    <div className="mobileQuickBar" aria-label="Hızlı iletişim">
+      <a href="https://wa.me/905466953914" target="_blank" rel="noreferrer">
+        WhatsApp
+      </a>
+      <Link href="/teklif">
+        Teklif Al <span>→</span>
+      </Link>
+    </div>
+  </>
   );
 }
 
