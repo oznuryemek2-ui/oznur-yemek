@@ -1,54 +1,33 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const services = [
-  { no: "01", title: "Yerinde Üretim", text: "İşletmenizin mutfağında, proje ihtiyaçlarına göre planlanan profesyonel üretim modeli.", image: "/images/site/service-onsite.webp", href: "/hizmetler#yerinde" },
-  { no: "02", title: "Taşımalı Yemek", text: "Kontrollü üretim, planlı sevkiyat ve doğru sıcaklık koşullarıyla zamanında teslimat.", image: "/images/site/service-delivery.webp", href: "/hizmetler#tasimali" },
-  { no: "03", title: "Paket Yemek", text: "Porsiyon standardı, hijyenik paketleme ve operasyonunuza uygun dağıtım çözümleri.", image: "/images/site/service-pack.webp", href: "/hizmetler#paket" },
+  { no: "01", title: "Yerinde üretim", label: "MUTFAĞINIZDA, SİZİN İÇİN", text: "İşletmenizin mutfağında; ekibinize, vardiyalarınıza ve servis saatlerinize uygun yemek üretimi.", href: "/hizmetler#yerinde" },
+  { no: "02", title: "Taşımalı yemek", label: "MUTFAĞIMIZDAN SOFRANIZA", text: "Merkezi mutfakta hazırlanan yemeklerin, planlı sevkiyatla servis noktanıza ulaştırılması.", href: "/hizmetler#tasimali" },
+  { no: "03", title: "Paket yemek", label: "HER PORSİYONDA ÖZEN", text: "Saha ekipleri ve yoğun iş günleri için porsiyonlanmış, hijyenik ve pratik yemek çözümleri.", href: "/hizmetler#paket" },
 ];
 
-const reasons = ["Yüksek üretim kapasitesi", "Deneyimli ve uzman kadro", "Modern mutfak ve ekipmanlar", "Geniş araç filosu", "Türkiye genelinde hizmet imkânı", "Güçlü referanslar ve proje deneyimi"];
-
 export default function Home() {
-  return <main>
-    <section className="heroWeb">
-      <img src="/images/site/hero-food.webp" alt="Öznur Yemek kurumsal yemek sunumu" />
-      <div className="heroWebShade" />
-      <div className="wrap heroWebContent">
-        <p className="eyebrow">KURUMSAL YEMEK HİZMETLERİ</p>
-        <h1>Güçlü mutfaklar,<br/>daha verimli yarınlar.</h1>
-        <p>Yerinde üretim, taşımalı yemek ve paket yemek hizmetlerinde planlı operasyon, hijyenik üretim ve güvenilir servis.</p>
-        <div className="heroActions"><Link className="button primary" href="/teklif">Teklif Al</Link><Link className="button outlineLight" href="/hizmetler">Hizmetlerimizi İncele</Link></div>
-      </div>
-      <div className="heroScroll">ÖZNUR YEMEK <span>↓</span></div>
+  return <main id="main-content">
+    <section className="editorialHero">
+      <div className="heroImage"><Image src="/images/site/kitchen-team.jpg" alt="Profesyonel mutfakta yemek hazırlığı — temsili fotoğraf" fill priority sizes="100vw" /></div>
+      <div className="heroVeil" />
+      <div className="wrap editorialHeroInner">
+        <p className="eyebrow">ÖZNUR YEMEK / KURUMSAL YEMEK HİZMETLERİ</p>
+        <h1>Her gün aynı özen.<br/><em>Her sofrada</em><br/>aynı güven.</h1>
+        <p className="heroDescription">İşinize güç veren yemek hizmetleri.<br/>Mutfağımızdan servis noktanıza, her adımda yanınızdayız.</p>
+        <div className="heroActions"><Link className="button primary" href="/teklif">Projeniz için teklif alın <span aria-hidden="true">↗</span></Link><Link className="heroSecondary" href="/hizmetler">Hizmetlerimizi keşfedin</Link></div>
+        <div className="heroBottom"><span>HERKES İÇİN LEZZET. HER YERDE HİZMET.</span><a href="#hizmetler">KEŞFET <span aria-hidden="true">↓</span></a></div>
+      </div><span className="imageCredit">Temsili mutfak fotoğrafı</span>
     </section>
-
-    <section className="numbersBar"><div className="wrap numbersGrid">
-      <article><strong>3.000</strong><span>Kişi / öğün üretim kapasitesi</span></article>
-      <article><strong>3</strong><span>Farklı hizmet modeli</span></article>
-      <article><strong>Geniş</strong><span>Araç ve sevkiyat altyapısı</span></article>
-      <article><strong>Türkiye</strong><span>Genelinde hizmet imkânı</span></article>
-    </div></section>
-
-    <section className="section wrap">
-      <div className="sectionIntro"><div><p className="eyebrow red">HİZMET MODELLERİMİZ</p><h2>Her projeye aynı kalıbı değil,<br/>doğru operasyon modelini sunuyoruz.</h2></div><p>Günlük kişi sayısı, lokasyon, vardiya düzeni ve servis saatine göre üretim ve dağıtım modelini proje özelinde planlıyoruz.</p></div>
-      <div className="webServiceGrid">{services.map(s => <Link className="webServiceCard" href={s.href} key={s.title}><div className="imageFrame"><img src={s.image} alt=""/><span>{s.no}</span></div><div className="serviceCopy"><h3>{s.title}</h3><p>{s.text}</p><b>Detayları incele →</b></div></Link>)}</div>
+    <section className="trustStrip"><div className="wrap"><p>Farklı sektörler.<br/><strong>Ortak bir güven.</strong></p><div><span>SANAYİ & ÜRETİM</span><span>İNŞAAT & ŞANTİYE</span><span>KAMU & KURUMLAR</span><span>LİMAN & LOJİSTİK</span></div></div></section>
+    <section className="wrap newServices" id="hizmetler">
+      <div className="newSectionHeading"><div><p className="eyebrow red">01 / HİZMETLERİMİZ</p><h2>İşinizin ritmine<br/>uygun çözümler.</h2></div><p>Her işletmenin ihtiyacı farklı.<br/>Kişi sayısı, lokasyon ve çalışma düzeninize göre doğru hizmet modelini birlikte belirliyoruz.</p></div>
+      <div className="serviceEditorialGrid">{services.map(s=><Link className="serviceEditorial" href={s.href} key={s.no}><div className="serviceTop"><span>{s.no}</span><span className="circleArrow" aria-hidden="true">↗</span></div><p className="eyebrow">{s.label}</p><h3>{s.title}</h3><p>{s.text}</p><span className="serviceMore">Hizmeti inceleyin</span></Link>)}</div>
     </section>
-
-    <section className="whySection"><div className="wrap whyLayout">
-      <div className="whyTitle"><p className="eyebrow">NEDEN ÖZNUR YEMEK?</p><h2>Yemeği değil,<br/>operasyonu yönetiyoruz.</h2><p>Kaliteli ürün kadar planlama, süreklilik, hijyen ve zamanında servis de önemlidir. Operasyonumuzu bu dört unsurun üzerine kuruyoruz.</p><Link className="textLink light" href="/kurumsal">Bizi daha yakından tanıyın →</Link></div>
-      <div className="reasonGrid">{reasons.map((r,i) => <article key={r}><span>{String(i+1).padStart(2,"0")}</span><b>{r}</b></article>)}</div>
-    </div></section>
-
-    <section className="section wrap qualityTeaser"><div className="qualityPhoto"><img src="/images/site/quality-chef.webp" alt="Hijyen standartlarıyla çalışan mutfak personeli"/><span className="photoTag">KALİTE • HİJYEN • KONTROL</span></div><div className="qualityCopy"><p className="eyebrow red">KALİTE & HİJYEN</p><h2>Güvenli gıda,<br/>sağlıklı gelecek.</h2><p>Hammadde tedarikinden servise kadar her aşamada kontrol, hijyen ve standartlaşmayı merkeze alıyoruz.</p><ul><li>Gıda güvenliği standartlarına uygun üretim</li><li>Düzenli denetim ve kontrol süreçleri</li><li>Hijyen eğitimli personel</li><li>Taze ve birinci kalite ürünler</li></ul><Link className="button black" href="/kalite-hijyen">Kalite Sürecimizi İncele</Link></div></section>
-
-    <section className="fleetBand"><img src="/images/site/fleet.webp" alt="Öznur Yemek sevkiyat filosu"/><div className="fleetShade"/><div className="wrap fleetContent"><p className="eyebrow">OPERASYON GÜCÜMÜZ</p><h2>Üretimden servise<br/>tek plan, tek standart.</h2><div className="operationSteps">{["Hammadde", "Üretim", "Paketleme", "Sevkiyat", "Servis", "Takip & Kontrol"].map((x,i)=><span key={x}><b>{String(i+1).padStart(2,"0")}</b>{x}</span>)}</div></div></section>
-
-    <section className="section wrap proofSection"><div><p className="eyebrow red">SAHA DENEYİMİ</p><h2>Büyük projelerde<br/>güçlü iş ortağı.</h2><p>Sanayi, inşaat, kamu ve liman operasyonlarında farklı ölçeklerde hizmet deneyimi.</p><Link className="button black" href="/referanslar">Referanslarımızı Gör</Link></div><div className="proofImage"><img src="/images/site/reference-industrial.webp" alt="Endüstriyel proje sahası"/><div className="proofBadge"><strong>5+</strong><span>yıllık saha deneyimi</span></div></div></section>
-
-    <section className="menuTeaser"><div className="wrap menuTeaserInner"><div><p className="eyebrow">ÖRNEK MENÜ</p><h2>Dengeli, lezzetli<br/>ve besleyici.</h2><p>Menüler proje ihtiyaçlarına, mevsime ve kişi profiline göre planlanır. Örnek haftalık menüyü web üzerinden inceleyebilirsiniz.</p><Link className="button white" href="/ornek-menu">Örnek Menüyü İncele</Link></div><img src="/images/site/menu-food.webp" alt="Kurumsal yemek menüsü"/></div></section>
-
-    <section className="section wrap pdfCallout"><div><span className="pdfIcon">PDF</span><div><p className="eyebrow red">KURUMSAL DOSYA</p><h3>Basılı sunum dosyasını da inceleyebilirsiniz.</h3><p>Web sitesi ana bilgi kaynağıdır. PDF dosyası teklif ve toplantılar için ek kurumsal sunum olarak sunulur.</p></div></div><a className="button outlineDark" href="/downloads/oznur-yemek-kurumsal-teklif.pdf" target="_blank" rel="noreferrer">PDF Dosyasını Aç</a></section>
-
-    <section className="ctaBand"><div className="wrap ctaBandInner"><div><p className="eyebrow">YENİ PROJE</p><h2>İhtiyacınızı anlatın,<br/>operasyonu birlikte planlayalım.</h2></div><Link className="button white" href="/teklif">Teklif Talebi Oluştur</Link></div></section>
+    <section className="careSection"><div className="wrap careLayout"><div className="carePhoto"><Image src="/images/site/chef.jpg" alt="Yemek sunumuna özen gösteren şef — temsili fotoğraf" fill sizes="(max-width: 900px) 100vw, 50vw"/><span>TEMSİLİ FOTOĞRAF</span></div><div className="careCopy"><p className="eyebrow red">02 / KALİTE & HİJYEN</p><h2>İyi yemek,<br/>iyi bir süreçle<br/><em>başlar.</em></h2><p>Lezzet kadar, o lezzetin nasıl hazırlandığı da önemlidir. Tedarikten servise uzanan her aşamada özenli ve kontrollü bir çalışma anlayışı.</p><div className="careRows"><div><span>01</span><strong>Özenle seçilen hammadde</strong></div><div><span>02</span><strong>Kontrollü üretim ve hijyen</strong></div><div><span>03</span><strong>Planlı sevkiyat ve servis</strong></div></div><Link className="textLink" href="/kalite-hijyen">Kalite yaklaşımımız <span aria-hidden="true">↗</span></Link></div></div></section>
+    <section className="wrap partnersSection"><div className="newSectionHeading"><div><p className="eyebrow red">03 / REFERANSLARIMIZ</p><h2>Birlikte çalışıyor,<br/>birlikte büyüyoruz.</h2></div><Link className="textLink" href="/referanslar">Tüm referanslar <span aria-hidden="true">↗</span></Link></div><div className="partnerNames"><span>TOSYALI<small>ÇELİKHANE PROJESİ</small></span><span>GÜBRETAŞ<small>İSKENDERUN LİMAN TESİSİ</small></span><span>DÖNMEZOĞLU<small>İÇ VE DIŞ TİCARET A.Ş.</small></span><span>İSKENDERUN TUR<small>BÖLGESEL İŞ BİRLİKLERİ</small></span></div></section>
+    <section className="menuEditorial"><div className="wrap menuEditorialInner"><div><p className="eyebrow">04 / MENÜ PLANLAMASI</p><h2>Günün en güzel<br/><em>molası.</em></h2><p>Mevsime, ekibinize ve projenizin ihtiyaçlarına uygun menüler. Her öğünde lezzet ve çeşitlilik.</p><Link className="button white" href="/ornek-menu">Örnek haftalık menü <span aria-hidden="true">↗</span></Link></div><div className="menuNote"><span>SOFRAMIZIN VAZGEÇİLMEZLERİ</span><p>Bir kase sıcaklık.<br/>Özenle hazırlanan ana yemek.<br/>Tamamlayan lezzetler.</p><div>Menüler proje ihtiyaçlarına göre planlanır.</div></div></div></section>
+    <section className="wrap contactEditorial"><p className="eyebrow red">BİRLİKTE BAŞLAYALIM</p><div><h2>Ekibinizin sofrasını<br/>birlikte planlayalım.</h2><Link className="button primary" href="/teklif">Teklif talebi oluştur <span aria-hidden="true">↗</span></Link></div><p>İhtiyaçlarınızı anlatın, size uygun yemek hizmetini birlikte belirleyelim.</p></section>
   </main>;
 }

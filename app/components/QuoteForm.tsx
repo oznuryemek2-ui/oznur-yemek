@@ -49,7 +49,7 @@ export default function QuoteForm() {
       <label>Planlanan başlangıç tarihi<input name="startDate" type="date" /></label>
       <label>Proje notu<textarea name="note" rows={4} placeholder="Vardiya, servis saati, lokasyon veya özel talepler..." /></label>
       <button className="button dark" type="submit" disabled={status === "sending"}>{status === "sending" ? "Gönderiliyor..." : "Teklif Talebini Gönder"}</button>
-      {message && <p className={`formMessage ${status}`}>{message}</p>}
+      {message && <p role="status" aria-live="polite" className={`formMessage ${status}`}>{message}</p>}
     </form>
   );
 }

@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
+import MobileNav from "./MobileNav";
 
 const nav = [
   ["Kurumsal", "/kurumsal"],
@@ -20,13 +22,7 @@ export function Header() {
           {nav.map(([label, href]) => <Link key={href} href={href}>{label}</Link>)}
           <Link className="navCta" href="/teklif">Teklif Al</Link>
         </nav>
-        <details className="mobileMenu">
-          <summary aria-label="Menüyü aç"><span></span><span></span><span></span></summary>
-          <div className="mobileMenuPanel">
-            {nav.map(([label, href]) => <Link key={href} href={href}>{label}</Link>)}
-            <Link className="navCta" href="/teklif">Teklif Al</Link>
-          </div>
-        </details>
+        <MobileNav links={nav} />
       </div>
     </header>
   );
@@ -40,6 +36,7 @@ export function Footer() {
           <div className="footerLogo"><span className="brandMark light">ÖY</span><b>ÖZNUR YEMEK</b></div>
           <p>Kurumsal yemek hizmetlerinde planlı operasyon, güvenilir üretim ve sürdürülebilir hizmet yaklaşımı.</p>
           <a className="pdfLink" href="/downloads/oznur-yemek-kurumsal-teklif.pdf" target="_blank" rel="noreferrer">Kurumsal dosyayı PDF olarak indir ↗</a>
+          <div className="footerContact"><a href="https://wa.me/905466953914" target="_blank" rel="noreferrer">WhatsApp ↗</a><a href="tel:+905466953914">Bizi arayın</a></div>
         </div>
         <div>
           <b>İletişim</b>
@@ -64,7 +61,7 @@ export function Footer() {
 export function PageHero({ eyebrow, title, text, image }: { eyebrow: string; title: string; text: string; image: string }) {
   return (
     <section className="pageHero">
-      <img src={image} alt="" />
+      <Image src="/images/site/kitchen-team.jpg" alt="" fill priority sizes="100vw" />
       <div className="pageHeroShade" />
       <div className="wrap pageHeroContent">
         <p className="eyebrow">{eyebrow}</p>
