@@ -1,1 +1,1 @@
-production-deploy-after-vercel-ignore-override
+production-deploy-after-git-reconnect-2026-09-19
