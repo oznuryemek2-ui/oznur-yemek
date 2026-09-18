@@ -1,0 +1,37 @@
+name: Vercel Deploy
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths-ignore:
+      - '.github/workflows/build-check.yml'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Check Vercel credentials
+        run: |
+          test -n "$VERCEL_TOKEN" || (echo "VERCEL_TOKEN missing" && exit 11)
+          test -n "$VERCEL_ORG_ID" || (echo "VERCEL_ORG_ID missing" && exit 12)
+          test -n "$VERCEL_PROJECT_ID" || (echo "VERCEL_PROJECT_ID missing" && exit 13)
+      - name: Install dependencies
+        run: npm install
+      - name: Link Vercel project
+        run: |
+          mkdir -p .vercel
+          printf '{"orgId":"%s","projectId":"%s"}' "$VERCEL_ORG_ID" "$VERCEL_PROJECT_ID" > .vercel/project.json
+      - name: Pull production environment
+        run: npx vercel@latest pull --yes --environment=production --token="$VERCEL_TOKEN"
+      - name: Build for Vercel
+        run: npx vercel@latest build --prod --token="$VERCEL_TOKEN"
+      - name: Deploy production
+        run: npx vercel@latest deploy --prebuilt --prod --token="$VERCEL_TOKEN"
