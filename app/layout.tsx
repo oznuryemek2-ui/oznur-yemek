@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import "./redesign.css";
+import "./oznur-home.css";
 import { Footer, Header } from "./components/SiteChrome";
 
 export const metadata:Metadata={
