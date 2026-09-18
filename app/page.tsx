@@ -4,28 +4,40 @@ import Link from "next/link";
 const services = [
   {
     no: "01",
-    title: "Yerinde üretim",
-    kicker: "Mutfağınızda, sizin ekibiniz için",
-    text: "İşletmenizin mutfağında; vardiya, kişi sayısı ve servis düzenine göre planlanan profesyonel üretim modeli.",
+    label: "Yerinde Üretim",
+    title: "Mutfağınızda, sizin operasyonunuza göre.",
+    text: "Profesyonel ekip, planlı üretim ve saha düzeniyle günlük yemek operasyonunu işletmenizin içinde yönetiyoruz.",
     image: "/images/site/service-onsite.webp",
     href: "/hizmetler#yerinde",
+    className: "homeServiceCard homeServiceCardLarge",
   },
   {
     no: "02",
-    title: "Taşımalı yemek",
-    kicker: "Merkezi üretim, planlı teslimat",
-    text: "Merkezi mutfakta hazırlanan öğünlerin uygun taşıma koşullarıyla, belirlenen servis saatine göre sahaya ulaştırılması.",
+    label: "Taşımalı Yemek",
+    title: "Merkezi üretim. Kontrollü teslimat.",
+    text: "Üretimden sevkiyata kadar zaman, sıcaklık ve servis planını tek akışta takip ediyoruz.",
     image: "/images/site/service-delivery.webp",
     href: "/hizmetler#tasimali",
+    className: "homeServiceCard",
   },
   {
     no: "03",
-    title: "Paket yemek",
-    kicker: "Pratik servis, standart porsiyon",
-    text: "Saha ekipleri ve yoğun operasyonlar için hijyenik ambalajlama ve kontrollü porsiyonlama ile paket yemek çözümleri.",
+    label: "Paket Yemek",
+    title: "Yoğun sahalar için pratik ve standart servis.",
+    text: "Hijyenik ambalajlama ve kontrollü porsiyonlama ile hızlı dağıtıma uygun çözümler sunuyoruz.",
     image: "/images/site/service-pack.webp",
     href: "/hizmetler#paket",
+    className: "homeServiceCard",
   },
+];
+
+const process = [
+  ["01", "Tedarik", "Ürün kabulü ve planlı tedarik"],
+  ["02", "Üretim", "Standart reçete ve hijyenik akış"],
+  ["03", "Porsiyon", "Dengeli ve kontrollü porsiyonlama"],
+  ["04", "Paketleme", "Servis modeline uygun hazırlık"],
+  ["05", "Sevkiyat", "Zaman ve sıcaklık takibi"],
+  ["06", "Saha", "Servis ve geri bildirim kontrolü"],
 ];
 
 const references = [
@@ -39,137 +51,137 @@ const references = [
 
 export default function Home() {
   return (
-    <main id="main-content">
-      <section className="brandHero">
-        <div className="wrap brandHeroGrid">
-          <div className="brandHeroCopy">
-            <p className="eyebrow red">ÖZNUR YEMEK / KURUMSAL YEMEK HİZMETLERİ</p>
+    <main id="main-content" className="homeV3">
+      <section className="homeHero">
+        <div className="homeHeroBackdrop" aria-hidden="true">
+          <Image
+            src="/images/site/hero-food.webp"
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+          />
+        </div>
+        <div className="homeHeroShade" aria-hidden="true" />
+
+        <div className="wrap homeHeroInner">
+          <div className="homeHeroTopline">
+            <span>ÖZNUR YEMEK</span>
+            <span>İSKENDERUN / HATAY</span>
+          </div>
+
+          <div className="homeHeroCopy">
+            <p className="homeKicker">KURUMSAL YEMEK HİZMETLERİ</p>
             <h1>
-              Sofrayı değil,
+              Güçlü mutfak.
               <br />
-              <em>tüm operasyonu</em>
-              <br />
-              yönetiyoruz.
+              <span>Kesintisiz operasyon.</span>
             </h1>
-            <p className="heroLead">
-              Yerinde üretim, taşımalı ve paket yemek hizmetlerinde; mutfaktan
-              sevkiyata kadar her adımı tek standart altında planlıyoruz.
+            <p className="homeHeroLead">
+              Yerinde üretim, taşımalı ve paket yemek hizmetlerinde; tedarikten
+              servise kadar bütün süreci tek plan altında yönetiyoruz.
             </p>
-            <div className="heroActions">
-              <Link className="button primary" href="/teklif">
-                Projeniz için teklif alın <span>↗</span>
+
+            <div className="homeHeroActions">
+              <Link className="homePrimaryButton" href="/teklif">
+                <span>Projeniz için teklif alın</span>
+                <b>↗</b>
               </Link>
-              <Link className="textLink" href="/hizmetler">
-                Hizmetleri inceleyin <span>↗</span>
+              <Link className="homeGhostLink" href="/hizmetler">
+                Hizmet modellerini inceleyin <span>→</span>
               </Link>
-            </div>
-            <div className="heroPrinciples">
-              <span>Planlı üretim</span>
-              <span>Kontrollü sevkiyat</span>
-              <span>Sürdürülebilir servis</span>
             </div>
           </div>
 
-          <div className="brandHeroVisual">
-            <div className="heroPhotoMain">
-              <Image
-                src="/images/site/hero-food.webp"
-                alt="Kurumsal yemek sunumu"
-                fill
-                priority
-                sizes="(max-width: 900px) 100vw, 56vw"
-              />
-            </div>
-            <div className="heroPhotoInset">
-              <Image
-                src="/images/site/kitchen-team.jpg"
-                alt="Profesyonel mutfakta üretim"
-                fill
-                sizes="240px"
-              />
-            </div>
-            <div className="heroVerticalNote">İSKENDERUN · HATAY</div>
-            <div className="heroStatement">
-              <span>HER GÜN</span>
-              <strong>Aynı özen.<br />Aynı standart.</strong>
-            </div>
+          <div className="homeHeroBadge" aria-label="Operasyon özeti">
+            <span>GÜNLÜK KAPASİTE</span>
+            <strong>3.000</strong>
+            <small>kişi / öğün</small>
+          </div>
+
+          <div className="homeHeroFooter">
+            <span>01 / PLANLI ÜRETİM</span>
+            <span>02 / KONTROLLÜ SEVKİYAT</span>
+            <span>03 / SÜRDÜRÜLEBİLİR SERVİS</span>
           </div>
         </div>
       </section>
 
-      <section className="credibilityStrip">
-        <div className="wrap credibilityStripInner">
-          <p>Farklı sektörler. <strong>Tek operasyon disiplini.</strong></p>
-          <div>
-            <span>SANAYİ & ÜRETİM</span>
-            <span>İNŞAAT & ŞANTİYE</span>
-            <span>KAMU & KURUMLAR</span>
-            <span>LİMAN & LOJİSTİK</span>
+      <section className="homeProof">
+        <div className="wrap homeProofGrid">
+          <div className="homeProofIntro">
+            <span className="homeSectionNo">01</span>
+            <p>Yemek hizmetinden fazlası</p>
           </div>
-        </div>
-      </section>
-
-      <section className="manifestoSection">
-        <div className="wrap manifestoGrid">
-          <div className="manifestoIndex">
-            <span>01</span>
-            <p className="eyebrow red">YAKLAŞIMIMIZ</p>
-          </div>
-          <div className="manifestoTitle">
+          <div className="homeProofStatement">
             <h2>
-              Kurumsal yemek,
+              Mutfak, lojistik ve saha.
               <br />
-              <em>mutfaktan daha büyük</em>
-              <br />
-              bir iştir.
+              <em>Tek operasyon standardı.</em>
             </h2>
-          </div>
-          <div className="manifestoText">
             <p>
-              Menü kadar tedarik, üretim akışı, vardiya planı, sevkiyat,
-              sıcaklık kontrolü ve saha düzeni de hizmetin parçasıdır.
+              Kurumsal yemek hizmetinde kalite yalnızca tabakta ölçülmez.
+              Hammadde kabulünden vardiya saatine, sevkiyattan servis düzenine
+              kadar bütün zincirin aynı disiplinle çalışması gerekir.
             </p>
-            <p>
-              Bu yüzden süreci parçalara bölmüyor; tek ekip, tek plan ve tek
-              hizmet standardıyla yönetiyoruz.
-            </p>
-            <Link className="textLink" href="/kurumsal">
-              Öznur Yemek’i tanıyın <span>↗</span>
-            </Link>
           </div>
+        </div>
+
+        <div className="wrap homeMetrics">
+          <article>
+            <strong>3.000</strong>
+            <span>Kişi / öğün kapasitesi</span>
+          </article>
+          <article>
+            <strong>3</strong>
+            <span>Farklı hizmet modeli</span>
+          </article>
+          <article>
+            <strong>6</strong>
+            <span>Temel operasyon adımı</span>
+          </article>
+          <article>
+            <strong>1</strong>
+            <span>Tek hizmet standardı</span>
+          </article>
         </div>
       </section>
 
-      <section className="servicesEditorial">
+      <section className="homeServices">
         <div className="wrap">
-          <div className="sectionHeading">
+          <div className="homeSectionHead">
             <div>
-              <p className="eyebrow red">02 / HİZMET MODELLERİ</p>
-              <h2>İhtiyaca göre şekillenen üç hizmet modeli.</h2>
+              <p className="homeKicker dark">02 / HİZMET MODELLERİ</p>
+              <h2>Her projeye aynı kalıp değil, doğru model.</h2>
             </div>
             <p>
               Kişi sayısı, lokasyon, vardiya düzeni ve mutfak altyapısına göre
-              doğru modeli birlikte belirliyoruz.
+              en uygun hizmet akışını birlikte kuruyoruz.
             </p>
           </div>
 
-          <div className="serviceStack">
+          <div className="homeServiceGrid">
             {services.map((service) => (
-              <Link className="serviceFeature" href={service.href} key={service.no}>
-                <div className="serviceFeatureNo">{service.no}</div>
-                <div className="serviceFeatureMedia">
+              <Link
+                href={service.href}
+                className={service.className}
+                key={service.no}
+              >
+                <div className="homeServiceMedia">
                   <Image
                     src={service.image}
                     alt=""
                     fill
-                    sizes="(max-width: 800px) 100vw, 42vw"
+                    sizes="(max-width: 800px) 100vw, 55vw"
                   />
                 </div>
-                <div className="serviceFeatureCopy">
-                  <span>{service.kicker}</span>
+                <div className="homeServiceOverlay" />
+                <span className="homeServiceNo">{service.no}</span>
+                <div className="homeServiceCopy">
+                  <p>{service.label}</p>
                   <h3>{service.title}</h3>
-                  <p>{service.text}</p>
-                  <b>Hizmeti inceleyin ↗</b>
+                  <span>{service.text}</span>
+                  <b>Detayları inceleyin ↗</b>
                 </div>
               </Link>
             ))}
@@ -177,123 +189,139 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="qualityStory">
-        <div className="qualityStoryMedia">
-          <Image
-            src="/images/site/chef.jpg"
-            alt="Profesyonel yemek hazırlığı"
-            fill
-            sizes="(max-width: 900px) 100vw, 50vw"
-          />
-          <div className="qualitySmallPhoto">
-            <Image
-              src="/images/site/quality-chef.webp"
-              alt=""
-              fill
-              sizes="210px"
-            />
+      <section className="homeProcess">
+        <div className="wrap homeProcessGrid">
+          <div className="homeProcessVisual">
+            <div className="homeProcessPhoto">
+              <Image
+                src="/images/site/chef.jpg"
+                alt="Profesyonel mutfakta yemek hazırlığı"
+                fill
+                sizes="(max-width: 900px) 100vw, 44vw"
+              />
+            </div>
+            <div className="homeProcessInset">
+              <Image
+                src="/images/site/quality-chef.webp"
+                alt=""
+                fill
+                sizes="220px"
+              />
+            </div>
+            <span className="homeProcessMark">Ö</span>
           </div>
-        </div>
 
-        <div className="qualityStoryCopy">
-          <p className="eyebrow light">03 / KALİTE & HİJYEN</p>
-          <h2>
-            Kalite,
-            <br />
-            <em>ilk malzeme</em>
-            <br />
-            kabulünde başlar.
-          </h2>
-          <p>
-            Tedarikten servise kadar kritik adımları takip ediyor; üretim,
-            porsiyon ve sevkiyatta sürekliliği koruyoruz.
-          </p>
-          <div className="processList">
-            <div><span>01</span><b>Tedarik & ürün kabulü</b></div>
-            <div><span>02</span><b>Hijyenik üretim akışı</b></div>
-            <div><span>03</span><b>Porsiyon & reçete standardı</b></div>
-            <div><span>04</span><b>Sevkiyat & saha kontrolü</b></div>
+          <div className="homeProcessContent">
+            <p className="homeKicker light">03 / OPERASYON DİSİPLİNİ</p>
+            <h2>
+              Kalite son kontrolde değil,
+              <br />
+              <em>ilk adımda başlar.</em>
+            </h2>
+            <p className="homeProcessLead">
+              Üretimin her aşamasını birbirine bağlı bir sistem olarak
+              yönetiyoruz. Böylece lezzet, hijyen ve servis standardı aynı
+              çizgide kalıyor.
+            </p>
+
+            <div className="homeProcessList">
+              {process.map(([no, title, text]) => (
+                <div key={no}>
+                  <span>{no}</span>
+                  <b>{title}</b>
+                  <p>{text}</p>
+                </div>
+              ))}
+            </div>
+
+            <Link className="homeLightButton" href="/kalite-hijyen">
+              Kalite yaklaşımımız <span>↗</span>
+            </Link>
           </div>
-          <Link className="button white" href="/kalite-hijyen">
-            Kalite yaklaşımımız <span>↗</span>
-          </Link>
         </div>
       </section>
 
-      <section className="referencesSection">
-        <div className="wrap referencesGrid">
-          <div className="referencesIntro">
-            <p className="eyebrow red">04 / REFERANSLAR</p>
+      <section className="homeReferences">
+        <div className="wrap homeReferencesGrid">
+          <div className="homeReferencesTitle">
+            <p className="homeKicker dark">04 / SAHADAKİ DENEYİM</p>
             <h2>
-              Güven, en iyi
+              Güven,
               <br />
-              <em>sahada görünür.</em>
+              <em>referansla görünür.</em>
             </h2>
             <p>
-              Farklı operasyon koşullarında edinilen deneyim, çalışma
-              sistemimizin en güçlü referansıdır.
+              Sanayi, inşaat, kamu ve liman projelerinde farklı operasyon
+              koşullarına uyum sağlayan yemek hizmetleri.
             </p>
-            <Link className="textLink" href="/referanslar">
-              Tüm referansları görün <span>↗</span>
+            <Link className="homeInlineLink" href="/referanslar">
+              Tüm referansları görüntüleyin <span>↗</span>
             </Link>
           </div>
-          <div className="referencesList">
+
+          <div className="homeReferenceList">
             {references.map((name, index) => (
               <div key={name}>
                 <span>{String(index + 1).padStart(2, "0")}</span>
                 <b>{name}</b>
+                <i>↗</i>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="menuStory">
-        <div className="wrap menuStoryGrid">
-          <div className="menuStoryMedia">
+      <section className="homeMenu">
+        <div className="wrap homeMenuGrid">
+          <div className="homeMenuMedia">
             <Image
               src="/images/site/menu-food.webp"
               alt="Örnek kurumsal yemek menüsü"
               fill
-              sizes="(max-width: 900px) 100vw, 52vw"
+              sizes="(max-width: 900px) 100vw, 55vw"
             />
+            <div className="homeMenuLabel">
+              <span>MENÜ PLANLAMASI</span>
+              <strong>Her gün dengeli.</strong>
+            </div>
           </div>
-          <div className="menuStoryCopy">
-            <p className="eyebrow red">05 / MENÜ PLANLAMASI</p>
+
+          <div className="homeMenuCopy">
+            <p className="homeKicker dark">05 / MENÜLER</p>
             <h2>
-              Her gün farklı.
+              Çeşitlilik,
               <br />
-              <em>Her gün dengeli.</em>
+              <em>standardı bozmaz.</em>
             </h2>
             <p>
-              Mevsime, ekip profiline ve proje ihtiyaçlarına göre planlanan
-              menülerle hem çeşitliliği hem servis standardını koruyoruz.
+              Mevsim, ekip profili ve proje ihtiyaçlarına göre hazırlanan
+              menülerle hem çeşitliliği hem porsiyon dengesini koruyoruz.
             </p>
-            <Link className="button dark" href="/ornek-menu">
-              Örnek haftalık menü <span>↗</span>
+            <Link className="homeDarkButton" href="/ornek-menu">
+              Örnek haftalık menüyü görün <span>↗</span>
             </Link>
           </div>
         </div>
       </section>
 
-      <section className="contactStatement">
-        <div className="wrap">
-          <p className="eyebrow red">BİRLİKTE BAŞLAYALIM</p>
-          <div className="contactStatementRow">
+      <section className="homeFinal">
+        <div className="wrap homeFinalInner">
+          <div>
+            <p className="homeKicker light">PROJENİZ İÇİN</p>
             <h2>
               Ekibinizin sofrasını
               <br />
-              birlikte planlayalım.
+              <em>birlikte planlayalım.</em>
             </h2>
-            <Link className="roundArrow" href="/teklif" aria-label="Teklif talebi oluştur">
-              ↗
-            </Link>
           </div>
-          <div className="contactStatementMeta">
-            <span>İskenderun / Hatay</span>
-            <span>+90 546 695 3914</span>
-            <span>Kurumsal yemek hizmetleri</span>
-          </div>
+          <Link className="homeFinalArrow" href="/teklif" aria-label="Teklif talebi oluştur">
+            ↗
+          </Link>
+        </div>
+        <div className="wrap homeFinalMeta">
+          <span>İSKENDERUN / HATAY</span>
+          <a href="tel:+905466953914">+90 546 695 3914</a>
+          <span>YERİNDE · TAŞIMALI · PAKET</span>
         </div>
       </section>
     </main>
