@@ -119,7 +119,7 @@ export function PageHero({
           <p>{text}</p>
         </div>
         <div className="pageHeroMedia">
-          <Image src={image} alt="" fill priority sizes="(max-width: 900px) 100vw, 52vw" />
+          <Image src={image} alt="" fill priority quality={90} sizes="(max-width: 900px) 100vw, 52vw" />
         </div>
       </div>
     </section>
