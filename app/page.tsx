@@ -6,21 +6,21 @@ const services = [
     kicker: "Yerinde Üretim",
     title: "Mutfağınızda, ekibiniz için günlük üretim.",
     text: "Personel, menü, üretim ve servis akışını sahada tek operasyon olarak yönetiyoruz.",
-    image: "/images/site/service-onsite.webp",
+    image: "https://images.pexels.com/photos/17318176/pexels-photo-17318176.jpeg?auto=compress&cs=tinysrgb&w=2200",
     href: "/hizmetler#yerinde",
   },
   {
     kicker: "Taşımalı Yemek",
     title: "Üretimden servise kontrollü teslimat.",
     text: "Merkezi üretim, sıcaklık takibi ve vardiya saatine uygun planlı sevkiyat.",
-    image: "/images/site/service-delivery.webp",
+    image: "https://images.pexels.com/photos/4393667/pexels-photo-4393667.jpeg?auto=compress&cs=tinysrgb&w=2200",
     href: "/hizmetler#tasimali",
   },
   {
     kicker: "Paket Yemek",
     title: "Yoğun sahalara pratik ve düzenli çözüm.",
     text: "Standart porsiyon, hijyenik ambalaj ve hızlı dağıtıma uygun servis modeli.",
-    image: "/images/site/service-pack.webp",
+    image: "https://images.pexels.com/photos/30635703/pexels-photo-30635703.jpeg?auto=compress&cs=tinysrgb&w=2200",
     href: "/hizmetler#paket",
   },
 ];
@@ -47,11 +47,12 @@ export default function Home() {
       <section className="oyHero">
         <Image
           className="oyHeroImage"
-          src="/images/site/hero-food.webp"
+          src="https://images.pexels.com/photos/36287931/pexels-photo-36287931.jpeg?auto=compress&cs=tinysrgb&w=2400"
           alt="Öznur Yemek tarafından hazırlanan kurumsal yemek servisi"
           fill
           priority
           sizes="100vw"
+          quality={90}
         />
         <div className="oyHeroOverlay" />
 
@@ -132,7 +133,7 @@ export default function Home() {
           <div className="oyFoodGrid">
             <div className="oyFoodMain">
               <Image
-                src="/images/site/menu-food.webp"
+                src="https://images.pexels.com/photos/31661077/pexels-photo-31661077.jpeg?auto=compress&cs=tinysrgb&w=2200"
                 alt="Öznur Yemek örnek kurumsal yemek menüsü"
                 fill
                 sizes="(max-width: 900px) 100vw, 62vw"
@@ -148,7 +149,7 @@ export default function Home() {
             <div className="oyFoodSide">
               <div className="oyFoodSideImage">
                 <Image
-                  src="/images/site/quality-chef.webp"
+                  src="https://images.pexels.com/photos/15671416/pexels-photo-15671416.jpeg?auto=compress&cs=tinysrgb&w=2200"
                   alt="Profesyonel mutfakta yemek hazırlığı"
                   fill
                   sizes="(max-width: 900px) 100vw, 38vw"
@@ -211,7 +212,7 @@ export default function Home() {
         <div className="wrap oyTrustGrid">
           <div className="oyTrustMedia">
             <Image
-              src="/images/site/chef.jpg"
+              src="https://images.pexels.com/photos/15671274/pexels-photo-15671274.jpeg?auto=compress&cs=tinysrgb&w=2200"
               alt="Öznur Yemek profesyonel mutfak operasyonu"
               fill
               sizes="(max-width: 900px) 100vw, 48vw"
@@ -291,7 +292,7 @@ export default function Home() {
       <section className="oyClosing">
         <div className="oyClosingImage">
           <Image
-            src="/images/site/service-delivery.webp"
+            src="https://images.pexels.com/photos/4393667/pexels-photo-4393667.jpeg?auto=compress&cs=tinysrgb&w=2200"
             alt="Kurumsal yemek sevkiyatı ve servis hazırlığı"
             fill
             sizes="100vw"
