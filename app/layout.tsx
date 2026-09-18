@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "./redesign.css";
 import { Footer, Header } from "./components/SiteChrome";
 
 export const metadata:Metadata={
