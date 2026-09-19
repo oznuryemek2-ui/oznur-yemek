@@ -16,6 +16,7 @@ export function Header() {
     <header className="siteHeader">
       <div className="headerInner">
         <Link className="brand" href="/" aria-label="Öznur Yemek ana sayfa">
+          <Image className="officialLogoMark" src="/images/site/logo-mark.png" alt="" width={54} height={54} priority />
           <span className="brandText officialWordmark">
             <b>ÖZNUR YEMEK</b>
             <small>HERKES İÇİN LEZZET, HER YERDE HİZMET</small>
@@ -55,9 +56,12 @@ export function Footer() {
     <footer className="footer">
       <div className="wrap footerGridNew">
         <div className="footerIdentity">
-          <div className="footerOfficialLogo">
-            <strong>ÖZNUR YEMEK</strong>
-            <span>HERKES İÇİN LEZZET, HER YERDE HİZMET</span>
+          <div className="footerOfficialBrand">
+            <Image src="/images/site/logo-mark.png" alt="" width={60} height={60} />
+            <div className="footerOfficialLogo">
+              <strong>ÖZNUR YEMEK</strong>
+              <span>HERKES İÇİN LEZZET, HER YERDE HİZMET</span>
+            </div>
           </div>
           <p>
             Yerinde üretim, taşımalı yemek ve paket yemek hizmetlerinde planlı operasyon.
