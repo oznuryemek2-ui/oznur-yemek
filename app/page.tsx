@@ -243,7 +243,7 @@ export default function Home() {
 
         <div className="mkFacilityPhoto">
           <Image
-            src="/images/site/canteen-service.png"
+            src="/images/site/service-onsite.png"
             alt="Profesyonel ekip ile düzenli yemekhane servisi"
             fill
             quality={90}
