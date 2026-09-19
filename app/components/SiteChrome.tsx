@@ -17,8 +17,13 @@ export function Header() {
     <>
     <header className="siteHeader">
       <div className="headerInner">
-        <Link className="brand" href="/" aria-label="Öznur Yemek ana sayfa">
-          <img className="officialBrandLockup" src={officialLogo} alt="Öznur Yemek" />
+        <Link className="brand officialBrand" href="/" aria-label="Öznur Yemek ana sayfa">
+          <span className="brandEmblemCrop" aria-hidden="true">
+            <img src={officialLogo} alt="" />
+          </span>
+          <span className="brandWordCrop">
+            <img src={officialLogo} alt="Öznur Yemek — Herkes İçin Lezzet, Her Yerde Hizmet" />
+          </span>
         </Link>
 
         <nav className="desktopNav" aria-label="Ana menü">
