@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - ".github/workflows/import-oznur-assets.yml"
+      - "asset-import-trigger.txt"
 
 permissions:
   contents: write
