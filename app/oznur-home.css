@@ -1394,3 +1394,29 @@
     min-width:760px;
   }
 }
+
+/* Exact Öznur corporate logo lockup */
+.officialBrandLockup{
+  display:block;
+  width:220px;
+  height:auto;
+  max-height:58px;
+  object-fit:contain;
+  object-position:left center;
+}
+.footerBrandLockup{
+  display:block;
+  width:250px;
+  height:auto;
+  object-fit:contain;
+  object-position:left center;
+}
+@media(max-width:720px){
+  .officialBrandLockup{
+    width:154px;
+    max-height:48px;
+  }
+  .footerBrandLockup{
+    width:210px;
+  }
+}
