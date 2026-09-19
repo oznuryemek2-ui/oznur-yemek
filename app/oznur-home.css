@@ -1420,3 +1420,73 @@
     width:210px;
   }
 }
+
+
+/* Header logo proportion fix: keep original artwork, enlarge wordmark without inflating emblem */
+.officialBrand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  flex:0 0 auto;
+}
+.brandEmblemCrop,
+.brandWordCrop{
+  position:relative;
+  display:block;
+  overflow:hidden;
+  flex:0 0 auto;
+}
+.brandEmblemCrop{
+  width:52px;
+  height:51px;
+}
+.brandEmblemCrop img{
+  position:absolute;
+  width:146px;
+  max-width:none;
+  height:auto;
+  left:0;
+  top:-5px;
+}
+.brandWordCrop{
+  width:150px;
+  height:47px;
+}
+.brandWordCrop img{
+  position:absolute;
+  width:286px;
+  max-width:none;
+  height:auto;
+  left:-136px;
+  top:0;
+}
+
+@media(max-width:720px){
+  .siteHeader{
+    height:76px;
+  }
+  .officialBrand{
+    gap:9px;
+  }
+  .brandEmblemCrop{
+    width:62px;
+    height:61px;
+  }
+  .brandEmblemCrop img{
+    width:174px;
+    left:0;
+    top:-5px;
+  }
+  .brandWordCrop{
+    width:138px;
+    height:44px;
+  }
+  .brandWordCrop img{
+    width:263px;
+    left:-125px;
+    top:0;
+  }
+  .mobileHeaderActions{
+    gap:3px;
+  }
+}
