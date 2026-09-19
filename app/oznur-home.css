@@ -19,37 +19,46 @@
   width:min(1440px,calc(100% - 48px));
 }
 .brand{
-  gap:10px;
+  gap:0;
 }
-.brandLine{
-  width:32px;
-  height:32px;
-  border:2px solid var(--oy-red);
-  border-radius:50% 50% 45% 45%;
-  background:transparent;
-  position:relative;
+.officialWordmark{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  line-height:1;
 }
-.brandLine:before{
-  content:"";
-  position:absolute;
-  width:13px;
-  height:8px;
-  border:2px solid var(--oy-red);
-  border-bottom:0;
-  border-radius:50% 50% 0 0;
-  left:7px;
-  top:-7px;
-  background:#fff;
+.officialWordmark b{
+  font-size:22px;
+  font-weight:900;
+  letter-spacing:.018em;
+  color:#202327;
 }
-.brandText b{
-  font-size:17px;
-  letter-spacing:-.02em;
+.officialWordmark small{
+  margin-top:4px;
+  color:#cf1730;
+  font-size:8px;
+  line-height:1;
+  letter-spacing:.035em;
+  font-weight:900;
 }
-.brandText small{
-  color:var(--oy-red);
-  font-size:7px;
-  letter-spacing:.02em;
-  font-weight:700;
+.footerOfficialLogo{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  line-height:1;
+}
+.footerOfficialLogo strong{
+  font-size:25px;
+  font-weight:900;
+  letter-spacing:.018em;
+  color:#202327;
+}
+.footerOfficialLogo span{
+  margin-top:5px;
+  color:#cf1730;
+  font-size:8px;
+  font-weight:900;
+  letter-spacing:.035em;
 }
 .desktopNav{
   gap:30px;
@@ -103,7 +112,8 @@
 .mkHeroImage{
   z-index:-3;
   object-fit:cover;
-  object-position:center 46%;
+  object-position:center 45%;
+  filter:saturate(.92) contrast(1.02);
 }
 .mkHeroShade{
   position:absolute;
@@ -224,7 +234,7 @@
   box-shadow:0 16px 34px rgba(0,0,0,.09);
 }
 .mkServiceTop{
-  min-height:150px;
+  min-height:176px;
   padding:22px;
   display:grid;
   grid-template-columns:46px 1fr 18px;
@@ -258,7 +268,9 @@
   overflow:hidden;
 }
 .mkServicePhoto img{object-fit:cover}
-.mkServiceCard:nth-child(2) .mkServicePhoto img{object-position:center 45%}
+.mkServiceCard:nth-child(1) .mkServicePhoto img{object-position:center 48%}
+.mkServiceCard:nth-child(2) .mkServicePhoto img{object-position:center 42%}
+.mkServiceCard:nth-child(3) .mkServicePhoto img{object-position:center 50%}
 
 /* stats */
 .mkStats{
@@ -589,7 +601,6 @@
   color:#202020;
   padding-top:34px;
 }
-.footerIdentity h2{font-size:24px;color:#202020}
 .footerIdentity p,.footerColumn p{color:#777}
 .footerColumn>b{color:#202020}
 .footerColumn a{color:#444}
@@ -612,10 +623,8 @@
   body{padding-bottom:70px}
   .siteHeader{height:64px}
   .headerInner{width:calc(100% - 20px)}
-  .brandLine{width:27px;height:27px}
-  .brandLine:before{width:10px;height:6px;left:6px;top:-6px}
-  .brandText b{font-size:15px}
-  .brandText small{display:none}
+  .officialWordmark b{font-size:16px}
+  .officialWordmark small{font-size:6px;margin-top:3px;white-space:nowrap}
   .desktopNav{display:none}
   .mobileHeaderActions{
     display:flex;
@@ -663,7 +672,7 @@
     min-height:650px;
   }
   .mkHeroImage{
-    object-position:64% center;
+    object-position:58% center;
   }
   .mkHeroShade{
     background:
