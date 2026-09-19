@@ -16,10 +16,9 @@ export function Header() {
     <header className="siteHeader">
       <div className="headerInner">
         <Link className="brand" href="/" aria-label="Öznur Yemek ana sayfa">
-          <span className="brandLine" />
-          <span className="brandText">
+          <span className="brandText officialWordmark">
             <b>ÖZNUR YEMEK</b>
-            <small>KURUMSAL YEMEK HİZMETLERİ</small>
+            <small>HERKES İÇİN LEZZET, HER YERDE HİZMET</small>
           </span>
         </Link>
 
@@ -56,10 +55,12 @@ export function Footer() {
     <footer className="footer">
       <div className="wrap footerGridNew">
         <div className="footerIdentity">
-          <span className="brandLine light" />
-          <h2>Öznur Yemek</h2>
+          <div className="footerOfficialLogo">
+            <strong>ÖZNUR YEMEK</strong>
+            <span>HERKES İÇİN LEZZET, HER YERDE HİZMET</span>
+          </div>
           <p>
-            Kontrollü üretim, planlı sevkiyat ve sürdürülebilir servis.
+            Yerinde üretim, taşımalı yemek ve paket yemek hizmetlerinde planlı operasyon.
           </p>
         </div>
 
