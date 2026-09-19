@@ -1,32 +1,79 @@
 import Image from "next/image";
 import Link from "next/link";
 
+const heroImage =
+  "https://images.pexels.com/photos/30893002/pexels-photo-30893002.jpeg?auto=compress&cs=tinysrgb&w=2400";
+
 const services = [
   {
-    kicker: "Yerinde Üretim",
-    title: "Mutfağınızda, ekibiniz için günlük üretim.",
-    text: "Personel, menü, üretim ve servis akışını sahada tek operasyon olarak yönetiyoruz.",
-    image: "https://images.pexels.com/photos/17318176/pexels-photo-17318176.jpeg?auto=compress&cs=tinysrgb&w=2200",
-    href: "/hizmetler#yerinde",
+    icon: "▦",
+    title: "Paket Yemek Hizmeti",
+    text: "Fabrika, ofis ve saha ekipleri için hijyenik, düzenli ve pratik yemek çözümleri.",
+    image:
+      "https://images.pexels.com/photos/33481128/pexels-photo-33481128.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    href: "/hizmetler#paket",
   },
   {
-    kicker: "Taşımalı Yemek",
-    title: "Üretimden servise kontrollü teslimat.",
-    text: "Merkezi üretim, sıcaklık takibi ve vardiya saatine uygun planlı sevkiyat.",
-    image: "https://images.pexels.com/photos/4393667/pexels-photo-4393667.jpeg?auto=compress&cs=tinysrgb&w=2200",
+    icon: "▰",
+    title: "Taşımalı Yemek Hizmeti",
+    text: "Merkezi üretimden vardiya saatlerinize uygun kontrollü ve planlı sevkiyat.",
+    image:
+      "https://images.pexels.com/photos/6169586/pexels-photo-6169586.jpeg?auto=compress&cs=tinysrgb&w=1600",
     href: "/hizmetler#tasimali",
   },
   {
-    kicker: "Paket Yemek",
-    title: "Yoğun sahalara pratik ve düzenli çözüm.",
-    text: "Standart porsiyon, hijyenik ambalaj ve hızlı dağıtıma uygun servis modeli.",
-    image: "https://images.pexels.com/photos/30635703/pexels-photo-30635703.jpeg?auto=compress&cs=tinysrgb&w=2200",
-    href: "/hizmetler#paket",
+    icon: "♨",
+    title: "Yerinde Üretim Hizmeti",
+    text: "Tesisinizde kurulan profesyonel mutfak organizasyonuyla günlük taze üretim.",
+    image:
+      "https://images.pexels.com/photos/13971183/pexels-photo-13971183.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    href: "/hizmetler#yerinde",
   },
 ];
 
-const refs = [
-  "Tosyalı Holding Çelikhane Projesi",
+const stats = [
+  ["3.000+", "Günlük yemek kapasitesi"],
+  ["21+", "Kurumsal referans"],
+  ["3", "Hizmet modeli"],
+  ["6", "Temel operasyon adımı"],
+];
+
+const benefits = [
+  ["♡", "Dengeli Menü", "Proje ihtiyaçlarına göre planlanan çeşitli menüler"],
+  ["◎", "Profesyonel Ekip", "Üretim ve saha süreçlerinde deneyimli kadro"],
+  ["◆", "Kontrollü Tedarik", "Ürün kabulünden üretime planlı tedarik zinciri"],
+  ["◇", "Hijyenik Üretim", "Her aşamada hijyen, izlenebilirlik ve kontrol"],
+];
+
+const menuCards = [
+  {
+    title: "Izgara Tavuk",
+    sub: "Pirinç pilavı ve sebze eşliğinde",
+    image:
+      "https://images.pexels.com/photos/29913263/pexels-photo-29913263.jpeg?auto=compress&cs=tinysrgb&w=1200",
+  },
+  {
+    title: "Döner & Pilav",
+    sub: "Geleneksel sıcak öğün",
+    image:
+      "https://images.pexels.com/photos/18062062/pexels-photo-18062062.jpeg?auto=compress&cs=tinysrgb&w=1200",
+  },
+  {
+    title: "Mercimek Çorbası",
+    sub: "Sıcak ve doyurucu başlangıç",
+    image:
+      "https://images.pexels.com/photos/9928340/pexels-photo-9928340.jpeg?auto=compress&cs=tinysrgb&w=1200",
+  },
+  {
+    title: "Mevsim Salata",
+    sub: "Taze ve dengeli",
+    image:
+      "https://images.pexels.com/photos/4394022/pexels-photo-4394022.jpeg?auto=compress&cs=tinysrgb&w=1200",
+  },
+];
+
+const references = [
+  "Tosyalı Holding Çelikhane",
   "Gübretaş İskenderun Liman Tesisi",
   "Doğu Akdeniz Gümrük ve Ticaret Bölge Müdürlüğü",
   "Dönmezoğlu İç ve Dış Ticaret A.Ş.",
@@ -34,281 +81,241 @@ const refs = [
   "İskenderun Tur",
 ];
 
-const menuItems = [
-  "Tepsi Kebabı",
-  "Tavuk Çöp Şiş",
-  "Döner",
-  "Kuru Fasulye & Pilav",
-];
-
 export default function Home() {
   return (
-    <main id="main-content" className="oyHome">
-      <section className="oyHero">
+    <main id="main-content" className="mkHome">
+      <section className="mkHero">
         <Image
-          className="oyHeroImage"
-          src="https://images.pexels.com/photos/36287931/pexels-photo-36287931.jpeg?auto=compress&cs=tinysrgb&w=2400"
-          alt="Öznur Yemek tarafından hazırlanan kurumsal yemek servisi"
+          className="mkHeroImage"
+          src={heroImage}
+          alt="Profesyonel mutfakta hazırlanan kurumsal yemek"
           fill
           priority
+          quality={92}
           sizes="100vw"
-          quality={90}
         />
-        <div className="oyHeroOverlay" />
+        <div className="mkHeroShade" />
 
-        <div className="wrap oyHeroContent">
-          <div className="oyHeroTag">
-            <span />
-            İSKENDERUN / HATAY • KURUMSAL YEMEK HİZMETLERİ
-          </div>
-
-          <div className="oyHeroMain">
-            <p className="oyHeroProof">Günde 3.000 kişilik üretim kapasitesi</p>
+        <div className="wrap mkHeroInner">
+          <div className="mkHeroCopy">
+            <span className="mkHeroKicker">KURUMSAL YEMEK HİZMETLERİ</span>
             <h1>
-              Ekibiniz için her gün
-              <strong>güvenle hazırlanan sofralar.</strong>
+              Her Sofrada
+              <strong>Güven ve Lezzet</strong>
             </h1>
-            <p className="oyHeroLead">
-              Yerinde üretim, taşımalı ve paket yemek hizmetlerinde; lezzeti,
-              hijyeni ve operasyon disiplinini aynı sofrada buluşturuyoruz.
-            </p>
-
-            <div className="oyHeroActions">
-              <Link className="oyPrimaryCta" href="/teklif">
-                Projeniz için teklif alın <span>→</span>
-              </Link>
-              <a
-                className="oyWhatsAppCta"
-                href="https://wa.me/905466953914"
-                target="_blank"
-                rel="noreferrer"
-              >
-                WhatsApp’tan yazın
-              </a>
-            </div>
-          </div>
-
-          <div className="oyHeroFacts">
-            <article>
-              <b>3.000</b>
-              <span>Kişi / öğün kapasitesi</span>
-            </article>
-            <article>
-              <b>21</b>
-              <span>Referans proje & kurum</span>
-            </article>
-            <article>
-              <b>3</b>
-              <span>Farklı hizmet modeli</span>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section className="oyPromise">
-        <div className="wrap oyPromiseInner">
-          <p>
-            <span>ÖZNUR YEMEK</span>
-            Kurumsal yemek hizmetinde yalnızca yemek değil,
-            <strong> sorunsuz bir günlük operasyon</strong> sunuyoruz.
-          </p>
-          <Link href="/kurumsal">Bizi tanıyın <span>→</span></Link>
-        </div>
-      </section>
-
-      <section className="oyFoodStory">
-        <div className="wrap">
-          <div className="oySectionHeading">
-            <div>
-              <span className="oyEyebrow">SOFRANIN MERKEZİNDE LEZZET VAR</span>
-              <h2>İştah açan menüler.<br />Her gün aynı özen.</h2>
-            </div>
             <p>
-              Menüleri mevsim, çalışan profili, saha koşulları ve porsiyon
-              dengesine göre planlıyoruz. Çünkü iyi operasyonun sonunda
-              insanların severek yediği bir tabak olmalı.
+              Kurumsal yemek hizmetlerinde kalite, hijyen ve sürdürülebilir
+              servis anlayışıyla işletmenizin yanındayız.
             </p>
-          </div>
 
-          <div className="oyFoodGrid">
-            <div className="oyFoodMain">
-              <Image
-                src="https://images.pexels.com/photos/31661077/pexels-photo-31661077.jpeg?auto=compress&cs=tinysrgb&w=2200"
-                alt="Öznur Yemek örnek kurumsal yemek menüsü"
-                fill
-                sizes="(max-width: 900px) 100vw, 62vw"
-              />
-              <div className="oyFoodMainShade" />
-              <div className="oyFoodMainCopy">
-                <span>ÖRNEK MENÜ</span>
-                <h3>Her gün dengeli, sıcak ve iştah açıcı.</h3>
-                <Link href="/ornek-menu">Haftalık menüyü inceleyin →</Link>
-              </div>
+            <div className="mkHeroButtons">
+              <Link href="/teklif" className="mkBtnPrimary">
+                Teklif Al <span>→</span>
+              </Link>
+              <Link href="/ornek-menu" className="mkBtnOutline">
+                Menüleri İncele
+              </Link>
             </div>
 
-            <div className="oyFoodSide">
-              <div className="oyFoodSideImage">
+            <div className="mkHeroBenefits">
+              <div><span>♨</span><b>Sağlıklı<br/>Menüler</b></div>
+              <div><span>◇</span><b>Hijyenik<br/>Üretim</b></div>
+              <div><span>◎</span><b>Güvenilir<br/>Hizmet</b></div>
+              <div><span>✓</span><b>Planlı<br/>Operasyon</b></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="mkServiceWrap">
+        <div className="wrap mkServiceGrid">
+          {services.map((service) => (
+            <Link href={service.href} className="mkServiceCard" key={service.title}>
+              <div className="mkServiceTop">
+                <span className="mkServiceIcon">{service.icon}</span>
+                <div>
+                  <h2>{service.title}</h2>
+                  <p>{service.text}</p>
+                </div>
+                <i>→</i>
+              </div>
+              <div className="mkServicePhoto">
                 <Image
-                  src="https://images.pexels.com/photos/15671416/pexels-photo-15671416.jpeg?auto=compress&cs=tinysrgb&w=2200"
-                  alt="Profesyonel mutfakta yemek hazırlığı"
+                  src={service.image}
+                  alt={service.title}
                   fill
-                  sizes="(max-width: 900px) 100vw, 38vw"
+                  quality={88}
+                  sizes="(max-width: 720px) 88vw, 33vw"
                 />
               </div>
-              <div className="oyMenuList">
-                <span>MENÜDEN ÖRNEKLER</span>
-                {menuItems.map((item, index) => (
-                  <div key={item}>
-                    <i>0{index + 1}</i>
-                    <b>{item}</b>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
+            </Link>
+          ))}
         </div>
       </section>
 
-      <section className="oyServices">
-        <div className="wrap">
-          <div className="oySectionHeading compact">
-            <div>
-              <span className="oyEyebrow">HİZMET MODELLERİ</span>
-              <h2>İşletmenize göre<br />doğru servis modeli.</h2>
-            </div>
-            <Link className="oyTextLink desktopOnly" href="/hizmetler">
-              Tüm hizmetleri inceleyin <span>→</span>
+      <section className="mkStats">
+        <div className="wrap mkStatsGrid">
+          {stats.map(([value, label], index) => (
+            <article key={label}>
+              <span className="mkStatIcon">{["●","▤","✦","✓"][index]}</span>
+              <div>
+                <strong>{value}</strong>
+                <p>{label}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="mkWhy">
+        <div className="wrap mkWhyGrid">
+          <div className="mkWhyIntro">
+            <span className="mkLabel">NEDEN ÖZNUR YEMEK?</span>
+            <h2>İyi yemek kadar güven veren bir operasyon.</h2>
+            <p>
+              Sadece yemek değil; düzen, kalite ve süreklilik sunuyoruz.
+              İşletmenizin günlük yemek operasyonunu baştan sona planlıyoruz.
+            </p>
+            <Link href="/kurumsal" className="mkSmallRedBtn">
+              Hakkımızda <span>→</span>
             </Link>
           </div>
 
-          <div className="oyServiceScroller">
-            {services.map((service) => (
-              <Link className="oyServiceCard" href={service.href} key={service.kicker}>
-                <div className="oyServiceMedia">
-                  <Image
-                    src={service.image}
-                    alt={service.kicker}
-                    fill
-                    sizes="(max-width: 720px) 86vw, 33vw"
-                  />
+          <div className="mkBenefitsGrid">
+            {benefits.map(([icon, title, text]) => (
+              <article key={title}>
+                <span>{icon}</span>
+                <div>
+                  <h3>{title}</h3>
+                  <p>{text}</p>
                 </div>
-                <div className="oyServiceBody">
-                  <span>{service.kicker}</span>
-                  <h3>{service.title}</h3>
-                  <p>{service.text}</p>
-                  <b>Detayları inceleyin <i>→</i></b>
-                </div>
-              </Link>
-            ))}
-          </div>
-
-          <Link className="oyTextLink mobileOnly" href="/hizmetler">
-            Tüm hizmetleri inceleyin <span>→</span>
-          </Link>
-        </div>
-      </section>
-
-      <section className="oyTrust">
-        <div className="wrap oyTrustGrid">
-          <div className="oyTrustMedia">
-            <Image
-              src="https://images.pexels.com/photos/15671274/pexels-photo-15671274.jpeg?auto=compress&cs=tinysrgb&w=2200"
-              alt="Öznur Yemek profesyonel mutfak operasyonu"
-              fill
-              sizes="(max-width: 900px) 100vw, 48vw"
-            />
-            <div className="oyTrustMini">
-              <strong>Planlı üretim</strong>
-              <span>Her vardiyaya uygun günlük akış</span>
-            </div>
-          </div>
-
-          <div className="oyTrustCopy">
-            <span className="oyEyebrow light">PROFESYONELLİK MUTFAKTA BAŞLAR</span>
-            <h2>Lezzetin arkasında güçlü bir sistem var.</h2>
-            <p>
-              Hammadde kabulünden üretime, sıcaklık kontrolünden sevkiyata,
-              personel hijyeninden saha servisine kadar tüm süreci tek
-              operasyon standardıyla yönetiyoruz.
-            </p>
-
-            <div className="oyTrustPoints">
-              <div>
-                <span>01</span>
-                <b>Güvenilir tedarik</b>
-                <p>Ürün kabulü ve hammadde kontrolü.</p>
-              </div>
-              <div>
-                <span>02</span>
-                <b>Hijyenik üretim</b>
-                <p>Standart reçete, porsiyon ve mutfak disiplini.</p>
-              </div>
-              <div>
-                <span>03</span>
-                <b>Kontrollü sevkiyat</b>
-                <p>Sıcaklık ve servis saatine göre planlama.</p>
-              </div>
-            </div>
-
-            <Link href="/kalite-hijyen" className="oyLightCta">
-              Kalite yaklaşımımız <span>→</span>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <section className="oyReferences">
-        <div className="wrap">
-          <div className="oySectionHeading">
-            <div>
-              <span className="oyEyebrow">REFERANSLAR</span>
-              <h2>Güven, sahada kazanılır.</h2>
-            </div>
-            <p>
-              Sanayi, liman, kamu ve inşaat projelerinde farklı çalışma
-              koşullarına uyum sağlayan yemek operasyonları yürüttük.
-            </p>
-          </div>
-
-          <div className="oyRefTop">
-            <div>
-              <strong>21</strong>
-              <span>referans proje ve kurum</span>
-            </div>
-            <Link href="/referanslar">Tüm referansları görün →</Link>
-          </div>
-
-          <div className="oyRefScroller">
-            {refs.map((name, index) => (
-              <article key={name}>
-                <span>{String(index + 1).padStart(2, "0")}</span>
-                <b>{name}</b>
               </article>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="oyClosing">
-        <div className="oyClosingImage">
-          <Image
-            src="https://images.pexels.com/photos/4393667/pexels-photo-4393667.jpeg?auto=compress&cs=tinysrgb&w=2200"
-            alt="Kurumsal yemek sevkiyatı ve servis hazırlığı"
-            fill
-            sizes="100vw"
-          />
-          <div className="oyClosingShade" />
+      <section className="mkMenuSection">
+        <div className="wrap mkMenuGrid">
+          <div className="mkMenuIntro">
+            <span className="mkLabel">GÜNÜN MENÜSÜNDEN ÖRNEKLER</span>
+            <h2>Her gün iştah açan, dengeli tabaklar.</h2>
+            <p>
+              Mevsiminde, taze ve özenle hazırlanan yemeklerle çalışanlarınıza
+              keyifli bir öğün deneyimi sunuyoruz.
+            </p>
+            <Link href="/ornek-menu" className="mkMenuButton">
+              Tüm Menüler <span>→</span>
+            </Link>
+          </div>
+
+          <div className="mkMenuCards">
+            {menuCards.map((item) => (
+              <article className="mkMenuCard" key={item.title}>
+                <div className="mkMenuPhoto">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    quality={90}
+                    sizes="(max-width: 720px) 76vw, 20vw"
+                  />
+                </div>
+                <div className="mkMenuCardText">
+                  <h3>{item.title}</h3>
+                  <p>{item.sub}</p>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
-        <div className="wrap oyClosingContent">
-          <span>YARININ MENÜSÜNÜ BUGÜNDEN PLANLAYALIM</span>
-          <h2>Ekibinizin sofrasını bize emanet edin.</h2>
-          <p>
-            Kişi sayınızı, çalışma düzeninizi ve lokasyonunuzu paylaşın.
-            İşletmenize uygun hizmet modelini birlikte oluşturalım.
-          </p>
-          <Link href="/teklif">
-            Teklif Talebi Oluştur <span>→</span>
-          </Link>
+      </section>
+
+      <section className="mkFacility">
+        <div className="mkFacilityText">
+          <div>
+            <span className="mkFacilityKicker">MODERN ÜRETİM YAKLAŞIMI</span>
+            <h2>Kaliteli Yemek<br/>Güçlü Altyapı</h2>
+            <p>
+              Modern mutfak düzeni, hijyen standartları ve planlı üretim
+              akışıyla günlük binlerce öğünü güvenle yönetiyoruz.
+            </p>
+            <Link href="/kalite-hijyen" className="mkWhiteBtn">
+              Kaliteyi Keşfedin <span>→</span>
+            </Link>
+
+            <div className="mkFacilityBadges">
+              <span>⚙ Modern Ekipman</span>
+              <span>◎ Profesyonel Ekip</span>
+              <span>◇ Hijyenik Ortam</span>
+            </div>
+          </div>
+        </div>
+
+        <div className="mkFacilityPhoto">
+          <Image
+            src="https://images.pexels.com/photos/13971183/pexels-photo-13971183.jpeg?auto=compress&cs=tinysrgb&w=2200"
+            alt="Profesyonel endüstriyel mutfakta çalışan aşçılar"
+            fill
+            quality={90}
+            sizes="(max-width: 900px) 100vw, 55vw"
+          />
+          <div className="mkFacilityNote">Lezzet, disiplinle buluşur.</div>
+        </div>
+      </section>
+
+      <section className="mkReferences">
+        <div className="wrap mkReferencesGrid">
+          <div className="mkRefIntro">
+            <span className="mkLabel">GÜÇLÜ REFERANSLARIMIZ</span>
+            <h2>Farklı sektörlerde güvenilen çözüm ortağı.</h2>
+          </div>
+          <div className="mkRefCards">
+            {references.map((name) => (
+              <div key={name} className="mkRefCard">
+                <b>{name}</b>
+              </div>
+            ))}
+            <Link href="/referanslar" className="mkRefMore">
+              ve daha birçok değerli iş ortağımız <span>→</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="mkFinalCta">
+        <Image
+          src="https://images.pexels.com/photos/33481128/pexels-photo-33481128.jpeg?auto=compress&cs=tinysrgb&w=2200"
+          alt=""
+          fill
+          quality={88}
+          sizes="100vw"
+        />
+        <div className="mkFinalShade" />
+        <div className="wrap mkFinalInner">
+          <div className="mkFinalCopy">
+            <h2>İş yeriniz için en uygun yemek çözümünü birlikte planlayalım</h2>
+            <p>Size özel menü ve fiyat teklifi için hemen bizimle iletişime geçin.</p>
+            <div>
+              <Link href="/teklif" className="mkBtnPrimary">
+                Teklif Al <span>→</span>
+              </Link>
+              <a
+                href="https://wa.me/905466953914"
+                target="_blank"
+                rel="noreferrer"
+                className="mkBtnOutline"
+              >
+                Bize Ulaşın <span>→</span>
+              </a>
+            </div>
+          </div>
+
+          <div className="mkFinalChecks">
+            <span>✓ Hızlı geri dönüş</span>
+            <span>✓ Size özel teklif</span>
+            <span>✓ Keşif ve danışmanlık</span>
+          </div>
         </div>
       </section>
     </main>
