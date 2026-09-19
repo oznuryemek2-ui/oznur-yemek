@@ -1,6 +1,58 @@
+import Image from "next/image";
 import { CTA, PageHero } from "../components/SiteChrome";
+
 export const metadata = { title: "Kalite & Hijyen" };
-const standards=["Gıda güvenliği standartlarına uygun üretim","Düzenli denetim ve kontrol süreçleri","Modern mutfak ekipmanları","Hijyen eğitimli personel","Taze ve birinci kalite ürünler","Sürdürülebilir tedarik yaklaşımı"];
-export default function Quality(){return <main><PageHero eyebrow="KALİTE & HİJYEN" title="Güvenli gıda, sağlıklı gelecek." text="Tedarikten servise kadar her aşamada kontrol, hijyen ve izlenebilirliği operasyonun temel parçası kabul ediyoruz." image="https://images.pexels.com/photos/15671416/pexels-photo-15671416.jpeg?auto=compress&cs=tinysrgb&w=2200"/>
-<section className="section wrap qualityPageGrid"><div><p className="eyebrow red">STANDARTLARIMIZ</p><h2>Kalite tesadüfe bırakılmaz.</h2><p>Hammadde kabulünden üretim alanına, personel hijyeninden sevkiyata kadar süreçler düzenli kontrollerle takip edilir.</p></div><div className="standardCards">{standards.map((s,i)=><article key={s}><span>{String(i+1).padStart(2,"0")}</span><b>{s}</b></article>)}</div></section>
-<section className="darkInfo"><div className="wrap darkInfoGrid"><div><strong>01</strong><h3>Tedarik</h3><p>Güvenilir tedarikçiler ve ürün kabul kontrolü.</p></div><div><strong>02</strong><h3>Üretim</h3><p>Hijyenik hazırlık, standart reçete ve porsiyonlama.</p></div><div><strong>03</strong><h3>Servis</h3><p>Zaman, sıcaklık ve saha düzeninin kontrolü.</p></div><div><strong>04</strong><h3>Takip</h3><p>Saha geri bildirimi ve sürekli kalite kontrolü.</p></div></div></section><CTA/></main>}
+
+const standards=[
+  "Gıda güvenliği standartlarına uygun üretim",
+  "Düzenli denetim ve kontrol süreçleri",
+  "Modern mutfak ekipmanları",
+  "Hijyen eğitimli personel",
+  "Taze ve birinci kalite ürünler",
+  "Sürdürülebilir tedarik zinciri",
+];
+
+const operations=[
+  ["01","Hammadde Tedariği","Güvenilir tedarikçilerden, birinci kalite ürünler"],
+  ["02","Üretim","Modern mutfaklarda hijyenik hazırlık"],
+  ["03","Paketleme","Standartlara uygun, güvenli ambalajlama"],
+  ["04","Sevkiyat","Filomuzla zamanında ve güvenli taşıma"],
+  ["05","Servis","Profesyonel ekip ile düzenli servis"],
+  ["06","Takip & Kontrol","Saha denetimleri ile sürekli kalite kontrol"],
+];
+
+export default function Quality(){
+  return <main>
+    <PageHero
+      eyebrow="KALİTE & HİJYEN STANDARTLARIMIZ"
+      title="Güvenli gıda, sağlıklı gelecek."
+      text="Üretimden servise kadar kalite ve hijyen, operasyonumuzun ayrılmaz parçasıdır."
+      image="/images/site/quality-control.png"
+    />
+
+    <section className="section wrap qualityPageGrid">
+      <div>
+        <p className="eyebrow red">STANDARTLARIMIZ</p>
+        <h2>Sağlıklı beslenme, verimli çalışma demektir.</h2>
+        <p>Gıda güvenliği ve hijyen süreçlerini üretimin her aşamasında sistemli biçimde ele alıyoruz.</p>
+      </div>
+      <div className="standardCards">
+        {standards.map((s,i)=><article key={s}><span>{String(i+1).padStart(2,"0")}</span><b>{s}</b></article>)}
+      </div>
+    </section>
+
+    <section className="qualityVisualBand">
+      <div className="qualityVisualImage">
+        <Image src="/images/site/service-pack.png" alt="Standartlara uygun paket yemek hazırlığı" fill quality={90} sizes="(max-width:900px) 100vw,45vw"/>
+      </div>
+      <div className="qualityVisualCopy">
+        <p className="eyebrow light">OPERASYON GÜCÜMÜZ</p>
+        <h2>Planlı, disiplinli ve kesintisiz hizmet.</h2>
+        <div className="qualityOperations">
+          {operations.map(([n,t,d])=><div key={n}><span>{n}</span><div><b>{t}</b><p>{d}</p></div></div>)}
+        </div>
+      </div>
+    </section>
+    <CTA/>
+  </main>
+}
