@@ -4,22 +4,22 @@ import { useEffect, useState } from "react";
 
 const slides = [
   {
-    src: "/images/site/hero-cooking.svg",
+    src: "/images/site/hero-home-cooking.svg",
     alt: "Profesyonel endüstriyel mutfakta toplu yemek üretimi",
     position: "center 48%",
   },
   {
-    src: "/images/site/hero-packaging.svg",
+    src: "/images/site/hero-home-packaging.svg",
     alt: "Hijyenik koşullarda kurumsal yemeklerin paketlenmesi",
     position: "center 50%",
   },
   {
-    src: "/images/site/hero-driving.svg",
+    src: "/images/site/hero-home-driving.svg",
     alt: "Öznur Yemek logolu elektrikli Ford E-Transit ile sevkiyat",
     position: "center 52%",
   },
   {
-    src: "/images/site/hero-loading.svg",
+    src: "/images/site/hero-home-loading.svg",
     alt: "Hazırlanan yemeklerin Öznur Yemek sevkiyat aracına yüklenmesi",
     position: "center 50%",
   },
