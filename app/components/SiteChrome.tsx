@@ -10,6 +10,7 @@ const nav = [
   ["Kalite & Hijyen", "/kalite-hijyen"],
   ["Referanslar", "/referanslar"],
   ["Örnek Menü", "/ornek-menu"],
+  ["İletişim", "/iletisim"],
 ] as const;
 
 export function Header() {
@@ -43,12 +44,18 @@ export function Header() {
     </header>
 
     <div className="mobileQuickBar" aria-label="Hızlı iletişim">
-      <a href="https://wa.me/905466953914" target="_blank" rel="noreferrer">
-        WhatsApp
+      <a className="quickWhatsApp" href="https://wa.me/905466953914" target="_blank" rel="noreferrer" aria-label="WhatsApp ile iletişime geç">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="currentColor" d="M12.04 2a9.84 9.84 0 0 0-8.41 14.95L2 22l5.2-1.57A9.96 9.96 0 1 0 12.04 2Zm0 17.96a8 8 0 0 1-4.08-1.11l-.29-.17-3.08.93.98-3-.19-.31a7.92 7.92 0 1 1 6.66 3.66Zm4.35-5.94c-.24-.12-1.41-.69-1.63-.77-.22-.08-.38-.12-.54.12-.16.24-.62.77-.76.93-.14.16-.28.18-.52.06-.24-.12-1.01-.37-1.92-1.18-.71-.63-1.19-1.41-1.33-1.65-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.19-.47-.39-.41-.54-.42h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.69 2.58 4.1 3.62.57.25 1.02.39 1.37.5.58.18 1.1.16 1.51.1.46-.07 1.41-.58 1.61-1.13.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28Z"/>
+        </svg>
+        <span>WhatsApp</span>
       </a>
-      <Link href="/teklif">
-        Teklif Al <span>→</span>
-      </Link>
+      <a className="quickCall" href="tel:+905466953914" aria-label="Öznur Yemek'i şimdi ara">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="currentColor" d="M6.62 10.79a15.46 15.46 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02l-2.2 2.2Z"/>
+        </svg>
+        <span>Şimdi Ara</span>
+      </a>
     </div>
   </>
   );
@@ -85,6 +92,7 @@ export function Footer() {
           <Link href="/kalite-hijyen">Kalite & Hijyen</Link>
           <Link href="/referanslar">Referanslar</Link>
           <Link href="/ornek-menu">Örnek Menü</Link>
+          <Link href="/iletisim">İletişim</Link>
         </div>
 
         <div className="footerColumn">
