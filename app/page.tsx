@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import HeroSlider from "./components/HeroSlider";
 
 const services = [
   {
@@ -71,15 +72,7 @@ export default function Home() {
   return (
     <main id="main-content" className="mkHome">
       <section className="mkHero">
-        <Image
-          className="mkHeroImage"
-          src="/images/site/hero-production.png"
-          alt="Profesyonel endüstriyel mutfakta toplu yemek üretimi"
-          fill
-          priority
-          quality={92}
-          sizes="100vw"
-        />
+        <HeroSlider />
         <div className="mkHeroShade" />
 
         <div className="wrap mkHeroInner">
