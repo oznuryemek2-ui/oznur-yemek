@@ -704,3 +704,122 @@
     font-size:37px;
   }
 }
+
+
+/* Site-wide image quality and crop discipline
+   One visual = one job. Desktop crops stay intentional instead of stretching random thumbnails. */
+.pageHeroTextOnly{
+  position:relative;
+  min-height:410px;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 82% 24%,rgba(201,31,44,.09),transparent 30%),
+    linear-gradient(135deg,#f2eee6 0%,#fbfaf7 72%);
+}
+.pageHeroTextOnly:after{
+  content:"";
+  position:absolute;
+  right:6vw;
+  bottom:-110px;
+  width:310px;
+  height:310px;
+  border:1px solid rgba(201,31,44,.18);
+  border-radius:50%;
+}
+.pageHeroGridTextOnly{
+  grid-template-columns:minmax(0,900px);
+}
+.pageHeroGridTextOnly .pageHeroCopy{
+  max-width:900px;
+}
+.pageHeroMedia,
+.serviceDetailImage,
+.mkServicePhoto,
+.mkQualityPhoto,
+.mkMenuVisual,
+.mkFacilityPhoto,
+.menuPagePhoto,
+.qualityVisualImage,
+.corporatePhoto{
+  background:#e9e8e3;
+}
+.pageHeroMedia img,
+.serviceDetailImage img,
+.mkServicePhoto img,
+.mkQualityPhoto img,
+.mkMenuVisual img,
+.mkFacilityPhoto img,
+.mkFinalCta>img,
+.menuPagePhoto img,
+.qualityVisualImage img,
+.corporatePhoto img{
+  object-fit:cover;
+  image-rendering:auto;
+}
+.mkServicePhoto{
+  height:215px;
+}
+.serviceDetailImage{
+  height:auto;
+  min-height:500px;
+  aspect-ratio:16/10;
+  border-radius:2px;
+}
+.serviceDetailImage img{
+  object-position:center;
+}
+.pageHeroMedia{
+  height:auto;
+  min-height:500px;
+  aspect-ratio:4/3;
+  max-height:620px;
+}
+.mkQualityPhoto img{object-position:center}
+.mkMenuVisual img{object-position:center 52%}
+.mkFacilityPhoto img{object-position:center 48%}
+.mkFinalCta>img{object-position:center 50%}
+.menuPagePhoto img{object-position:center 42%}
+.corporatePhoto img{object-position:center}
+.qualityVisualImage img{object-position:center}
+
+/* Avoid asking small card images to impersonate billboards. */
+@media(min-width:1101px){
+  .mkServiceGrid{
+    align-items:stretch;
+  }
+  .mkServicePhoto{
+    aspect-ratio:16/9;
+  }
+  .serviceDetailImage{
+    max-height:610px;
+  }
+}
+
+@media(max-width:900px){
+  .pageHeroTextOnly{
+    min-height:330px;
+  }
+  .serviceDetailImage{
+    min-height:0;
+    aspect-ratio:4/3;
+  }
+}
+
+@media(max-width:720px){
+  .pageHeroTextOnly{
+    min-height:290px;
+  }
+  .mkServicePhoto{
+    height:auto;
+    aspect-ratio:16/10;
+  }
+  .serviceDetailImage{
+    height:auto;
+    aspect-ratio:4/3;
+  }
+  .menuPagePhoto{
+    min-height:350px;
+  }
+}
