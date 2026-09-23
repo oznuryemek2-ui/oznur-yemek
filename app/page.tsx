@@ -170,7 +170,8 @@ export default function Home() {
               <Link href={service.href} className="mkServiceCard" key={service.title}>
                 <div className="mkServiceTop">
                   <span className="mkServiceIcon">{service.icon}</span>
-                  <div>
+                  <div className="mkServiceContent">
+                    <span className="mkServiceKicker">HİZMET MODELİ</span>
                     <h2>{service.title}</h2>
                     <p>{service.text}</p>
                   </div>
