@@ -8,35 +8,35 @@ const services = [
     icon: "♨",
     title: "Yerinde Üretim Yemek Hizmeti",
     text: "İhtiyaçlarınıza uygun menüler, profesyonel ekip ve tam donanımlı mutfak kurulumu.",
-    image: "/images/site/service-onsite.png",
+    image: "/images/site/service-onsite.webp",
     href: "/hizmetler#yerinde",
   },
   {
     icon: "▰",
     title: "Taşımalı Yemek Hizmeti",
     text: "Geniş ve modern araç filomuzla yemeklerinizi zamanında, sıcak ve taze olarak ulaştırıyoruz.",
-    image: "/images/site/service-delivery.png",
+    image: "/images/site/service-delivery.webp",
     href: "/hizmetler#tasimali",
   },
   {
     icon: "▦",
     title: "Paket Yemek Hizmeti",
     text: "Vakum paketleme ile daha hijyenik, düzenli ve pratik toplu yemek çözümleri sunuyoruz.",
-    image: "/images/site/service-pack.png",
+    image: "/images/site/service-pack.webp",
     href: "/hizmetler#paket",
   },
   {
     icon: "◇",
     title: "Davet & Organizasyon",
     text: "Kurumsal davetler, özel organizasyonlar ve toplu etkinlikler için planlı yemek ve servis çözümleri.",
-    image: "/images/site/hero-cooking.svg",
+    image: "https://images.pexels.com/photos/38460679/pexels-photo-38460679.jpeg?auto=compress&cs=tinysrgb&w=2200",
     href: "/hizmetler#organizasyon",
   },
   {
     icon: "◐",
     title: "İftar & Ramazan Organizasyonları",
     text: "Ramazan dönemine özel toplu iftar, paketli yemek ve yerinde servis organizasyonları.",
-    image: "/images/site/menu-food.webp",
+    image: "https://images.pexels.com/photos/34471416/pexels-photo-34471416.jpeg?auto=compress&cs=tinysrgb&w=2200",
     href: "/hizmetler#iftar",
   },
 ];
@@ -266,7 +266,7 @@ export default function Home() {
         <div className="wrap mkQualityGrid">
           <div className="mkQualityPhoto">
             <Image
-              src="/images/site/quality-chef.webp"
+              src="https://images.pexels.com/photos/37431302/pexels-photo-37431302.jpeg?auto=compress&cs=tinysrgb&w=2200"
               alt="Hijyen ve kalite kontrol süreçlerini uygulayan profesyonel mutfak ekibi"
               fill
               quality={95}
@@ -289,7 +289,7 @@ export default function Home() {
         <div className="wrap mkMenuGridFinal">
           <div className="mkMenuVisual">
             <Image
-              src="/images/site/hero-food.webp"
+              src="https://images.pexels.com/photos/15671279/pexels-photo-15671279/free-photo-of-food-on-plates-in-kitchen.jpeg?auto=compress&cs=tinysrgb&w=2200"
               alt="Kurumsal yemek menüsünden sıcak ana yemek sunumu"
               fill
               quality={95}
@@ -366,7 +366,7 @@ export default function Home() {
       </section>
 
       <section className="mkFinalCta">
-        <Image src="/images/site/hero-loading.svg" alt="Kurumsal yemek sevkiyatı için araç yükleme operasyonu" fill quality={95} sizes="100vw" />
+        <Image src="/images/site/hero-driving.svg" alt="Kurumsal sıcak yemek sevkiyat operasyonu" fill quality={95} sizes="100vw" />
         <div className="mkFinalShade" />
         <div className="wrap mkFinalInner">
           <div className="mkFinalCopy">
