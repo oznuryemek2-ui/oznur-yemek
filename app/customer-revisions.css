@@ -232,3 +232,119 @@
   .mkWorkGrid{grid-template-columns:1fr}
   .mkWorkCard{min-height:116px}
 }
+
+
+/* Stronger service-card hierarchy: titles must read as titles at a glance */
+.mkServiceCard{
+  position:relative;
+  border:1px solid #dedede;
+  box-shadow:0 12px 30px rgba(0,0,0,.055);
+}
+.mkServiceCard:before{
+  content:"";
+  position:absolute;
+  z-index:2;
+  left:0;
+  top:0;
+  width:100%;
+  height:4px;
+  background:var(--oy-red);
+  transform:scaleX(.16);
+  transform-origin:left center;
+  transition:transform .25s ease;
+}
+.mkServiceCard:hover:before{
+  transform:scaleX(1);
+}
+.mkServiceTop{
+  min-height:205px;
+  padding:26px 22px 24px;
+  grid-template-columns:52px minmax(0,1fr) 20px;
+  gap:16px;
+  align-items:start;
+}
+.mkServiceIcon{
+  width:46px;
+  height:46px;
+  display:grid;
+  place-items:center;
+  border-radius:10px;
+  background:#fff3f4;
+  color:var(--oy-red);
+  font-size:29px;
+  line-height:1;
+}
+.mkServiceContent{
+  min-width:0;
+}
+.mkServiceKicker{
+  display:block;
+  margin:1px 0 8px;
+  color:var(--oy-red);
+  font-size:9px;
+  line-height:1;
+  font-weight:900;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+}
+.mkServiceTop h2{
+  margin:0 0 12px;
+  color:#111;
+  font-size:clamp(24px,2vw,31px);
+  line-height:1.05;
+  letter-spacing:-.04em;
+  font-weight:900;
+  text-wrap:balance;
+}
+.mkServiceTop p{
+  margin:0;
+  color:#666b66;
+  font-size:12.5px;
+  line-height:1.58;
+}
+.mkServiceTop i{
+  margin-top:24px;
+  color:var(--oy-red);
+  font-size:23px;
+  font-weight:700;
+}
+
+@media(max-width:1050px){
+  .mkServiceTop{
+    min-height:190px;
+  }
+  .mkServiceTop h2{
+    font-size:27px;
+  }
+}
+
+@media(max-width:720px){
+  .mkServiceTop{
+    min-height:auto;
+    padding:22px 18px 20px;
+    grid-template-columns:44px minmax(0,1fr) 18px;
+    gap:13px;
+  }
+  .mkServiceIcon{
+    width:40px;
+    height:40px;
+    font-size:25px;
+  }
+  .mkServiceKicker{
+    margin-bottom:7px;
+    font-size:8px;
+  }
+  .mkServiceTop h2{
+    margin-bottom:9px;
+    font-size:22px;
+    line-height:1.08;
+  }
+  .mkServiceTop p{
+    font-size:12px;
+    line-height:1.5;
+  }
+  .mkServiceTop i{
+    margin-top:20px;
+    font-size:20px;
+  }
+}
