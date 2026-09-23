@@ -830,3 +830,42 @@
   object-position:82% center;
   transform:scale(1.045);
 }
+
+
+/* Image quality and crop discipline */
+.mkServicePhoto img,
+.mkQualityPhoto img,
+.mkMenuVisual img,
+.mkFacilityPhoto img,
+.mkFinalCta > img,
+.serviceDetailImage img,
+.pageHeroMedia img,
+.qualityVisualImage img,
+.menuPagePhoto img,
+.corporatePhoto img{
+  object-fit:cover;
+  image-rendering:auto;
+}
+
+.mkServiceCard:nth-child(4) .mkServicePhoto img{object-position:center 42%}
+.mkServiceCard:nth-child(5) .mkServicePhoto img{object-position:center 54%}
+.mkQualityPhoto img{object-position:center 45%}
+.mkMenuVisual img{object-position:center 52%}
+.mkFacilityPhoto img{object-position:center 48%}
+.serviceDetailImage img{object-position:center 50%}
+.qualityVisualImage img{object-position:center 46%}
+.menuPagePhoto img{object-position:center 50%}
+.corporatePhoto img{
+  width:100%;
+  height:auto;
+  object-fit:cover;
+}
+
+@media(min-width:1100px){
+  .pageHeroMedia,
+  .serviceDetailImage,
+  .qualityVisualImage,
+  .menuPagePhoto{
+    overflow:hidden;
+  }
+}
