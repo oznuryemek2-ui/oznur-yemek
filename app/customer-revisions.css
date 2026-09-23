@@ -1,0 +1,234 @@
+/* Customer revision pass — 2026-09-23
+   Keeps the existing visual language while making desktop contact actions,
+   service breadth and sector coverage immediately visible. */
+
+/* Hero: brighter photography, quicker crossfade, desktop contact actions */
+.mkHeroShade{
+  background:
+    linear-gradient(90deg,rgba(10,10,10,.74) 0%,rgba(10,10,10,.58) 34%,rgba(10,10,10,.13) 70%,rgba(10,10,10,.025) 100%),
+    linear-gradient(0deg,rgba(8,8,8,.28),transparent 58%);
+}
+.mkHeroSlide{
+  filter:saturate(.98) contrast(1.015) brightness(1.10);
+  transition:opacity .72s ease,transform 4.4s ease;
+}
+.mkHero,
+.mkHeroInner{
+  min-height:590px;
+}
+.mkHeroContactRow{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:14px;
+}
+.mkHeroContact{
+  min-height:44px;
+  padding:0 15px;
+  border:1px solid rgba(255,255,255,.28);
+  border-radius:6px;
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  background:rgba(15,15,15,.28);
+  backdrop-filter:blur(8px);
+  color:#fff;
+  font-size:11px;
+  font-weight:850;
+  transition:.2s ease;
+}
+.mkHeroContact svg{
+  width:17px;
+  height:17px;
+  flex:0 0 17px;
+}
+.mkHeroContact:hover{
+  transform:translateY(-2px);
+  border-color:rgba(255,255,255,.58);
+  background:rgba(15,15,15,.48);
+}
+.mkHeroContact.whatsapp svg{color:#6ee39a}
+.mkHeroContact.call svg{color:#ff818a}
+
+/* Services: introduce the section clearly and balance 5 cards */
+.mkServiceWrap{
+  padding:58px 0 42px;
+}
+.mkServiceHead{
+  margin-bottom:26px;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(260px,.62fr);
+  gap:46px;
+  align-items:end;
+}
+.mkServiceHead h2{
+  margin:0;
+  max-width:720px;
+  font-size:clamp(34px,3.6vw,52px);
+  line-height:1;
+  letter-spacing:-.045em;
+}
+.mkServiceHead>p{
+  margin:0;
+  color:var(--oy-muted);
+  font-size:13px;
+  line-height:1.65;
+}
+.mkServiceGrid{
+  grid-template-columns:repeat(6,minmax(0,1fr));
+  gap:16px;
+}
+.mkServiceCard{grid-column:span 2}
+.mkServiceCard:nth-child(4),
+.mkServiceCard:nth-child(5){grid-column:span 3}
+.mkServiceTop{
+  min-height:168px;
+}
+.mkServicePhoto{
+  height:180px;
+}
+.mkServiceCard:nth-child(4) .mkServicePhoto img,
+.mkServiceCard:nth-child(5) .mkServicePhoto img{
+  object-position:center 50%;
+}
+
+/* Work areas */
+.mkWorkAreas{
+  padding:58px 0 64px;
+  background:#f7f7f5;
+  border-top:1px solid #ecece8;
+  border-bottom:1px solid #ecece8;
+}
+.mkWorkHead{
+  display:grid;
+  grid-template-columns:minmax(0,.9fr) minmax(280px,.55fr);
+  gap:54px;
+  align-items:end;
+  margin-bottom:30px;
+}
+.mkWorkHead h2{
+  margin:0;
+  max-width:680px;
+  font-size:clamp(36px,4vw,56px);
+  line-height:1;
+  letter-spacing:-.048em;
+}
+.mkWorkHead>p{
+  margin:0;
+  color:var(--oy-muted);
+  font-size:13px;
+  line-height:1.7;
+}
+.mkWorkGrid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  border-top:1px solid #dddeda;
+  border-left:1px solid #dddeda;
+  background:#fff;
+}
+.mkWorkCard{
+  min-height:150px;
+  padding:22px;
+  border-right:1px solid #dddeda;
+  border-bottom:1px solid #dddeda;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  transition:.2s ease;
+}
+.mkWorkCard:hover{
+  background:#fffaf8;
+  transform:translateY(-2px);
+}
+.mkWorkCard span{
+  color:var(--oy-red);
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:.12em;
+}
+.mkWorkCard h3{
+  margin:28px 0 5px;
+  font-size:19px;
+  line-height:1.1;
+  letter-spacing:-.025em;
+}
+.mkWorkCard p{
+  margin:0;
+  color:var(--oy-muted);
+  font-size:11px;
+  line-height:1.45;
+}
+
+@media(max-width:1050px){
+  .mkHero,
+  .mkHeroInner{min-height:560px}
+  .mkServiceHead,
+  .mkWorkHead{
+    grid-template-columns:1fr;
+    gap:14px;
+  }
+  .mkServiceGrid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+  .mkServiceCard,
+  .mkServiceCard:nth-child(4),
+  .mkServiceCard:nth-child(5){
+    grid-column:span 1;
+  }
+  .mkServiceCard:last-child{
+    grid-column:1/-1;
+  }
+  .mkWorkGrid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+}
+
+@media(max-width:720px){
+  .mkHero,
+  .mkHeroInner{min-height:535px}
+  .mkHeroShade{
+    background:
+      linear-gradient(90deg,rgba(10,10,10,.73) 0%,rgba(10,10,10,.48) 58%,rgba(10,10,10,.16) 100%),
+      linear-gradient(0deg,rgba(8,8,8,.30),transparent 56%);
+  }
+  .mkHeroSlide{
+    filter:saturate(.98) contrast(1.01) brightness(1.06);
+    transition:opacity .68s ease,transform 4.1s ease;
+  }
+  .mkHeroContactRow{display:none}
+  .mkServiceWrap{padding:44px 0 34px}
+  .mkServiceHead{margin-bottom:20px}
+  .mkServiceHead h2,
+  .mkWorkHead h2{font-size:34px}
+  .mkServiceGrid{
+    grid-template-columns:1fr;
+    gap:12px;
+  }
+  .mkServiceCard,
+  .mkServiceCard:last-child{
+    grid-column:auto;
+  }
+  .mkServiceTop{
+    min-height:auto;
+    padding:20px;
+  }
+  .mkServicePhoto{height:170px}
+  .mkWorkAreas{padding:46px 0 52px}
+  .mkWorkHead{margin-bottom:22px}
+  .mkWorkGrid{
+    grid-template-columns:1fr 1fr;
+  }
+  .mkWorkCard{
+    min-height:132px;
+    padding:17px;
+  }
+  .mkWorkCard h3{
+    margin-top:20px;
+    font-size:16px;
+  }
+}
+
+@media(max-width:430px){
+  .mkWorkGrid{grid-template-columns:1fr}
+  .mkWorkCard{min-height:116px}
+}
