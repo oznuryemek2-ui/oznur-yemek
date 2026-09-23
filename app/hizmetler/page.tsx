@@ -27,9 +27,27 @@ const items=[
     no:"03",
     kicker:"PAKET YEMEK HİZMETİ",
     title:"Hijyenik ve pratik paket yemek çözümü.",
-    text:"Paketinle, yemeğini ye, bitir. Vakum paketleme ile daha hijyenik, daha uzun süre taze.",
+    text:"Vakum paketleme ile daha hijyenik, düzenli ve pratik toplu yemek çözümleri sunuyoruz.",
     image:"/images/site/service-pack.png",
-    bullets:["Vakum paketleme","Daha hijyenik servis","Daha uzun süre tazelik"]
+    bullets:["Vakum paketleme","Hijyenik servis","Planlı ve pratik dağıtım"]
+  },
+  {
+    id:"organizasyon",
+    no:"04",
+    kicker:"DAVET & ORGANİZASYON",
+    title:"Kurumsal ve özel organizasyonlar için planlı servis.",
+    text:"Kurumsal davetler, toplantılar ve toplu etkinliklerde kişi sayısı ve etkinlik akışına uygun üretim ve servis planı oluşturuyoruz.",
+    image:"/images/site/hero-home-cooking.svg",
+    bullets:["Etkinliğe özel menü planı","Üretim ve servis koordinasyonu","Kurumsal ve toplu organizasyonlar"]
+  },
+  {
+    id:"iftar",
+    no:"05",
+    kicker:"İFTAR & RAMAZAN ORGANİZASYONLARI",
+    title:"Ramazan dönemine özel toplu iftar çözümleri.",
+    text:"Toplu iftar programları için menü, üretim, paketleme, sevkiyat ve yerinde servis süreçlerini tek plan altında yönetiyoruz.",
+    image:"/images/site/menu-meals.png",
+    bullets:["Toplu iftar menüleri","Paketli yemek ve sevkiyat","Yerinde servis organizasyonu"]
   }
 ];
 
@@ -38,7 +56,7 @@ export default function Services(){
     <PageHero
       eyebrow="HİZMET MODELLERİMİZ"
       title="Her ihtiyaca uygun, esnek çözümler."
-      text="Yerinde üretim, taşımalı yemek ve paket yemek modellerimizle farklı proje koşullarına uygun hizmet sunuyoruz."
+      text="Yerinde üretim, taşımalı yemek, paket yemek, davet ve Ramazan organizasyonlarıyla farklı proje koşullarına uygun hizmet sunuyoruz."
       image="/images/site/service-onsite.png"
     />
     <section className="section wrap serviceDetailList">
