@@ -6,7 +6,7 @@ const officialLogo = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAlgAAADjBAMA
 
 const nav = [
   ["Kurumsal", "/kurumsal"],
-  ["Hizmetler", "/hizmetler"],
+  ["Hizmetler", "/hizmetler"],\n  ["Çalışma Alanları", "/calisma-alanlarimiz"],
   ["Kalite & Hijyen", "/kalite-hijyen"],
   ["Referanslar", "/referanslar"],
   ["Örnek Menü", "/ornek-menu"],
@@ -88,7 +88,7 @@ export function Footer() {
         <div className="footerColumn">
           <b>Site</b>
           <Link href="/kurumsal">Kurumsal</Link>
-          <Link href="/hizmetler">Hizmetler</Link>
+          <Link href="/hizmetler">Hizmetler</Link>\n          <Link href="/calisma-alanlarimiz">Çalışma Alanlarımız</Link>
           <Link href="/kalite-hijyen">Kalite & Hijyen</Link>
           <Link href="/referanslar">Referanslar</Link>
           <Link href="/ornek-menu">Örnek Menü</Link>
