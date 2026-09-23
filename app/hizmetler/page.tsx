@@ -46,7 +46,7 @@ const items=[
     kicker:"İFTAR & RAMAZAN ORGANİZASYONLARI",
     title:"Ramazan dönemine özel toplu iftar çözümleri.",
     text:"Toplu iftar programları için menü, üretim, paketleme, sevkiyat ve yerinde servis süreçlerini tek plan altında yönetiyoruz.",
-    image:"/images/site/menu-meals.png",
+    image:"https://images.pexels.com/photos/20475933/pexels-photo-20475933.jpeg?auto=compress&cs=tinysrgb&w=2200",
     bullets:["Toplu iftar menüleri","Paketli yemek ve sevkiyat","Yerinde servis organizasyonu"]
   }
 ];
