@@ -45,8 +45,7 @@ export default function References(){
       eyebrow="REFERANSLARIMIZ"
       title="Büyük projelerde, güçlü iş ortağı."
       text="Tosyalı Holding Çelikhane, TOKİ projeleri ve İskenderun bölgesinde farklı sektörlerde saha deneyimi."
-      image="/images/site/service-onsite.png"
-    />
+      />
     <section className="section wrap refsPage">
       <div className="refsLead">
         <p className="eyebrow red">5 YILLIK SAHA DENEYİMİ</p>
