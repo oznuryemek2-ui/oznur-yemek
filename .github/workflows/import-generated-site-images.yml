@@ -1,0 +1,72 @@
+name: Import generated site images
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/import-generated-site-images.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  import-images:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Download generated images
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p public/images/site/generated
+
+          download() {
+            url="$1"
+            dest="$2"
+            echo "Downloading $dest"
+            curl --fail --location --retry 3 --retry-delay 2 "$url" -o "$dest"
+            test -s "$dest"
+            size=$(stat -c%s "$dest")
+            if [ "$size" -lt 20000 ]; then
+              echo "Downloaded file is unexpectedly small: $dest ($size bytes)"
+              exit 1
+            fi
+          }
+
+          download "https://at.adobe.com/EMoLmttzSLdxRpC0" "public/images/site/generated/slider-cooking.webp"
+          download "https://at.adobe.com/PoYTejNspVxVYNsh" "public/images/site/generated/slider-packaging.webp"
+          download "https://at.adobe.com/qSwi3GQeRo7FZTlm" "public/images/site/generated/slider-loading.webp"
+          download "https://at.adobe.com/C4WzAl32QH5fVK51" "public/images/site/generated/slider-service.webp"
+          download "https://at.adobe.com/rDutdAUrle9ghOCi" "public/images/site/generated/home-onsite.webp"
+          download "https://at.adobe.com/zHICt5vIh5AXiSOS" "public/images/site/generated/home-delivery.webp"
+          download "https://at.adobe.com/9pVeNkFmMiFz5wWI" "public/images/site/generated/home-packaging.webp"
+          download "https://at.adobe.com/eHW6hmbzeU0E9Vw7" "public/images/site/generated/home-event.webp"
+          download "https://at.adobe.com/K7D4P2n010wHuMtI" "public/images/site/generated/home-iftar.webp"
+          download "https://at.adobe.com/hjLAU0bZCb0xjOXs" "public/images/site/generated/home-quality.webp"
+          download "https://at.adobe.com/CBEBfAcRglvgtJgg" "public/images/site/generated/home-menu.webp"
+          download "https://at.adobe.com/qddBkyAZRoPnsWEm" "public/images/site/generated/service-onsite.webp"
+          download "https://at.adobe.com/2NebpqLN9ItSpwog" "public/images/site/generated/service-delivery.webp"
+          download "https://at.adobe.com/koS5Cz5PaB5jxooQ" "public/images/site/generated/service-packaging.webp"
+          download "https://at.adobe.com/xBJ6s07QlgG5lsz0" "public/images/site/generated/service-event.webp"
+          download "https://at.adobe.com/jAIIL6hZWzDPX6fH" "public/images/site/generated/service-iftar.webp"
+          download "https://at.adobe.com/QjboTTi91akghzr0" "public/images/site/generated/service-quality.webp"
+          download "https://at.adobe.com/TedYdcubMFtbT9um" "public/images/site/generated/service-cafeteria.webp"
+          download "https://at.adobe.com/b5KaDI7Tfw1ImaY8" "public/images/site/generated/menu-detail.webp"
+
+      - name: Commit generated images
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/images/site/generated
+          if git diff --cached --quiet; then
+            echo "No image changes to commit."
+            exit 0
+          fi
+          git commit -m "Add optimized generated site photography"
+          git push origin HEAD:main
