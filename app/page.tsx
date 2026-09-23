@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import HeroSlider from "./components/HeroSlider";\nimport WorkAreaIcon from "./components/WorkAreaIcon";
+import HeroSlider from "./components/HeroSlider";
+import WorkAreaIcon from "./components/WorkAreaIcon";
 
 const services = [
   {
