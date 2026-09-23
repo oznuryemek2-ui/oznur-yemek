@@ -266,8 +266,8 @@ export default function Home() {
         <div className="wrap mkQualityGrid">
           <div className="mkQualityPhoto">
             <Image
-              src="/images/site/quality-control.png"
-              alt="Hijyen standartlarıyla kontrol edilen toplu yemek üretimi"
+              src="/images/site/quality-chef.webp"
+              alt="Hijyen ve kalite kontrol süreçlerini uygulayan profesyonel mutfak ekibi"
               fill
               quality={95}
               sizes="(max-width: 900px) 100vw, 50vw"
