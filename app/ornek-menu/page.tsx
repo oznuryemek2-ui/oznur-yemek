@@ -89,8 +89,8 @@ export default function Menu(){
       eyebrow="ÖRNEK MENÜ"
       title="Lezzetli, dengeli ve güvenilir öğün planı."
       text="PDF’te yer alan Ağustos ayı kahvaltı ve yemek menülerini tam olarak inceleyin."
-      image="https://images.pexels.com/photos/37105715/pexels-photo-37105715.jpeg?auto=compress&cs=tinysrgb&w=2200"
-      imageAlt="Profesyonel mutfakta kurumsal yemek hazırlığı"
+      image="/images/site/generated/menu-detail.webp"
+      imageAlt="Profesyonel mutfakta özenle hazırlanmış dengeli kurumsal öğünler"
     />
 
     <section className="section wrap menuPage menuPageFull">
