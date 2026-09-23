@@ -89,7 +89,6 @@ export default function Menu(){
       eyebrow="ÖRNEK MENÜ"
       title="Lezzetli, dengeli ve güvenilir öğün planı."
       text="PDF’te yer alan Ağustos ayı kahvaltı ve yemek menülerini tam olarak inceleyin."
-      image="/images/site/menu-meals.png"
     />
 
     <section className="section wrap menuPage menuPageFull">
@@ -100,7 +99,7 @@ export default function Menu(){
       </div>
 
       <div className="menuPagePhoto">
-        <Image src="/images/site/menu-meals.png" alt="Porsiyonlanmış kurumsal yemekler" fill quality={90} sizes="100vw"/>
+        <Image src="/images/site/kitchen-team.jpg" alt="Profesyonel mutfakta öğün sunumu hazırlayan şef" fill quality={95} sizes="(max-width:900px) 100vw, 1100px"/>
       </div>
 
       <MenuTable
