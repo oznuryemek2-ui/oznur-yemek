@@ -118,23 +118,34 @@ export function PageHero({
   title,
   text,
   image,
+  imageAlt = "",
 }: {
   eyebrow: string;
   title: string;
   text: string;
-  image: string;
+  image?: string;
+  imageAlt?: string;
 }) {
   return (
-    <section className="pageHero">
-      <div className="wrap pageHeroGrid">
+    <section className={`pageHero ${image ? "" : "pageHeroTextOnly"}`}>
+      <div className={`wrap pageHeroGrid ${image ? "" : "pageHeroGridTextOnly"}`}>
         <div className="pageHeroCopy">
           <p className="eyebrow red">{eyebrow}</p>
           <h1>{title}</h1>
           <p>{text}</p>
         </div>
-        <div className="pageHeroMedia">
-          <Image src={image} alt="" fill priority quality={90} sizes="(max-width: 900px) 100vw, 52vw" />
-        </div>
+        {image ? (
+          <div className="pageHeroMedia">
+            <Image
+              src={image}
+              alt={imageAlt}
+              fill
+              priority
+              quality={95}
+              sizes="(max-width: 900px) 100vw, 52vw"
+            />
+          </div>
+        ) : null}
       </div>
     </section>
   );
