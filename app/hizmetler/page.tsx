@@ -10,7 +10,7 @@ const items=[
     kicker:"YERİNDE ÜRETİM YEMEK HİZMETİ",
     title:"İhtiyaçlarınıza uygun menüler ve tam donanımlı mutfak kurulumu.",
     text:"İhtiyaçlarınıza uygun menüler, profesyonel ekip ve tam donanımlı mutfak kurulumu.",
-    image:"/images/site/service-onsite.png",
+    image:"/images/site/hero-production.png",
     bullets:["İhtiyaca uygun menü","Profesyonel ekip","Tam donanımlı mutfak kurulumu"]
   },
   {
@@ -19,7 +19,7 @@ const items=[
     kicker:"TAŞIMALI YEMEK HİZMETİ",
     title:"Zamanında, sıcak ve taze teslimat.",
     text:"Geniş ve modern araç filomuzla yemeklerinizi zamanında, sıcak ve taze olarak ulaştırıyoruz.",
-    image:"/images/site/service-delivery.png",
+    image:"/images/site/hero-driving.svg",
     bullets:["Geniş ve modern araç filosu","Zamanında teslimat","Sıcak ve taze ulaştırma"]
   },
   {
@@ -28,7 +28,7 @@ const items=[
     kicker:"PAKET YEMEK HİZMETİ",
     title:"Hijyenik ve pratik paket yemek çözümü.",
     text:"Vakum paketleme ile daha hijyenik, düzenli ve pratik toplu yemek çözümleri sunuyoruz.",
-    image:"/images/site/service-pack.png",
+    image:"/images/site/hero-packaging.svg",
     bullets:["Vakum paketleme","Hijyenik servis","Planlı ve pratik dağıtım"]
   },
   {
@@ -37,7 +37,7 @@ const items=[
     kicker:"DAVET & ORGANİZASYON",
     title:"Kurumsal ve özel organizasyonlar için planlı servis.",
     text:"Kurumsal davetler, toplantılar ve toplu etkinliklerde kişi sayısı ve etkinlik akışına uygun üretim ve servis planı oluşturuyoruz.",
-    image:"/images/site/hero-home-cooking.svg",
+    image:"/images/site/chef.jpg",
     bullets:["Etkinliğe özel menü planı","Üretim ve servis koordinasyonu","Kurumsal ve toplu organizasyonlar"]
   },
   {
@@ -57,13 +57,12 @@ export default function Services(){
       eyebrow="HİZMET MODELLERİMİZ"
       title="Her ihtiyaca uygun, esnek çözümler."
       text="Yerinde üretim, taşımalı yemek, paket yemek, davet ve Ramazan organizasyonlarıyla farklı proje koşullarına uygun hizmet sunuyoruz."
-      image="/images/site/service-onsite.png"
     />
     <section className="section wrap serviceDetailList">
       {items.map((x,i)=>
         <article id={x.id} className={"serviceDetail "+(i%2?"reverse":"")} key={x.id}>
           <div className="serviceDetailImage">
-            <Image src={x.image} alt={x.kicker} fill quality={90} sizes="(max-width:900px) 100vw,50vw"/>
+            <Image src={x.image} alt={x.kicker} fill quality={95} sizes="(max-width:900px) 100vw,50vw"/>
             <span>{x.no}</span>
           </div>
           <div className="serviceDetailCopy">
