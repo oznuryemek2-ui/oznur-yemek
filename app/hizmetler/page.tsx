@@ -67,8 +67,8 @@ export default function Services(){
             <span>{x.no}</span>
           </div>
           <div className="serviceDetailCopy">
-            <p className="eyebrow red">{x.kicker}</p>
-            <h2>{x.title}</h2>
+            <h2 className="serviceTypeTitle">{x.kicker}</h2>
+            <h3 className="servicePromiseTitle">{x.title}</h3>
             <p>{x.text}</p>
             <ul>{x.bullets.map(b=><li key={b}>{b}</li>)}</ul>
           </div>
