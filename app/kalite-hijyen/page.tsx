@@ -27,6 +27,8 @@ export default function Quality(){
       eyebrow="KALİTE & HİJYEN STANDARTLARIMIZ"
       title="Güvenli gıda, sağlıklı gelecek."
       text="Üretimden servise kadar kalite ve hijyen, operasyonumuzun ayrılmaz parçasıdır."
+      image="/images/site/hero-packaging.svg"
+      imageAlt="Hijyenik paketleme ve üretim süreci"
       />
 
     <section className="section wrap qualityPageGrid">
