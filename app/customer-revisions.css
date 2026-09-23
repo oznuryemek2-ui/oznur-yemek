@@ -823,3 +823,10 @@
     min-height:350px;
   }
 }
+
+
+/* Home quality visual crop: keep the subject, discard baked edge text from the source. */
+.mkQualityPhoto img[src*="quality-chef"]{
+  object-position:82% center;
+  transform:scale(1.045);
+}
