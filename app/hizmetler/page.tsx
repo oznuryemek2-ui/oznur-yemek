@@ -19,7 +19,7 @@ const items=[
     kicker:"TAŞIMALI YEMEK HİZMETİ",
     title:"Zamanında, sıcak ve taze teslimat.",
     text:"Geniş ve modern araç filomuzla yemeklerinizi zamanında, sıcak ve taze olarak ulaştırıyoruz.",
-    image:"/images/site/hero-driving.svg",
+    image:"/images/site/service-delivery.png",
     bullets:["Geniş ve modern araç filosu","Zamanında teslimat","Sıcak ve taze ulaştırma"]
   },
   {
@@ -28,7 +28,7 @@ const items=[
     kicker:"PAKET YEMEK HİZMETİ",
     title:"Hijyenik ve pratik paket yemek çözümü.",
     text:"Vakum paketleme ile daha hijyenik, düzenli ve pratik toplu yemek çözümleri sunuyoruz.",
-    image:"/images/site/hero-packaging.svg",
+    image:"/images/site/service-pack.png",
     bullets:["Vakum paketleme","Hijyenik servis","Planlı ve pratik dağıtım"]
   },
   {
@@ -37,7 +37,7 @@ const items=[
     kicker:"DAVET & ORGANİZASYON",
     title:"Kurumsal ve özel organizasyonlar için planlı servis.",
     text:"Kurumsal davetler, toplantılar ve toplu etkinliklerde kişi sayısı ve etkinlik akışına uygun üretim ve servis planı oluşturuyoruz.",
-    image:"/images/site/chef.jpg",
+    image:"https://images.pexels.com/photos/34975688/pexels-photo-34975688.jpeg?auto=compress&cs=tinysrgb&w=2200",
     bullets:["Etkinliğe özel menü planı","Üretim ve servis koordinasyonu","Kurumsal ve toplu organizasyonlar"]
   },
   {
@@ -57,6 +57,8 @@ export default function Services(){
       eyebrow="HİZMET MODELLERİMİZ"
       title="Her ihtiyaca uygun, esnek çözümler."
       text="Yerinde üretim, taşımalı yemek, paket yemek, davet ve Ramazan organizasyonlarıyla farklı proje koşullarına uygun hizmet sunuyoruz."
+      image="https://images.pexels.com/photos/10511959/pexels-photo-10511959.jpeg?auto=compress&cs=tinysrgb&w=2200"
+      imageAlt="Profesyonel ekip ile kurumsal yemek üretimi"
     />
     <section className="section wrap serviceDetailList">
       {items.map((x,i)=>
