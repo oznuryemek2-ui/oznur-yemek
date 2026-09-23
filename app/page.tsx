@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import HeroSlider from "./components/HeroSlider";
+import HeroSlider from "./components/HeroSlider";\nimport WorkAreaIcon from "./components/WorkAreaIcon";
 
 const services = [
   {
@@ -41,15 +41,15 @@ const services = [
 ];
 
 const workAreas = [
-  ["01", "Fabrikalar", "Vardiyalı üretim düzenine uygun kesintisiz yemek operasyonu."],
-  ["02", "Şantiyeler", "Saha koşullarına uygun planlı üretim, sevkiyat ve servis."],
-  ["03", "Okullar", "Dengeli menüler ve düzenli servis süreçleri."],
-  ["04", "Hastaneler", "Hijyen ve operasyon disiplinini merkeze alan hizmet."],
-  ["05", "Kamu Kurumları", "Kurumsal standartlara uygun, sürdürülebilir toplu yemek."],
-  ["06", "Ofisler", "Çalışan deneyimini destekleyen günlük yemek çözümleri."],
-  ["07", "Limanlar", "Yoğun saha temposuna uyumlu zamanında üretim ve teslimat."],
-  ["08", "Enerji Projeleri", "Proje sahalarına özel ölçeklenebilir yemek operasyonu."],
-];
+  { id: "fabrikalar", icon: "factory", title: "Fabrikalar", text: "Vardiyalı üretim düzenine uygun kesintisiz yemek operasyonu." },
+  { id: "santiyeler", icon: "construction", title: "Şantiyeler", text: "Saha koşullarına uygun planlı üretim, sevkiyat ve servis." },
+  { id: "okullar", icon: "school", title: "Okullar", text: "Dengeli menüler ve düzenli servis süreçleri." },
+  { id: "hastaneler", icon: "hospital", title: "Hastaneler", text: "Hijyen ve operasyon disiplinini merkeze alan hizmet." },
+  { id: "kamu-kurumlari", icon: "government", title: "Kamu Kurumları", text: "Kurumsal standartlara uygun, sürdürülebilir toplu yemek." },
+  { id: "ofisler", icon: "office", title: "Ofisler", text: "Çalışan deneyimini destekleyen günlük yemek çözümleri." },
+  { id: "limanlar", icon: "port", title: "Limanlar", text: "Yoğun saha temposuna uyumlu zamanında üretim ve teslimat." },
+  { id: "enerji-projeleri", icon: "energy", title: "Enerji Projeleri", text: "Proje sahalarına özel ölçeklenebilir yemek operasyonu." },
+] as const;
 
 const stats = [
   ["3.000", "Kişi / öğün üretim kapasitesi"],
@@ -199,15 +199,28 @@ export default function Home() {
             </p>
           </div>
           <div className="mkWorkGrid">
-            {workAreas.map(([no, title, text]) => (
-              <article className="mkWorkCard" key={title}>
-                <span>{no}</span>
+            {workAreas.map((area) => (
+              <Link
+                href={`/calisma-alanlarimiz#${area.id}`}
+                className="mkWorkCard"
+                key={area.id}
+                aria-label={`${area.title} çalışma alanını incele`}
+              >
+                <span className="mkWorkIcon">
+                  <WorkAreaIcon type={area.icon} />
+                </span>
                 <div>
-                  <h3>{title}</h3>
-                  <p>{text}</p>
+                  <h3>{area.title}</h3>
+                  <p>{area.text}</p>
                 </div>
-              </article>
+                <span className="mkWorkArrow" aria-hidden="true">→</span>
+              </Link>
             ))}
+          </div>
+          <div className="mkWorkFooter">
+            <Link href="/calisma-alanlarimiz" className="mkWorkMore">
+              Tüm Çalışma Alanlarımızı İncele <span>→</span>
+            </Link>
           </div>
         </div>
       </section>
