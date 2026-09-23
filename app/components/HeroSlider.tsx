@@ -32,7 +32,7 @@ export default function HeroSlider() {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     const timer = window.setInterval(
       () => setActive((current) => (current + 1) % slides.length),
-      5200
+      3800
     );
     return () => window.clearInterval(timer);
   }, []);
