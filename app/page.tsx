@@ -8,35 +8,35 @@ const services = [
     icon: "♨",
     title: "Yerinde Üretim Yemek Hizmeti",
     text: "İhtiyaçlarınıza uygun menüler, profesyonel ekip ve tam donanımlı mutfak kurulumu.",
-    image: "/images/site/service-onsite.webp",
+    image: "/images/site/generated/home-onsite.webp",
     href: "/hizmetler#yerinde",
   },
   {
     icon: "▰",
     title: "Taşımalı Yemek Hizmeti",
     text: "Geniş ve modern araç filomuzla yemeklerinizi zamanında, sıcak ve taze olarak ulaştırıyoruz.",
-    image: "/images/site/service-delivery.webp",
+    image: "/images/site/generated/home-delivery.webp",
     href: "/hizmetler#tasimali",
   },
   {
     icon: "▦",
     title: "Paket Yemek Hizmeti",
     text: "Vakum paketleme ile daha hijyenik, düzenli ve pratik toplu yemek çözümleri sunuyoruz.",
-    image: "/images/site/service-pack.webp",
+    image: "/images/site/generated/home-packaging.webp",
     href: "/hizmetler#paket",
   },
   {
     icon: "◇",
     title: "Davet & Organizasyon",
     text: "Kurumsal davetler, özel organizasyonlar ve toplu etkinlikler için planlı yemek ve servis çözümleri.",
-    image: "https://images.pexels.com/photos/38460679/pexels-photo-38460679.jpeg?auto=compress&cs=tinysrgb&w=2200",
+    image: "/images/site/generated/home-event.webp",
     href: "/hizmetler#organizasyon",
   },
   {
     icon: "◐",
     title: "İftar & Ramazan Organizasyonları",
     text: "Ramazan dönemine özel toplu iftar, paketli yemek ve yerinde servis organizasyonları.",
-    image: "https://images.pexels.com/photos/34471416/pexels-photo-34471416.jpeg?auto=compress&cs=tinysrgb&w=2200",
+    image: "/images/site/generated/home-iftar.webp",
     href: "/hizmetler#iftar",
   },
 ];
@@ -266,7 +266,7 @@ export default function Home() {
         <div className="wrap mkQualityGrid">
           <div className="mkQualityPhoto">
             <Image
-              src="https://images.pexels.com/photos/37431302/pexels-photo-37431302.jpeg?auto=compress&cs=tinysrgb&w=2200"
+              src="/images/site/generated/home-quality.webp"
               alt="Hijyen ve kalite kontrol süreçlerini uygulayan profesyonel mutfak ekibi"
               fill
               quality={95}
@@ -289,7 +289,7 @@ export default function Home() {
         <div className="wrap mkMenuGridFinal">
           <div className="mkMenuVisual">
             <Image
-              src="https://images.pexels.com/photos/15671279/pexels-photo-15671279/free-photo-of-food-on-plates-in-kitchen.jpeg?auto=compress&cs=tinysrgb&w=2200"
+              src="/images/site/generated/home-menu.webp"
               alt="Kurumsal yemek menüsünden sıcak ana yemek sunumu"
               fill
               quality={95}
