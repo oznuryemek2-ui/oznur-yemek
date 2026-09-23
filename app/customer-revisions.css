@@ -633,3 +633,74 @@
     min-height:120px;
   }
 }
+
+
+/* Service detail hierarchy: service name must read as a real heading on every service */
+.serviceDetailCopy .serviceTypeTitle{
+  margin:0 0 18px;
+  color:var(--oy-red);
+  font-size:clamp(20px,1.85vw,28px);
+  line-height:1.12;
+  font-weight:900;
+  letter-spacing:.035em;
+  text-transform:uppercase;
+}
+.serviceDetailCopy .serviceTypeTitle:after{
+  content:"";
+  display:block;
+  width:52px;
+  height:3px;
+  margin-top:13px;
+  border-radius:999px;
+  background:var(--oy-red);
+}
+.serviceDetailCopy .servicePromiseTitle{
+  margin:0;
+  max-width:760px;
+  color:#111;
+  font-size:clamp(42px,4.5vw,64px);
+  font-weight:500;
+  letter-spacing:-.06em;
+  line-height:1.04;
+}
+.serviceDetailCopy .servicePromiseTitle + p{
+  margin-top:24px;
+  color:var(--oy-muted);
+  font-size:16px;
+  line-height:1.8;
+}
+.serviceDetailCopy{
+  min-width:0;
+}
+
+@media(max-width:720px){
+  .serviceDetailCopy .serviceTypeTitle{
+    margin-bottom:16px;
+    font-size:20px;
+    line-height:1.18;
+    letter-spacing:.025em;
+  }
+  .serviceDetailCopy .serviceTypeTitle:after{
+    width:42px;
+    height:3px;
+    margin-top:11px;
+  }
+  .serviceDetailCopy .servicePromiseTitle{
+    font-size:40px;
+    line-height:1.03;
+  }
+  .serviceDetailCopy .servicePromiseTitle + p{
+    margin-top:20px;
+    font-size:15px;
+    line-height:1.7;
+  }
+}
+
+@media(max-width:430px){
+  .serviceDetailCopy .serviceTypeTitle{
+    font-size:19px;
+  }
+  .serviceDetailCopy .servicePromiseTitle{
+    font-size:37px;
+  }
+}
