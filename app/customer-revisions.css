@@ -1058,3 +1058,91 @@ body{
     aspect-ratio:4/3;
   }
 }
+
+
+/* =========================================================
+   BRANDED RESPONSIVE PHOTOGRAPHY — 24.09.2026
+   Use a native landscape file on desktop and a native portrait
+   file on mobile. No stretching, no Ken Burns zoom, no fake
+   desktop enlargement.
+   ========================================================= */
+.responsiveSitePicture{
+  position:absolute;
+  inset:0;
+  display:block;
+  width:100%;
+  height:100%;
+  overflow:hidden;
+}
+.responsiveSiteImg{
+  display:block;
+  width:100%;
+  height:100%;
+  max-width:none;
+  object-fit:cover;
+  object-position:center;
+}
+
+.pageHeroMediaResponsive{
+  aspect-ratio:16/10!important;
+}
+.serviceDetailImage{
+  aspect-ratio:16/10!important;
+}
+.serviceDetailImage .responsiveSitePicture,
+.pageHeroMedia .responsiveSitePicture{
+  z-index:0;
+}
+.serviceDetailImage>span{
+  z-index:2;
+}
+
+/* Hero slider: crossfade only. Scaling was making desktop photos
+   look artificially enlarged even when their aspect ratio was correct. */
+.mkHeroSlide{
+  position:absolute;
+  inset:0;
+  display:block;
+  width:100%;
+  height:100%;
+  opacity:0;
+  transform:none!important;
+  transition:opacity .72s ease!important;
+  will-change:opacity;
+}
+.mkHeroSlide.isActive{
+  opacity:1;
+  transform:none!important;
+}
+.mkHeroSlide .mkHeroImage{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  transform:none!important;
+}
+
+/* Keep desktop photography at its intended crop. */
+@media(min-width:721px){
+  .pageHeroMediaResponsive,
+  .serviceDetailImage{
+    aspect-ratio:16/10!important;
+    min-height:0!important;
+    max-height:none!important;
+  }
+}
+
+/* Mobile receives a separate portrait asset instead of cropping
+   a desktop landscape into a tall phone slot. */
+@media(max-width:720px){
+  .pageHeroMediaResponsive,
+  .serviceDetailImage{
+    aspect-ratio:4/5!important;
+    min-height:0!important;
+    max-height:none!important;
+  }
+  .pageHeroMediaResponsive .responsiveSiteImg,
+  .serviceDetailImage .responsiveSiteImg{
+    object-position:center!important;
+  }
+}
