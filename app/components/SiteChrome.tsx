@@ -127,8 +127,8 @@ export function PageHero({
   imageAlt?: string;
 }) {
   return (
-    <section className={`pageHero ${image ? "" : "pageHeroTextOnly"}`}>
-      <div className={`wrap pageHeroGrid ${image ? "" : "pageHeroGridTextOnly"}`}>
+    <section className={`pageHero ${image ? "pageHeroWithMedia" : "pageHeroTextOnly"}`}>
+      <div className={`wrap pageHeroGrid ${image ? "pageHeroGridWithMedia" : "pageHeroGridTextOnly"}`}>
         <div className="pageHeroCopy">
           <p className="eyebrow red">{eyebrow}</p>
           <h1>{title}</h1>
