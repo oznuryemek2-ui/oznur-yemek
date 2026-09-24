@@ -1,27 +1,28 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import ResponsiveSiteImage from "./ResponsiveSiteImage";
 
 const slides = [
   {
-    src: "/images/site/generated/slider-cooking.webp",
-    alt: "Profesyonel endüstriyel mutfakta toplu yemek üretimi",
-    position: "center 48%",
+    desktop: "/images/site/brand-responsive/hero-cooking-desktop.webp",
+    mobile: "/images/site/brand-responsive/hero-cooking-mobile.webp",
+    alt: "Öznur Yemek profesyonel endüstriyel mutfak üretimi",
   },
   {
-    src: "/images/site/generated/slider-packaging.webp",
-    alt: "Hijyenik koşullarda kurumsal yemeklerin paketlenmesi",
-    position: "center 50%",
+    desktop: "/images/site/brand-responsive/hero-delivery-desktop.webp",
+    mobile: "/images/site/brand-responsive/hero-delivery-mobile.webp",
+    alt: "Öznur Yemek kurumsal yemek sevkiyat hazırlığı",
   },
   {
-    src: "/images/site/generated/slider-loading.webp",
-    alt: "Kurumsal yemek sevkiyatı için araç yükleme operasyonu",
-    position: "center 52%",
+    desktop: "/images/site/brand-responsive/hero-event-desktop.webp",
+    mobile: "/images/site/brand-responsive/hero-event-mobile.webp",
+    alt: "Öznur Yemek davet ve organizasyon büfesi",
   },
   {
-    src: "/images/site/generated/slider-service.webp",
-    alt: "Kurumsal yemekhanede profesyonel servis operasyonu",
-    position: "center 50%",
+    desktop: "/images/site/brand-responsive/hero-iftar-desktop.webp",
+    mobile: "/images/site/brand-responsive/hero-iftar-mobile.webp",
+    alt: "Öznur Yemek iftar ve Ramazan organizasyonu",
   },
 ] as const;
 
@@ -40,14 +41,20 @@ export default function HeroSlider() {
   return (
     <div className="mkHeroSlides" aria-hidden="true">
       {slides.map((slide, index) => (
-        <img
-          key={slide.src}
-          className={"mkHeroImage mkHeroSlide" + (active === index ? " isActive" : "")}
-          src={slide.src}
+        <ResponsiveSiteImage
+          key={slide.desktop}
+          desktopSrc={slide.desktop}
+          mobileSrc={slide.mobile}
           alt=""
-          loading={index === 0 ? "eager" : "lazy"}
-          decoding="async"
-          style={{ objectPosition: slide.position }}
+          desktopWidth={1586}
+          desktopHeight={992}
+          mobileWidth={793}
+          mobileHeight={992}
+          desktopSizes="100vw"
+          mobileSizes="100vw"
+          priority={index === 0}
+          pictureClassName={"mkHeroSlide" + (active === index ? " isActive" : "")}
+          className="mkHeroImage"
         />
       ))}
       <div className="mkHeroSliderDots">
