@@ -2011,3 +2011,185 @@
     transform:none;
   }
 }
+
+/* ===== EKİM 2026 ÖRNEK MENÜ — SITE UYUMLU TABLO ===== */
+.monthlyMenuBlock{
+  margin:0 0 84px;
+  padding-top:30px;
+  border-top:1px solid var(--oy-line,#dedfdd);
+}
+.monthlyMenuHead{
+  max-width:none;
+  margin:0 0 24px;
+  display:grid;
+  grid-template-columns:86px minmax(0,720px);
+  gap:24px;
+  align-items:start;
+}
+.menuMonthBadge{
+  width:76px;
+  height:76px;
+  background:var(--red,#c91f2c);
+  color:#fff;
+  display:grid;
+  grid-template-columns:30px 1fr;
+  align-items:center;
+  padding:10px 9px;
+  border-radius:4px;
+}
+.menuMonthBadge>span{
+  font-size:28px;
+  font-weight:800;
+  line-height:1;
+  letter-spacing:-.05em;
+}
+.menuMonthBadge>div{
+  display:grid;
+  gap:2px;
+  padding-left:8px;
+  border-left:1px solid rgba(255,255,255,.38);
+}
+.menuMonthBadge b{
+  font-size:10px;
+  line-height:1;
+  letter-spacing:.08em;
+}
+.menuMonthBadge small{
+  font-size:9px;
+  opacity:.78;
+}
+.monthlyMenuHead .eyebrow{
+  margin:1px 0 7px;
+}
+.monthlyMenuHead h2{
+  margin:0;
+  font-size:clamp(30px,3.2vw,43px);
+  line-height:1.05;
+  letter-spacing:-.04em;
+  color:var(--ink,#232626);
+}
+.monthlyMenuHead>div:last-child>p:last-child{
+  max-width:660px;
+  margin:12px 0 0;
+  color:var(--oy-muted,#646969);
+  font-size:14px;
+  line-height:1.65;
+}
+.menuTableWrap{
+  overflow:auto;
+  border:1px solid var(--oy-line,#dedfdd);
+  border-radius:8px;
+  background:#fff;
+  box-shadow:0 16px 42px rgba(28,35,31,.06);
+  scrollbar-color:#b8bcb8 transparent;
+  scrollbar-width:thin;
+}
+.monthlyMenuTable{
+  width:100%;
+  border-collapse:separate;
+  border-spacing:0;
+  background:#fff;
+  color:var(--ink,#232626);
+}
+.monthlyMenuTable.breakfastTable{min-width:1120px}
+.monthlyMenuTable.mealTable{min-width:860px}
+.monthlyMenuTable th{
+  position:sticky;
+  top:0;
+  z-index:2;
+  padding:15px 16px;
+  border:0;
+  border-right:1px solid rgba(255,255,255,.12);
+  background:#28312c;
+  color:#fff;
+  font-size:11px;
+  line-height:1.25;
+  font-weight:700;
+  letter-spacing:.07em;
+  text-transform:uppercase;
+  text-align:left;
+  white-space:nowrap;
+}
+.monthlyMenuTable th:first-child{
+  left:0;
+  z-index:4;
+}
+.monthlyMenuTable th:last-child{border-right:0}
+.monthlyMenuTable td{
+  padding:14px 16px;
+  border:0;
+  border-right:1px solid var(--oy-line,#dedfdd);
+  border-bottom:1px solid var(--oy-line,#dedfdd);
+  background:#fff;
+  font-size:13px;
+  line-height:1.35;
+  font-weight:600;
+  vertical-align:middle;
+  white-space:nowrap;
+}
+.monthlyMenuTable td:first-child{
+  position:sticky;
+  left:0;
+  z-index:1;
+  min-width:112px;
+  background:#f7f5f0;
+  color:var(--red,#c91f2c);
+  font-weight:800;
+}
+.monthlyMenuTable td:last-child{
+  min-width:220px;
+  border-right:0;
+  white-space:normal;
+}
+.monthlyMenuTable tr:last-child td{border-bottom:0}
+.monthlyMenuTable tbody tr:nth-child(even) td:not(:first-child){background:#fbfaf7}
+.monthlyMenuTable tbody tr.isWeekend td:not(:first-child){background:rgba(201,31,44,.055)}
+.monthlyMenuTable tbody tr.isWeekend td:first-child{
+  background:var(--red,#c91f2c);
+  color:#fff;
+}
+.monthlyMenuTable tbody tr:hover td:not(:first-child){background:#f3f0e9}
+.monthlyMenuTable tbody tr.isWeekend:hover td:not(:first-child){background:rgba(201,31,44,.09)}
+
+@media(max-width:720px){
+  .monthlyMenuBlock{
+    margin-bottom:62px;
+    padding-top:24px;
+  }
+  .monthlyMenuHead{
+    grid-template-columns:62px minmax(0,1fr);
+    gap:15px;
+    margin-bottom:18px;
+  }
+  .menuMonthBadge{
+    width:58px;
+    height:58px;
+    grid-template-columns:22px 1fr;
+    padding:8px 7px;
+  }
+  .menuMonthBadge>span{font-size:22px}
+  .menuMonthBadge>div{padding-left:6px}
+  .menuMonthBadge b{font-size:8px}
+  .menuMonthBadge small{font-size:8px}
+  .monthlyMenuHead h2{
+    font-size:29px;
+  }
+  .monthlyMenuHead>div:last-child>p:last-child{
+    font-size:12px;
+    margin-top:9px;
+  }
+  .menuTableWrap{
+    margin-inline:-16px;
+    border-radius:0;
+    border-left:0;
+    border-right:0;
+  }
+  .monthlyMenuTable th,
+  .monthlyMenuTable td{
+    padding:12px 13px;
+    font-size:12px;
+  }
+  .monthlyMenuTable th{font-size:10px}
+  .monthlyMenuTable td:first-child{min-width:106px}
+}
+/* ===== /EKİM 2026 ÖRNEK MENÜ ===== */
