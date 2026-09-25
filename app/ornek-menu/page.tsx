@@ -134,7 +134,7 @@ export default function Menu(){
       </div>
 
       <MenuTable
-        title="Sabah Kahvaltı Menüsü"
+        title="Ekim Ayı Kahvaltı Menüsü"
         subtitle="Peynir, zeytin, yumurta, sıcak-soğuk eşlikler ve tamamlayıcı ürünlerden oluşan Ekim ayı kahvaltı planı."
         headers={["Gün","Peynir","Zeytin","Yumurta","Eşlik","Ek Ürün","Tamamlayıcı"]}
         rows={breakfast}
@@ -142,7 +142,7 @@ export default function Menu(){
       />
 
       <MenuTable
-        title="Öğle Yemek Menüsü"
+        title="Ekim Ayı Yemek Menüsü"
         subtitle="Ana yemek, yardımcı yemek, eşlik ve tamamlayıcıdan oluşan Ekim ayı öğle yemeği planı."
         headers={["Gün","Ana Yemek","Yardımcı","Eşlik","Tamamlayıcı"]}
         rows={meals}
