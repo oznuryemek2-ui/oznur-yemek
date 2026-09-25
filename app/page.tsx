@@ -88,10 +88,10 @@ const operations = [
 ];
 
 const menuSamples = [
-  ["03 Ağustos", "Tavuk Çöp Şiş", "Bulgur pilavı • Çorba • Salata"],
-  ["07 Ağustos", "Döner", "Pirinç pilavı • Ayran • Çorba"],
-  ["08 Ağustos", "Kuru Fasülye", "Pirinç pilavı • Yoğurt • Turşu"],
-  ["14 Ağustos", "Tepsi Kebabı", "Bulgur pilavı • Cacık • Çorba"],
+  ["03 Ekim", "Biber Dolması", "Makarna • Yoğurt • Çorba"],
+  ["07 Ekim", "Döner", "Pirinç pilavı • Ayran • Çorba"],
+  ["08 Ekim", "Patlıcan Kebabı", "Pirinç pilavı • Çorba • Salata"],
+  ["14 Ekim", "Tepsi Kebabı", "Bulgur pilavı • Çorba • Meyve"],
 ];
 
 export default function Home() {
@@ -297,7 +297,7 @@ export default function Home() {
             />
           </div>
           <div className="mkMenuIntroFinal">
-            <span className="mkLabel">AĞUSTOS AYI YEMEK MENÜSÜNDEN</span>
+            <span className="mkLabel">EKİM AYI YEMEK MENÜSÜNDEN</span>
             <h2>Dengeli, çeşitli ve planlı günlük menüler.</h2>
             <p>
               Menü; ana yemek, yardımcı yemek, eşlik ve tamamlayıcı ürünlerden
