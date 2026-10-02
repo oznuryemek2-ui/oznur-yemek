@@ -1,7 +1,10 @@
 import Image from "next/image";
 import { CTA, PageHero } from "../components/SiteChrome";
 
-export const metadata = { title: "Örnek Menü" };
+export const metadata = {
+  title: "Ekim 2026 Örnek Menü",
+  description: "Öznur Yemek Ekim 2026 kahvaltı ve toplu yemek menüsünü gün gün inceleyin. Kurumsal projelere göre planlanabilen dengeli örnek menüler.",
+};
 
 const breakfast = [
 ["10/1/2026","BEYAZ PEYNİR","ZEYTİN","HAŞ. YUMURTA","SÖĞÜŞ","SALAM","BAL-TEREYAĞ-V.REÇEL-ÇİKOLATA"],
@@ -130,7 +133,7 @@ export default function Menu(){
       </div>
 
       <div className="menuPagePhoto">
-        <Image src="/images/site/menu-meals.png" alt="Kurumsal toplu yemek menüsü için hazırlanmış çeşitli öğünler" fill quality={95} sizes="(max-width:900px) 100vw, 1100px"/>
+        <Image src="/images/site/menu-meals.png" alt="Kurumsal toplu yemek menüsü için hazırlanmış çeşitli öğünler" fill quality={82} sizes="(max-width:900px) 100vw, 1100px"/>
       </div>
 
       <MenuTable
