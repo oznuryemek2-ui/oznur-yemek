@@ -335,7 +335,7 @@ export default function Home() {
 
         <div className="mkFacilityPhoto">
           <Image
-            src="/images/site/canteen-service.png"
+            src="/images/site/generated/service-cafeteria.webp"
             alt="Profesyonel ekip ile düzenli kurumsal yemekhane servisi"
             fill
             quality={78}
