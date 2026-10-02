@@ -91,6 +91,10 @@ export function Footer() {
           <b>Site</b>
           <Link href="/kurumsal">Kurumsal</Link>
           <Link href="/hizmetler">Hizmetler</Link>
+          <Link href="/hizmetler/toplu-yemek">Toplu Yemek</Link>
+          <Link href="/hizmetler/yerinde-uretim">Yerinde Üretim</Link>
+          <Link href="/hizmetler/tasimali-yemek">Taşımalı Yemek</Link>
+          <Link href="/hizmetler/paket-yemek">Paket Yemek</Link>
           <Link href="/calisma-alanlarimiz">Çalışma Alanlarımız</Link>
           <Link href="/kalite-hijyen">Kalite & Hijyen</Link>
           <Link href="/referanslar">Referanslar</Link>
