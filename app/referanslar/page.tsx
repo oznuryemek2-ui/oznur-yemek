@@ -1,6 +1,9 @@
 import { CTA, PageHero } from "../components/SiteChrome";
 
-export const metadata = { title: "Referanslar" };
+export const metadata = {
+  title: "Referanslar",
+  description: "Öznur Yemek'in Tosyalı Çelikhane, TOKİ projeleri ve İskenderun bölgesindeki kurumsal toplu yemek proje deneyimini inceleyin.",
+};
 
 const tosyali=[
   "CEYLAN İNŞAAT TAAHHÜT VE SAN. LTD. ŞTİ.",
