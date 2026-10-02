@@ -23,7 +23,7 @@ export default function ResponsiveSiteImage({
   className = "",
   pictureClassName = "",
   priority = false,
-  quality = 95,
+  quality = 82,
   desktopWidth = 1586,
   desktopHeight = 992,
   mobileWidth = 1122,

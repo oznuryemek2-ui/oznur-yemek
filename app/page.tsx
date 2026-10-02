@@ -179,7 +179,7 @@ export default function Home() {
                   <i>→</i>
                 </div>
                 <div className="mkServicePhoto">
-                  <Image src={service.image} alt={service.title} fill quality={95} sizes="(max-width: 720px) 88vw, 33vw" />
+                  <Image src={service.image} alt={service.title} fill quality={82} sizes="(max-width: 720px) 88vw, 33vw" />
                 </div>
               </Link>
             ))}
@@ -269,7 +269,7 @@ export default function Home() {
               src="/images/site/generated/home-quality.webp"
               alt="Hijyen ve kalite kontrol süreçlerini uygulayan profesyonel mutfak ekibi"
               fill
-              quality={95}
+              quality={82}
               sizes="(max-width: 900px) 100vw, 50vw"
             />
           </div>
@@ -292,7 +292,7 @@ export default function Home() {
               src="/images/site/generated/home-menu.webp"
               alt="Kurumsal yemek menüsünden sıcak ana yemek sunumu"
               fill
-              quality={95}
+              quality={82}
               sizes="(max-width: 900px) 100vw, 50vw"
             />
           </div>
@@ -338,7 +338,7 @@ export default function Home() {
             src="/images/site/canteen-service.png"
             alt="Profesyonel ekip ile düzenli kurumsal yemekhane servisi"
             fill
-            quality={95}
+            quality={82}
             sizes="(max-width: 900px) 100vw, 55vw"
           />
           <div className="mkFacilityNote">Herkes için lezzet, her yerde hizmet.</div>
@@ -366,7 +366,7 @@ export default function Home() {
       </section>
 
       <section className="mkFinalCta">
-        <Image src="/images/site/hero-driving.svg" alt="Kurumsal sıcak yemek sevkiyat operasyonu" fill quality={95} sizes="100vw" />
+        <Image src="/images/site/hero-driving.svg" alt="Kurumsal sıcak yemek sevkiyat operasyonu" fill quality={82} sizes="100vw" />
         <div className="mkFinalShade" />
         <div className="wrap mkFinalInner">
           <div className="mkFinalCopy">
