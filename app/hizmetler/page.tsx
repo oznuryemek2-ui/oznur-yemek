@@ -1,7 +1,10 @@
 import { CTA, PageHero } from "../components/SiteChrome";
 import ResponsiveSiteImage from "../components/ResponsiveSiteImage";
 
-export const metadata={title:"Hizmetler"};
+export const metadata = {
+  title: "Kurumsal Yemek Hizmetleri",
+  description: "Yerinde üretim, taşımalı yemek, paket yemek, davet ve organizasyon çözümleriyle Öznur Yemek'in kurumsal hizmetlerini inceleyin.",
+};
 
 const items=[
   {
