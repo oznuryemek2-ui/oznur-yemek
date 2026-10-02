@@ -1,7 +1,10 @@
 import Image from "next/image";
 import { CTA, PageHero } from "../components/SiteChrome";
 
-export const metadata = { title: "Kalite & Hijyen" };
+export const metadata = {
+  title: "Kalite & Hijyen",
+  description: "Öznur Yemek'in gıda güvenliği, hijyen, hammadde tedariki, üretim, paketleme, sevkiyat ve kalite kontrol süreçlerini inceleyin.",
+};
 
 const standards=[
   "Gıda güvenliği standartlarına uygun üretim",
