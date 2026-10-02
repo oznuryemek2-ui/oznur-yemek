@@ -16,6 +16,9 @@ export const metadata: Metadata = {
     "İskenderun ve Hatay’da kurumsal yemek, toplu yemek, taşımalı yemek, yerinde üretim, paket yemek ve catering çözümleri. Öznur Yemek’ten projenize özel teklif alın.",
   metadataBase: new URL(siteUrl),
   applicationName: "Öznur Yemek",
+  verification: {
+    google: "Dfj7qK-_q2pCuTYbGBIcUbicG_DwM0O_HPEnf3HwSu0",
+  },
   keywords: [
     "kurumsal yemek",
     "toplu yemek",
