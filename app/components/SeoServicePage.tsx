@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { CTA, PageHero } from "./SiteChrome";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://oznuryemek.com";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.oznuryemek.com";
 
 export type SeoServicePageProps = {
   canonicalPath: string;
