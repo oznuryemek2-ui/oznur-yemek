@@ -27,14 +27,15 @@ const slides = [
 ] as const;
 
 export default function HeroSlider() {
-  const [active, setActive] = useState(0);\n  const [loadedCount, setLoadedCount] = useState(1);
+  const [active, setActive] = useState(0);
+  const [loadedCount, setLoadedCount] = useState(1);
 
   useEffect(() => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
     // İlk boyamada yalnızca ilk hero görselini indir. Sonraki slaytları
     // ihtiyaç duyulmadan kısa süre önce kademeli yükleyerek LCP'yi hafiflet.
-    const preloadTimers = [1200, 5000, 8800].map((delay, index) =>
+    const preloadTimers = [2200, 6200, 10200].map((delay, index) =>
       window.setTimeout(() => setLoadedCount(index + 2), delay)
     );
 
@@ -63,7 +64,8 @@ export default function HeroSlider() {
           mobileHeight={992}
           desktopSizes="100vw"
           mobileSizes="100vw"
-          quality={82}\n          priority={index === 0}
+          quality={78}
+          priority={index === 0}
           pictureClassName={"mkHeroSlide" + (active === index ? " isActive" : "")}
           className="mkHeroImage"
         />

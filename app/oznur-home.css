@@ -2193,3 +2193,30 @@
   .monthlyMenuTable td:first-child{min-width:106px}
 }
 /* ===== /EKİM 2026 ÖRNEK MENÜ ===== */
+
+
+/* Performance: below-the-fold sections should not cost initial render time. */
+.mkWorkAreas,
+.mkStats,
+.mkWhy,
+.mkQuality,
+.mkMenuSection,
+.mkFacility,
+.mkReferences,
+.mkFinalCta{
+  content-visibility:auto;
+  contain-intrinsic-size:auto 640px;
+}
+
+@media(max-width:720px){
+  .mkWorkAreas,
+  .mkStats,
+  .mkWhy,
+  .mkQuality,
+  .mkMenuSection,
+  .mkFacility,
+  .mkReferences,
+  .mkFinalCta{
+    contain-intrinsic-size:auto 760px;
+  }
+}
