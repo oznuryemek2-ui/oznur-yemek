@@ -1,7 +1,15 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import HeroSlider from "./components/HeroSlider";
 import WorkAreaIcon from "./components/WorkAreaIcon";
+
+export const metadata: Metadata = {
+  title: "İskenderun Kurumsal Yemek, Toplu Yemek & Catering",
+  description:
+    "İskenderun ve Hatay’da fabrikalar, şantiyeler, ofisler ve kurumlar için toplu yemek, yerinde üretim, taşımalı yemek, paket yemek ve catering hizmetleri.",
+  alternates: { canonical: "/" },
+};
 
 const services = [
   {
@@ -9,28 +17,28 @@ const services = [
     title: "Yerinde Üretim Yemek Hizmeti",
     text: "İhtiyaçlarınıza uygun menüler, profesyonel ekip ve tam donanımlı mutfak kurulumu.",
     image: "/images/site/generated/home-onsite.webp",
-    href: "/hizmetler#yerinde",
+    href: "/hizmetler/yerinde-uretim",
   },
   {
     icon: "▰",
     title: "Taşımalı Yemek Hizmeti",
     text: "Geniş ve modern araç filomuzla yemeklerinizi zamanında, sıcak ve taze olarak ulaştırıyoruz.",
     image: "/images/site/generated/home-delivery.webp",
-    href: "/hizmetler#tasimali",
+    href: "/hizmetler/tasimali-yemek",
   },
   {
     icon: "▦",
     title: "Paket Yemek Hizmeti",
     text: "Vakum paketleme ile daha hijyenik, düzenli ve pratik toplu yemek çözümleri sunuyoruz.",
     image: "/images/site/generated/home-packaging.webp",
-    href: "/hizmetler#paket",
+    href: "/hizmetler/paket-yemek",
   },
   {
     icon: "◇",
     title: "Davet & Organizasyon",
     text: "Kurumsal davetler, özel organizasyonlar ve toplu etkinlikler için planlı yemek ve servis çözümleri.",
     image: "/images/site/generated/home-event.webp",
-    href: "/hizmetler#organizasyon",
+    href: "/hizmetler/kurumsal-catering",
   },
   {
     icon: "◐",
