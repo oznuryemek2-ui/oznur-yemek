@@ -1,9 +1,11 @@
+import Link from "next/link";
 import { CTA, PageHero } from "../components/SiteChrome";
 import ResponsiveSiteImage from "../components/ResponsiveSiteImage";
 
 export const metadata = {
-  title: "Kurumsal Yemek Hizmetleri",
-  description: "Yerinde üretim, taşımalı yemek, paket yemek, davet ve organizasyon çözümleriyle Öznur Yemek'in kurumsal hizmetlerini inceleyin.",
+  title: "İskenderun Kurumsal Yemek Hizmetleri",
+  description: "İskenderun ve Hatay’da toplu yemek, yerinde üretim, taşımalı yemek, paket yemek ve kurumsal catering çözümlerimizi inceleyin.",
+  alternates: { canonical: "/hizmetler" },
 };
 
 const items=[
@@ -16,6 +18,7 @@ const items=[
     imageDesktop:"/images/site/brand-responsive/service-onsite-desktop.webp",
     imageMobile:"/images/site/brand-responsive/service-onsite-mobile.webp",
     imageAlt:"Öznur Yemek markalı profesyonel endüstriyel mutfakta yerinde üretim",
+    href:"/hizmetler/yerinde-uretim",
     bullets:["İhtiyaca uygun menü","Profesyonel ekip","Tam donanımlı mutfak kurulumu"]
   },
   {
@@ -27,6 +30,7 @@ const items=[
     imageDesktop:"/images/site/brand-responsive/service-delivery-desktop.webp",
     imageMobile:"/images/site/brand-responsive/service-delivery-mobile.webp",
     imageAlt:"Öznur Yemek markalı araçla sıcak yemek sevkiyat operasyonu",
+    href:"/hizmetler/tasimali-yemek",
     bullets:["Geniş ve modern araç filosu","Zamanında teslimat","Sıcak ve taze ulaştırma"]
   },
   {
@@ -38,6 +42,7 @@ const items=[
     imageDesktop:"/images/site/brand-responsive/service-packaging-desktop.webp",
     imageMobile:"/images/site/brand-responsive/service-packaging-mobile.webp",
     imageAlt:"Öznur Yemek logolu paketlerle hijyenik paket yemek üretim hattı",
+    href:"/hizmetler/paket-yemek",
     bullets:["Vakum paketleme","Hijyenik servis","Planlı ve pratik dağıtım"]
   },
   {
@@ -49,6 +54,7 @@ const items=[
     imageDesktop:"/images/site/brand-responsive/service-event-desktop.webp",
     imageMobile:"/images/site/brand-responsive/service-event-mobile.webp",
     imageAlt:"Öznur Yemek markalı kurumsal davet ve organizasyon açık büfesi",
+    href:"/hizmetler/kurumsal-catering",
     bullets:["Etkinliğe özel menü planı","Üretim ve servis koordinasyonu","Kurumsal ve toplu organizasyonlar"]
   },
   {
@@ -94,6 +100,7 @@ export default function Services(){
             <h3 className="servicePromiseTitle">{x.title}</h3>
             <p>{x.text}</p>
             <ul>{x.bullets.map(b=><li key={b}>{b}</li>)}</ul>
+            {"href" in x && x.href ? <Link href={x.href} className="mkMenuButton">Detaylı bilgi <span>→</span></Link> : null}
           </div>
         </article>
       )}
