@@ -5,7 +5,7 @@ import "./oznur-home.css";
 import "./customer-revisions.css";
 import { Footer, Header } from "./components/SiteChrome";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://oznuryemek.com";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.oznuryemek.com";
 
 export const metadata: Metadata = {
   title: {
