@@ -43,13 +43,13 @@ export const metadata: Metadata = {
     type: "website",
     locale: "tr_TR",
     siteName: "Öznur Yemek",
-    images: ["/images/site/hero-production.png"],
+    images: ["/images/site/generated/slider-cooking.webp"],
   },
   twitter: {
     card: "summary_large_image",
     title: "Öznur Yemek | Kurumsal Yemek Hizmetleri",
     description: "Herkes için lezzet, her yerde hizmet.",
-    images: ["/images/site/hero-production.png"],
+    images: ["/images/site/generated/slider-cooking.webp"],
   },
 };
 
