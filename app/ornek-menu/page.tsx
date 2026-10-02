@@ -133,7 +133,7 @@ export default function Menu(){
       </div>
 
       <div className="menuPagePhoto">
-        <Image src="/images/site/menu-meals.png" alt="Kurumsal toplu yemek menüsü için hazırlanmış çeşitli öğünler" fill quality={82} sizes="(max-width:900px) 100vw, 1100px"/>
+        <Image src="/images/site/menu-food.webp" alt="Kurumsal toplu yemek menüsü için hazırlanmış çeşitli öğünler" fill quality={82} sizes="(max-width:900px) 100vw, 1100px"/>
       </div>
 
       <MenuTable
