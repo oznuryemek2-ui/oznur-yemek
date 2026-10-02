@@ -1,6 +1,8 @@
 name: Production Deploy (Prebuilt)
 
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
 
 jobs:
