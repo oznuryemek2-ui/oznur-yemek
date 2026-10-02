@@ -47,7 +47,7 @@ export default function Quality(){
 
     <section className="qualityVisualBand">
       <div className="qualityVisualImage">
-        <Image src="/images/site/quality-control.png" alt="Profesyonel mutfakta gıda güvenliği ve kalite kontrolü" fill quality={95} sizes="(max-width:900px) 100vw,45vw"/>
+        <Image src="/images/site/quality-chef.webp" alt="Profesyonel mutfakta gıda güvenliği ve kalite kontrolü" fill quality={82} sizes="(max-width:900px) 100vw,45vw"/>
       </div>
       <div className="qualityVisualCopy">
         <p className="eyebrow light">OPERASYON GÜCÜMÜZ</p>
