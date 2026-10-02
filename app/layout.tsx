@@ -9,11 +9,11 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://oznuryemek.com";
 
 export const metadata: Metadata = {
   title: {
-    default: "Öznur Yemek | Kurumsal Yemek Hizmetleri",
+    default: "İskenderun Kurumsal Yemek & Catering | Öznur Yemek",
     template: "%s | Öznur Yemek",
   },
   description:
-    "Öznur Yemek; yerinde üretim, taşımalı yemek, paket yemek ve organizasyon hizmetlerinde güçlü üretim altyapısı, hijyenik süreçler ve planlı operasyon sunar.",
+    "İskenderun ve Hatay’da kurumsal yemek, toplu yemek, taşımalı yemek, yerinde üretim, paket yemek ve catering çözümleri. Öznur Yemek’ten projenize özel teklif alın.",
   metadataBase: new URL(siteUrl),
   applicationName: "Öznur Yemek",
   keywords: [
@@ -25,6 +25,11 @@ export const metadata: Metadata = {
     "catering",
     "İskenderun yemek firması",
     "Hatay catering",
+    "İskenderun toplu yemek",
+    "İskenderun catering",
+    "Hatay toplu yemek",
+    "fabrika yemek hizmeti",
+    "şantiye yemek hizmeti",
   ],
   robots: {
     index: true,
@@ -38,8 +43,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Öznur Yemek | Kurumsal Yemek Hizmetleri",
-    description: "Herkes için lezzet, her yerde hizmet.",
+    title: "İskenderun Kurumsal Yemek & Catering | Öznur Yemek",
+    description: "İskenderun ve Hatay’da kurumsal, toplu, taşımalı ve yerinde üretim yemek hizmetleri.",
     type: "website",
     locale: "tr_TR",
     siteName: "Öznur Yemek",
@@ -47,25 +52,61 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Öznur Yemek | Kurumsal Yemek Hizmetleri",
-    description: "Herkes için lezzet, her yerde hizmet.",
+    title: "İskenderun Kurumsal Yemek & Catering | Öznur Yemek",
+    description: "İskenderun ve Hatay’da kurumsal, toplu, taşımalı ve yerinde üretim yemek hizmetleri.",
     images: ["/images/site/generated/slider-cooking.webp"],
   },
 };
 
-const organizationSchema = {
+const localBusinessSchema = {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": "FoodEstablishment",
+  "@id": `${siteUrl}/#business`,
   name: "Öznur Yemek",
   url: siteUrl,
   logo: `${siteUrl}/images/site/oznur-logo.png`,
-  telephone: ["+90 546 695 3914", "+90 541 804 3274"],
+  image: `${siteUrl}/images/site/generated/slider-cooking.webp`,
+  description:
+    "İskenderun ve Hatay merkezli kurumsal yemek, toplu yemek, yerinde üretim, taşımalı yemek, paket yemek ve catering hizmetleri.",
+  telephone: "+90 546 695 3914",
   address: {
     "@type": "PostalAddress",
     streetAddress: "Denizciler Mah. Nurol Aş. İnş. Müh. Halik Aksu Sk. No:9",
     addressLocality: "İskenderun",
     addressRegion: "Hatay",
     addressCountry: "TR",
+  },
+  areaServed: [
+    { "@type": "City", name: "İskenderun" },
+    { "@type": "AdministrativeArea", name: "Hatay" },
+    { "@type": "Country", name: "Türkiye" },
+  ],
+  contactPoint: [
+    {
+      "@type": "ContactPoint",
+      telephone: "+90 546 695 3914",
+      contactType: "sales",
+      areaServed: "TR",
+      availableLanguage: ["tr"],
+    },
+    {
+      "@type": "ContactPoint",
+      telephone: "+90 541 804 3274",
+      contactType: "customer service",
+      areaServed: "TR",
+      availableLanguage: ["tr"],
+    },
+  ],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Kurumsal Yemek Hizmetleri",
+    itemListElement: [
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Toplu Yemek Hizmeti" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Yerinde Üretim Yemek Hizmeti" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Taşımalı Yemek Hizmeti" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Paket Yemek Hizmeti" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Kurumsal Catering" } },
+    ],
   },
   sameAs: ["https://www.instagram.com/yemekoznur"],
 };
@@ -79,7 +120,7 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(organizationSchema).replace(/</g, "\\u003c"),
+            __html: JSON.stringify(localBusinessSchema).replace(/</g, "\\u003c"),
           }}
         />
         <Header />
