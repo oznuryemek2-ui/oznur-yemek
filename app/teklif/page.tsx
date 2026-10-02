@@ -1,6 +1,9 @@
 import QuoteForm from "../components/QuoteForm";
 
-export const metadata = { title: "Teklif Al" };
+export const metadata = {
+  title: "Kurumsal Yemek Teklifi Al",
+  description: "Yerinde üretim, taşımalı ve paket yemek ihtiyaçlarınız için Öznur Yemek'ten projenize özel kurumsal yemek teklifi alın.",
+};
 
 export default function QuotePage(){
   return <main>
