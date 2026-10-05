@@ -10,6 +10,19 @@ export const metadata = {
 
 const items=[
   {
+    id:"fabrika",
+    no:"00",
+    kicker:"FABRİKA & PERSONEL YEMEK HİZMETİ",
+    title:"İskenderun ve Hatay’daki fabrikalara vardiya düzenine uygun personel yemeği.",
+    text:"Fabrika, üretim tesisi, depo ve sanayi işletmeleri için taşımalı veya yerinde üretim modeliyle düzenli kurumsal yemek operasyonu.",
+    imageDesktop:"/images/site/brand-responsive/services-hero-desktop.webp",
+    imageMobile:"/images/site/brand-responsive/services-hero-mobile.webp",
+    imageAlt:"İskenderun fabrika ve personel yemek hizmeti",
+    href:"/hizmetler/fabrika-yemek-hizmeti",
+    bullets:["Vardiya saatlerine uygun servis","Taşımalı veya yerinde üretim","İskenderun ve Hatay saha planlaması"]
+  },
+
+  {
     id:"yerinde",
     no:"01",
     kicker:"YERİNDE ÜRETİM YEMEK HİZMETİ",
@@ -75,7 +88,7 @@ export default function Services(){
     <PageHero
       eyebrow="HİZMET MODELLERİMİZ"
       title="Her ihtiyaca uygun, esnek çözümler."
-      text="Yerinde üretim, taşımalı yemek, paket yemek, davet ve Ramazan organizasyonlarıyla farklı proje koşullarına uygun hizmet sunuyoruz."
+      text="İskenderun ve Hatay’da fabrika personel yemeği, toplu yemek, yerinde üretim, taşımalı yemek, paket yemek ve kurumsal catering hizmetleri sunuyoruz."
       image="/images/site/brand-responsive/services-hero-desktop.webp"
       imageMobile="/images/site/brand-responsive/services-hero-mobile.webp"
       imageAlt="Öznur Yemek profesyonel tabaklama, üretim ve kurumsal yemek servisi"
