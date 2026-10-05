@@ -80,7 +80,7 @@ export function Footer() {
           <b>İletişim</b>
           <p>
             Denizciler Mah. Nurol Aş. İnş. Müh.<br />
-            Halik Aksu Sk. No:9<br />
+            Halit Aksu Sk. No:9<br />
             İskenderun / Hatay
           </p>
           <a href="tel:+905466953914">+90 546 695 3914</a>
