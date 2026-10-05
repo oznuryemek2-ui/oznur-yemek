@@ -50,7 +50,7 @@ const services = [
 ];
 
 const workAreas = [
-  { id: "fabrikalar", icon: "factory", title: "Fabrikalar", text: "Vardiyalı üretim düzenine uygun kesintisiz yemek operasyonu." },
+  { id: "fabrikalar", icon: "factory", title: "Fabrikalar", text: "Vardiyalı üretim düzenine uygun kesintisiz yemek operasyonu.", href: "/hizmetler/fabrika-yemek-hizmeti" },
   { id: "santiyeler", icon: "construction", title: "Şantiyeler", text: "Saha koşullarına uygun planlı üretim, sevkiyat ve servis." },
   { id: "okullar", icon: "school", title: "Okullar", text: "Dengeli menüler ve düzenli servis süreçleri." },
   { id: "hastaneler", icon: "hospital", title: "Hastaneler", text: "Hijyen ve operasyon disiplinini merkeze alan hizmet." },
@@ -117,9 +117,7 @@ export default function Home() {
               <strong>daha verimli yarınlar.</strong>
             </h1>
             <p>
-              Öznur Yemek, insan odaklı yaklaşımıyla kurumsal ve toplu yemek
-              hizmetlerinde kaliteli, hijyenik ve sürdürülebilir çözümler
-              sunan, sektörde deneyimli bir iş ortağıdır.
+              Öznur Yemek; İskenderun ve Hatay’da fabrikalar, iş yerleri ve kurumlar için toplu yemek, catering, taşımalı yemek ve yerinde üretim hizmetleri sunar. Vardiyalı tesislerden günlük personel yemeğine kadar üretim ve sevkiyat sürecini tek plan altında yönetir.
             </p>
 
             <div className="mkHeroButtons">
@@ -210,7 +208,7 @@ export default function Home() {
           <div className="mkWorkGrid">
             {workAreas.map((area) => (
               <Link
-                href={`/calisma-alanlarimiz#${area.id}`}
+                href={"href" in area && area.href ? area.href : `/calisma-alanlarimiz#${area.id}`}
                 className="mkWorkCard"
                 key={area.id}
                 aria-label={`${area.title} çalışma alanını incele`}
