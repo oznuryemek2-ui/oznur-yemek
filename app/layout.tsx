@@ -74,13 +74,17 @@ const localBusinessSchema = {
   telephone: "+90 546 695 3914",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Denizciler Mah. Nurol Aş. İnş. Müh. Halik Aksu Sk. No:9",
+    streetAddress: "Denizciler Mah. Nurol Aş. İnş. Müh. Halit Aksu Sk. No:9",
     addressLocality: "İskenderun",
     addressRegion: "Hatay",
     addressCountry: "TR",
   },
   areaServed: [
     { "@type": "City", name: "İskenderun" },
+    { "@type": "City", name: "Arsuz" },
+    { "@type": "City", name: "Belen" },
+    { "@type": "City", name: "Payas" },
+    { "@type": "City", name: "Dörtyol" },
     { "@type": "AdministrativeArea", name: "Hatay" },
     { "@type": "Country", name: "Türkiye" },
   ],
