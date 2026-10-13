@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import SiteAnalytics from "./components/SiteAnalytics";
 import "./globals.css";
 import "./redesign.css";
 import "./oznur-home.css";
@@ -133,6 +134,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <SiteAnalytics />
       </body>
     </html>
   );
