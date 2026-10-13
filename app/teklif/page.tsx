@@ -3,6 +3,7 @@ import QuoteForm from "../components/QuoteForm";
 export const metadata = {
   title: "Kurumsal Yemek Teklifi Al",
   description: "Yerinde üretim, taşımalı ve paket yemek ihtiyaçlarınız için Öznur Yemek'ten projenize özel kurumsal yemek teklifi alın.",
+  alternates: { canonical: "/teklif" },
 };
 
 export default function QuotePage(){
@@ -21,7 +22,7 @@ export default function QuotePage(){
             <b>Doğrudan iletişim</b>
             <a href="tel:+905466953914">+90 546 695 3914</a>
             <a href="tel:+905418043274">+90 541 804 3274</a>
-            <span>Denizciler Mah. Nurol Aş. İnş. Müh.<br/>Halik Aksu Sk. No:9<br/>İskenderun / Hatay</span>
+            <span>Denizciler Mah. Nurol Aş. İnş. Müh.<br/>Halit Aksu Sk. No:9<br/>İskenderun / Hatay</span>
           </div>
         </div>
         <QuoteForm/>
