@@ -1,13 +1,14 @@
 import Link from "next/link";
 
 export const metadata = {
+  alternates: { canonical: "/iletisim" },
   title: "İletişim",
   description:
     "Öznur Yemek ile kurumsal yemek hizmetleri, teklif, proje planlama ve operasyon detayları için iletişime geçin.",
 };
 
 const mapHref =
-  "https://www.google.com/maps/search/?api=1&query=Denizciler%20Mah.%20Halik%20Aksu%20Sk.%20No%3A9%20%C4%B0skenderun%20Hatay";
+  "https://www.google.com/maps/search/?api=1&query=Denizciler%20Mah.%20Halit%20Aksu%20Sk.%20No%3A9%20%C4%B0skenderun%20Hatay";
 
 export default function ContactPage() {
   return (
