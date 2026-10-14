@@ -5,6 +5,7 @@ const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.oznuryemek.com"
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     { url: `${baseUrl}/`, changeFrequency: "weekly", priority: 1 },
+    { url: `${baseUrl}/turkiye-geneli-kurumsal-yemek`, changeFrequency: "monthly", priority: 0.95 },
     { url: `${baseUrl}/hizmetler`, changeFrequency: "monthly", priority: 0.9 },
     { url: `${baseUrl}/hizmetler/toplu-yemek`, changeFrequency: "monthly", priority: 0.95 },
     { url: `${baseUrl}/hizmetler/yerinde-uretim`, changeFrequency: "monthly", priority: 0.9 },
