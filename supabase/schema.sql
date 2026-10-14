@@ -18,6 +18,8 @@ create table if not exists public.quote_requests (
 );
 
 alter table public.quote_requests enable row level security;
+revoke all on public.quote_requests from anon, authenticated;
+grant select, insert, update, delete on public.quote_requests to service_role;
 
 -- No public select/update/delete policies are created.
 -- Website inserts are performed only from the server API with the service-role key.
