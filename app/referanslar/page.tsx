@@ -1,6 +1,7 @@
 import { CTA, PageHero } from "../components/SiteChrome";
 
 export const metadata = {
+  alternates: { canonical: "/referanslar" },
   title: "Referanslar",
   description: "Öznur Yemek'in Tosyalı Çelikhane, TOKİ projeleri ve İskenderun bölgesindeki kurumsal toplu yemek proje deneyimini inceleyin.",
 };
