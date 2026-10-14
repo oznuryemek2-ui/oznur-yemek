@@ -3,6 +3,7 @@ import { CTA, PageHero } from "../components/SiteChrome";
 import WorkAreaIcon, { type WorkAreaIconType } from "../components/WorkAreaIcon";
 
 export const metadata = {
+  alternates: { canonical: "/calisma-alanlarimiz" },
   title: "Çalışma Alanlarımız",
   description:
     "Öznur Yemek'in fabrikalar, şantiyeler, okullar, hastaneler, kamu kurumları, ofisler, limanlar ve enerji projelerine özel kurumsal yemek çözümleri.",
