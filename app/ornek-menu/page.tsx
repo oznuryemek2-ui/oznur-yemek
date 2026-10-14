@@ -2,6 +2,7 @@ import Image from "next/image";
 import { CTA, PageHero } from "../components/SiteChrome";
 
 export const metadata = {
+  alternates: { canonical: "/ornek-menu" },
   title: "Ekim 2026 Örnek Menü",
   description: "Öznur Yemek Ekim 2026 kahvaltı ve toplu yemek menüsünü gün gün inceleyin. Kurumsal projelere göre planlanabilen dengeli örnek menüler.",
 };
