@@ -255,6 +255,7 @@ export default function Home() {
             <Link href="/kurumsal" className="mkSmallRedBtn">
               Bizi Tanıyın <span>→</span>
             </Link>
+            <p><Link href="/turkiye-geneli-kurumsal-yemek" className="mkMenuButton">Türkiye genelindeki projeler için yemek çözümlerimiz →</Link></p>
           </div>
 
           <div className="mkBenefitsGrid mkWhyBenefits">
