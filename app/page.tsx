@@ -5,9 +5,9 @@ import HeroSlider from "./components/HeroSlider";
 import WorkAreaIcon from "./components/WorkAreaIcon";
 
 export const metadata: Metadata = {
-  title: "İskenderun Kurumsal Yemek, Toplu Yemek & Catering",
+  title: "Kurumsal Toplu Yemek | Türkiye Geneli, İskenderun & Hatay",
   description:
-    "İskenderun ve Hatay’da fabrikalar, şantiyeler, ofisler ve kurumlar için toplu yemek, yerinde üretim, taşımalı yemek, paket yemek ve catering hizmetleri.",
+    "Türkiye genelindeki projeler ile İskenderun ve Hatay’da fabrikalar, şantiyeler ve kurumlar için toplu yemek, yerinde üretim, personel yemeği ve catering çözümleri.",
   alternates: { canonical: "/" },
 };
 
@@ -117,7 +117,7 @@ export default function Home() {
               <strong>daha verimli yarınlar.</strong>
             </h1>
             <p>
-              Öznur Yemek; İskenderun ve Hatay’da fabrikalar, iş yerleri ve kurumlar için toplu yemek, catering, taşımalı yemek ve yerinde üretim hizmetleri sunar. Vardiyalı tesislerden günlük personel yemeğine kadar üretim ve sevkiyat sürecini tek plan altında yönetir.
+              Öznur Yemek; İskenderun ve Hatay’da fabrikalara, iş yerlerine ve kurumlara toplu yemek, catering, taşımalı yemek ve yerinde üretim hizmetleri sunar. Türkiye genelindeki büyük ölçekli şantiye ve kurumsal projelerde ise hizmet modelini saha koşullarına göre planlar.
             </p>
 
             <div className="mkHeroButtons">
