@@ -2,6 +2,7 @@ import Image from "next/image";
 import { CTA, PageHero } from "../components/SiteChrome";
 
 export const metadata = {
+  alternates: { canonical: "/kurumsal" },
   title: "Kurumsal",
   description: "Öznur Yemek'in kurumsal toplu yemek yaklaşımını, üretim gücünü, deneyimli ekibini ve proje odaklı hizmet anlayışını inceleyin.",
 };
