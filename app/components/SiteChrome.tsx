@@ -91,6 +91,7 @@ export function Footer() {
           <b>Site</b>
           <Link href="/kurumsal">Kurumsal</Link>
           <Link href="/hizmetler">Hizmetler</Link>
+          <Link href="/turkiye-geneli-kurumsal-yemek">Türkiye Geneli Kurumsal Yemek</Link>
           <Link href="/hizmetler/toplu-yemek">Toplu Yemek</Link>
           <Link href="/hizmetler/yerinde-uretim">Yerinde Üretim</Link>
           <Link href="/hizmetler/tasimali-yemek">Taşımalı Yemek</Link>
