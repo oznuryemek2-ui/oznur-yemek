@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import SeoServicePage from "../../components/SeoServicePage";
 
 export const metadata: Metadata = {
-  title: "İskenderun Toplu Yemek Hizmeti | Hatay Kurumsal Yemek",
-  description: "İskenderun ve Hatay’da fabrika, şantiye, ofis, okul ve kurumlar için planlı toplu yemek üretimi, sevkiyat ve servis hizmeti.",
+  title: "İskenderun Toplu Yemek ve Tabldot Hizmeti",
+  description: "İskenderun ve Hatay’da fabrika, şantiye ve iş yerlerine toplu yemek, tabldot ve günlük personel yemeği. Menü, üretim ve servis için projenize özel teklif alın.",
   alternates: { canonical: "/hizmetler/toplu-yemek" },
 };
 
@@ -17,8 +17,8 @@ export default function Page() {
     imageMobile="/images/site/brand-responsive/services-hero-mobile.webp"
     imageAlt="İskenderun kurumsal toplu yemek üretimi ve servis operasyonu"
     serviceType="Toplu Yemek Hizmeti"
-    sectionTitle="Günlük yemek ihtiyacını tek bir operasyon planında yönetiyoruz."
-    detail="Toplu yemek hizmetinde yalnızca menüyü değil; hammadde tedariği, üretim, porsiyonlama, sevkiyat, servis ve saha kontrolünü birlikte ele alıyoruz. Kişi sayısı ve vardiya saatlerine göre günlük operasyon planı oluşturuyor, kurumların düzenli yemek ihtiyacını sürdürülebilir bir yapıya dönüştürüyoruz."
+    sectionTitle="Tabldot ve günlük personel yemeği için planlı üretim."
+    detail="Toplu yemek hizmetinde yalnızca menüyü değil; hammadde tedariği, üretim, porsiyonlama, sevkiyat, servis ve saha kontrolünü birlikte ele alıyoruz. Tabldot ve günlük personel yemeğinde menü çeşitliliğini, öğün sayısını ve vardiya saatlerini işletmenin çalışma düzenine göre birlikte planlıyoruz. Fiyat teklifi; kişi sayısı, menü içeriği, üretim modeli, teslimat noktası ve servis kapsamı değerlendirilerek hazırlanır. Aylık örnek menümüz, seçenekleri görüşmek için bir başlangıç sunar."
     idealFor={["Fabrikalar ve üretim tesisleri","Şantiyeler ve proje sahaları","Ofisler ve iş merkezleri","Okullar ve eğitim kurumları","Kamu kurumları, limanlar ve enerji projeleri"]}
     process={[
       { title: "İhtiyaç analizi", text: "Kişi sayısı, öğün ve vardiya düzeni netleştirilir." },
