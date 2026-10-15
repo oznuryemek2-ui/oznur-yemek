@@ -16,9 +16,11 @@ const areas: Array<{
   lead: string;
   detail: string;
   points: string[];
+  href?: string;
 }> = [
   {
     id: "fabrikalar",
+    href: "/hizmetler/fabrika-yemek-hizmeti",
     icon: "factory",
     title: "Fabrikalar",
     lead: "Vardiyalı üretim düzenine uyum sağlayan kesintisiz yemek operasyonu.",
@@ -28,6 +30,7 @@ const areas: Array<{
   },
   {
     id: "santiyeler",
+    href: "/hizmetler/santiye-yemek-hizmeti",
     icon: "construction",
     title: "Şantiyeler",
     lead: "Saha koşullarına uygun, esnek ve planlı toplu yemek çözümleri.",
@@ -132,8 +135,8 @@ export default function WorkAreasPage() {
                 ))}
               </ul>
             </div>
-            <Link href="/teklif" className="workAreaDetailLink">
-              Projeniz için teklif alın <span>→</span>
+            <Link href={area.href || "/teklif"} className="workAreaDetailLink">
+              {area.href ? "Hizmet detaylarını inceleyin" : "Projeniz için teklif alın"} <span>→</span>
             </Link>
           </article>
         ))}

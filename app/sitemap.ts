@@ -13,6 +13,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/hizmetler/paket-yemek`, changeFrequency: "monthly", priority: 0.85 },
     { url: `${baseUrl}/hizmetler/kurumsal-catering`, changeFrequency: "monthly", priority: 0.85 },
     { url: `${baseUrl}/hizmetler/fabrika-yemek-hizmeti`, changeFrequency: "monthly", priority: 0.95 },
+    { url: `${baseUrl}/hizmetler/santiye-yemek-hizmeti`, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${baseUrl}/rehber/toplu-yemek-fiyatlari`, changeFrequency: "monthly", priority: 0.85 },
     { url: `${baseUrl}/teklif`, changeFrequency: "monthly", priority: 0.9 },
     { url: `${baseUrl}/ornek-menu`, changeFrequency: "monthly", priority: 0.85 },
     { url: `${baseUrl}/kurumsal`, changeFrequency: "monthly", priority: 0.8 },

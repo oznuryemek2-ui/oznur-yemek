@@ -18,6 +18,7 @@ export type SeoServicePageProps = {
   process: { title: string; text: string }[];
   localTitle: string;
   localText: string;
+  questions?: { question: string; answer: string }[];
 };
 
 export default function SeoServicePage(props: SeoServicePageProps) {
@@ -100,6 +101,22 @@ export default function SeoServicePage(props: SeoServicePageProps) {
             üretim ve sevkiyat planını ihtiyacınıza göre oluşturalım.
           </p>
           <Link href="/teklif" className="mkMenuButton">Projeniz için teklif alın <span>→</span></Link>
+        </div>
+      </section>
+      {props.questions?.length ? (
+        <section className="section wrap storyGrid">
+          <div><p className="eyebrow red">SIK SORULAN SORULAR</p><h2>Planlamadan önce merak edilenler.</h2></div>
+          <div>{props.questions.map((item) => (
+            <article key={item.question}><h3>{item.question}</h3><p>{item.answer}</p></article>
+          ))}</div>
+        </section>
+      ) : null}
+      <section className="section wrap storyGrid">
+        <div><p className="eyebrow red">MENÜ & BÜTÇE</p><h2>İhtiyacınızı netleştirin, teklifleri aynı kapsamda karşılaştırın.</h2></div>
+        <div>
+          <p>Menü içeriği, kişi sayısı ve servis modeli birlikte değerlendirilir. Örnek menüyü inceleyin; fiyat rehberiyle teklifinizde bulunması gereken kalemleri belirleyin.</p>
+          <p><Link href="/ornek-menu">Aylık örnek yemek menüsü →</Link></p>
+          <p><Link href="/rehber/toplu-yemek-fiyatlari">Toplu yemek fiyatları ve teklif karşılaştırma rehberi →</Link></p>
         </div>
       </section>
       <CTA />

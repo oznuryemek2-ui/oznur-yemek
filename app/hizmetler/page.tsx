@@ -118,6 +118,15 @@ export default function Services(){
         </article>
       )}
     </section>
+    <section className="section wrap storyGrid">
+      <div><p className="eyebrow red">İHTİYACINIZA GÖRE SEÇİN</p><h2>Şantiye, günlük tabldot ve bütçe planlaması.</h2></div>
+      <div>
+        <p>İş yerinizin altyapısı ve çalışma düzeni doğru hizmet modelini belirler. İlgili çözümü ve teklif hazırlık rehberini inceleyin.</p>
+        <p><Link href="/hizmetler/santiye-yemek-hizmeti">Şantiye ve inşaat sahalarına yemek hizmeti →</Link></p>
+        <p><Link href="/hizmetler/toplu-yemek">Günlük personel ve tabldot yemek hizmeti →</Link></p>
+        <p><Link href="/rehber/toplu-yemek-fiyatlari">Toplu yemek fiyatları ve teklif karşılaştırma rehberi →</Link></p>
+      </div>
+    </section>
     <CTA/>
   </main>
 }
