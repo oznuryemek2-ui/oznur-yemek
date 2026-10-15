@@ -47,8 +47,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "İskenderun Kurumsal Yemek & Catering | Öznur Yemek",
-    description: "İskenderun ve Hatay’da kurumsal, toplu, taşımalı ve yerinde üretim yemek hizmetleri.",
+    title: "Toplu Yemek ve Catering | Öznur Yemek",
+    description: "İskenderun ve Hatay’da toplu yemek ve catering; Türkiye genelindeki kurumsal ve şantiye projeleri için yemek çözümleri.",
     type: "website",
     locale: "tr_TR",
     siteName: "Öznur Yemek",
@@ -56,8 +56,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "İskenderun Kurumsal Yemek & Catering | Öznur Yemek",
-    description: "İskenderun ve Hatay’da kurumsal, toplu, taşımalı ve yerinde üretim yemek hizmetleri.",
+    title: "Toplu Yemek ve Catering | Öznur Yemek",
+    description: "İskenderun ve Hatay’da toplu yemek ve catering; Türkiye genelindeki kurumsal ve şantiye projeleri için yemek çözümleri.",
     images: ["/images/site/generated/slider-cooking.webp"],
   },
 };
