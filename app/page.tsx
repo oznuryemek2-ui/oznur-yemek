@@ -5,10 +5,25 @@ import HeroSlider from "./components/HeroSlider";
 import WorkAreaIcon from "./components/WorkAreaIcon";
 
 export const metadata: Metadata = {
-  title: "Kurumsal Toplu Yemek | Türkiye Geneli, İskenderun & Hatay",
+  title: "İskenderun & Hatay Toplu Yemek ve Catering",
   description:
-    "Türkiye genelindeki projeler ile İskenderun ve Hatay’da fabrikalar, şantiyeler ve kurumlar için toplu yemek, yerinde üretim, personel yemeği ve catering çözümleri.",
+    "İskenderun ve Hatay’da fabrika, şantiye ve kurumlara toplu yemek ve catering. Türkiye geneli projeler için yerinde üretim, taşımalı ve paket yemek. Teklif alın.",
   alternates: { canonical: "/" },
+  openGraph: {
+    title: "İskenderun & Hatay Toplu Yemek ve Catering | Öznur Yemek",
+    description: "Fabrika, şantiye ve kurumlar için toplu yemek. İskenderun ve Hatay’da yerel hizmet, Türkiye genelinde proje bazlı çözümler.",
+    url: "/",
+    type: "website",
+    locale: "tr_TR",
+    siteName: "Öznur Yemek",
+    images: [{ url: "/images/site/generated/slider-cooking.webp", alt: "Öznur Yemek kurumsal yemek üretimi" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Toplu Yemek ve Catering | Öznur Yemek",
+    description: "İskenderun, Hatay ve Türkiye genelindeki kurumsal projeler için yemek çözümleri.",
+    images: ["/images/site/generated/slider-cooking.webp"],
+  },
 };
 
 const services = [
@@ -105,6 +120,18 @@ const menuSamples = [
 export default function Home() {
   return (
     <main id="main-content" className="mkHome">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "@id": "https://www.oznuryemek.com/#website",
+          name: "Öznur Yemek",
+          url: "https://www.oznuryemek.com/",
+          inLanguage: "tr-TR",
+          publisher: { "@id": "https://www.oznuryemek.com/#business" },
+        }).replace(/</g, "\\u003c") }}
+      />
       <section className="mkHero">
         <HeroSlider />
         <div className="mkHeroShade" />
@@ -113,8 +140,8 @@ export default function Home() {
           <div className="mkHeroCopy">
             <span className="mkHeroKicker">KURUMSAL YEMEK HİZMETLERİ</span>
             <h1>
-              Güçlü mutfaklar,
-              <strong>daha verimli yarınlar.</strong>
+              Kurumsal toplu yemek,
+              <strong>her projeye doğru çözüm.</strong>
             </h1>
             <p>
               Öznur Yemek; İskenderun ve Hatay’da fabrikalara, iş yerlerine ve kurumlara toplu yemek, catering, taşımalı yemek ve yerinde üretim hizmetleri sunar. Türkiye genelindeki büyük ölçekli şantiye ve kurumsal projelerde ise hizmet modelini saha koşullarına göre planlar.
