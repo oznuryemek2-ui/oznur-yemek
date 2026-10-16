@@ -147,7 +147,7 @@ export function PageHero({
             <ResponsiveSiteImage
               desktopSrc={image}
               mobileSrc={imageMobile}
-              alt={image.includes("ingredients") ? "Taze sebzeler — temsili fotoğraf" : image.includes("meal") ? "Türk kahvaltısı sunumu — temsili fotoğraf" : image.includes("table") ? "Davet masasında çeşitli yemekler — temsili fotoğraf" : "Servis kaplarında çeşitli sıcak yemekler — temsili fotoğraf"}
+              alt={imageAlt || (image.includes("ingredients") ? "Taze sebzeler — temsili fotoğraf" : "Toplu yemek servisi — temsili fotoğraf")}
               className="responsiveSiteImg"
               pictureClassName="responsiveSitePicture"
               priority
