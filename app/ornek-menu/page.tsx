@@ -117,12 +117,12 @@ function MenuTable({
 }
 
 export default function Menu(){
-  return <main>
+  return <main id="main-content">
     <PageHero
       eyebrow="ÖRNEK MENÜ"
       title="Lezzetli, dengeli ve güvenilir öğün planı."
       text="Ekim 2026 kahvaltı ve yemek menülerimizi gün gün inceleyin."
-      image="/images/site/generated/menu-detail.webp"
+      image="/images/editorial/meal.webp"
       imageAlt="Profesyonel mutfakta özenle hazırlanmış dengeli kurumsal öğünler"
     />
 
@@ -134,7 +134,7 @@ export default function Menu(){
       </div>
 
       <div className="menuPagePhoto">
-        <Image src="/images/site/menu-food.webp" alt="Kurumsal toplu yemek menüsü için hazırlanmış çeşitli öğünler" fill quality={82} sizes="(max-width:900px) 100vw, 1100px"/>
+        <Image src="/images/editorial/meal.webp" alt="Türk kahvaltısında peynir, zeytin, yumurta ve menemen — temsili fotoğraf" fill quality={82} sizes="(max-width:900px) 100vw, 1100px"/>
       </div>
 
       <MenuTable

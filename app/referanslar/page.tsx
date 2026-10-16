@@ -44,12 +44,12 @@ function RefGroup({title,subtitle,items}:{title:string;subtitle:string;items:str
 }
 
 export default function References(){
-  return <main>
+  return <main id="main-content">
     <PageHero
       eyebrow="REFERANSLARIMIZ"
       title="Büyük projelerde, güçlü iş ortağı."
       text="Tosyalı Holding Çelikhane, TOKİ projeleri ve İskenderun bölgesinde farklı sektörlerde saha deneyimi."
-      image="https://images.pexels.com/photos/11330115/pexels-photo-11330115.jpeg?auto=compress&cs=tinysrgb&w=2200"
+      image="/images/editorial/buffet.webp"
       imageAlt="Profesyonel mutfak ekibi proje operasyonunda"
       />
     <section className="section wrap refsPage">

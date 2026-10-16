@@ -26,12 +26,12 @@ const why = [
 ];
 
 export default function CorporatePage(){
-  return <main>
+  return <main id="main-content">
     <PageHero
       eyebrow="BİZ KİMİZ?"
       title="İnsan odaklı, deneyimli bir kurumsal yemek iş ortağı."
       text="Öznur Yemek, kurumsal ve toplu yemek hizmetlerinde kaliteli, hijyenik ve sürdürülebilir çözümler sunar."
-      image="/images/site/generated/service-onsite.webp"
+      image="/images/editorial/buffet.webp"
       imageAlt="Öznur Yemek profesyonel üretim mutfağı"
       />
 
@@ -57,13 +57,13 @@ export default function CorporatePage(){
         <article><span>01</span><h3>3.000</h3><p>Kişi / öğün üretim kapasitesi</p></article>
         <article><span>02</span><h3>3</h3><p>Farklı hizmet modeli</p></article>
         <article><span>03</span><h3>Geniş Filo</h3><p>Sıcak ve zamanında teslimat</p></article>
-        <article><span>04</span><h3>Türkiye</h3><p>Her noktada hizmet verebilme imkanı</p></article>
+        <article><span>04</span><h3>Türkiye</h3><p>Proje koşullarına göre hizmet planlama</p></article>
       </div>
     </section>
 
     <section className="section wrap corporateImageSplit">
       <figure className="corporatePhoto">
-        <Image src="https://images.pexels.com/photos/11392648/pexels-photo-11392648.jpeg?auto=compress&cs=tinysrgb&w=2200" alt="Profesyonel mutfak ekibi ve kurumsal operasyon" width={1200} height={720} quality={82} sizes="(max-width:900px) 100vw,50vw"/>
+        <Image src="/images/editorial/table.webp" alt="Yemeklerin bulunduğu servis masası — temsili fotoğraf" width={1200} height={720} quality={82} sizes="(max-width:900px) 100vw,50vw"/>
       </figure>
       <div>
         <p className="eyebrow red">NEDEN ÖZNUR YEMEK?</p>

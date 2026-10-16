@@ -7,7 +7,7 @@ export const metadata = {
 };
 
 export default function QuotePage(){
-  return <main>
+  return <main id="main-content">
     <section className="quotePage">
       <div className="wrap quotePageGrid">
         <div className="quotePageIntro">

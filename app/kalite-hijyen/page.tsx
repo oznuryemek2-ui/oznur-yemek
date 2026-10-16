@@ -26,12 +26,12 @@ const operations=[
 ];
 
 export default function Quality(){
-  return <main>
+  return <main id="main-content">
     <PageHero
       eyebrow="KALİTE & HİJYEN STANDARTLARIMIZ"
       title="Güvenli gıda, sağlıklı gelecek."
       text="Üretimden servise kadar kalite ve hijyen, operasyonumuzun ayrılmaz parçasıdır."
-      image="/images/site/generated/service-quality.webp"
+      image="/images/editorial/ingredients.webp"
       imageAlt="Endüstriyel mutfakta profesyonel gıda güvenliği ve kalite denetimi"
       />
 
@@ -48,7 +48,7 @@ export default function Quality(){
 
     <section className="qualityVisualBand">
       <div className="qualityVisualImage">
-        <Image src="/images/site/quality-chef.webp" alt="Profesyonel mutfakta gıda güvenliği ve kalite kontrolü" fill quality={82} sizes="(max-width:900px) 100vw,45vw"/>
+        <Image src="/images/editorial/ingredients.webp" alt="Taze sebze ve mantarlar — temsili fotoğraf" fill quality={82} sizes="(max-width:900px) 100vw,45vw"/>
       </div>
       <div className="qualityVisualCopy">
         <p className="eyebrow light">OPERASYON GÜCÜMÜZ</p>
