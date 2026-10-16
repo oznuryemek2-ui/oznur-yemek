@@ -63,7 +63,7 @@ export default function CorporatePage(){
 
     <section className="section wrap corporateImageSplit">
       <figure className="corporatePhoto">
-        <Image src="/images/editorial/table.webp" alt="Yemeklerin bulunduğu servis masası — temsili fotoğraf" width={1200} height={720} quality={82} sizes="(max-width:900px) 100vw,50vw"/>
+        <Image src="/images/editorial/canteen-service.webp" alt="Yemekhane servis hattında sıcak yemek porsiyonlama — temsili fotoğraf" width={1200} height={720} quality={82} sizes="(max-width:900px) 100vw,50vw"/>
       </figure>
       <div>
         <p className="eyebrow red">NEDEN ÖZNUR YEMEK?</p>

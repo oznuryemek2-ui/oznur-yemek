@@ -123,8 +123,8 @@ export default function Menu(){
       eyebrow="ÖRNEK MENÜ"
       title="Lezzetli, dengeli ve güvenilir öğün planı."
       text="Ekim 2026 kahvaltı ve yemek menülerimizi gün gün inceleyin."
-      image="/images/editorial/meal.webp"
-      imageAlt="Türk kahvaltısı sunumu — temsili fotoğraf"
+      image="/images/editorial/hot-meals.webp"
+      imageAlt="Toplu servis için hazırlanmış pilav ve sıcak yemekler — temsili fotoğraf"
     />
 
     <section className="section wrap menuPage menuPageFull">
@@ -135,7 +135,7 @@ export default function Menu(){
       </div>
 
       <div className="menuPagePhoto">
-        <Image src="/images/editorial/meal.webp" alt="Türk kahvaltısında peynir, zeytin, yumurta ve menemen — temsili fotoğraf" fill quality={82} sizes="(max-width:900px) 100vw, 1100px"/>
+        <Image src="/images/editorial/hot-meals.webp" alt="Toplu servis için hazırlanmış pilav ve sıcak yemekler — temsili fotoğraf" fill quality={82} sizes="(max-width:900px) 100vw, 1100px"/>
       </div>
 
       <MenuTable

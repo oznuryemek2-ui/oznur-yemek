@@ -1,13 +1,13 @@
 /* Shared visual system. Existing routes, content and form behavior are retained. */
 :root{
-  --red:#b6202c;
-  --red-dark:#941925;
-  --ink:#242925;
-  --muted:#626860;
-  --paper:#fcfbf7;
-  --cream:#f3f0e8;
-  --line:#dedfd6;
-  --dark:#24382e;
+  --red:#cf1831;
+  --red-dark:#a70f25;
+  --ink:#192c22;
+  --muted:#4d5d52;
+  --paper:#ffffff;
+  --cream:#fff4e9;
+  --line:#e1e4dc;
+  --dark:#173e2c;
   --oy-red:var(--red);
   --oy-red-deep:var(--red-dark);
   --oy-ink:var(--ink);
@@ -1206,3 +1206,24 @@ a,button,input,textarea,select{
 .footerOfficialBrand>.footerBrandLockup{width:220px;height:auto;max-width:100%;background:#fff;padding:10px 12px;border-radius:4px}
 
 .footerIdentity p{color:#c1c9bf}
+
+/* Warmer, clearer color contrast without changing layout or photo content. */
+.freshHero{background:linear-gradient(115deg,#fff9f1 0%,#ffeddd 100%)}
+.freshLead{color:#46594d}
+.freshLocation{border-top:3px solid var(--red)}
+.freshServiceCard{border-top:3px solid #e8a190;box-shadow:0 5px 20px #173e2c05}
+.freshServiceCard:nth-child(2),.freshServiceCard:nth-child(4){border-top-color:#639b76;background:#f5faf3}
+.freshServiceGuide{background:#fff0e5;border-color:#efc7b0}
+.freshServiceCard:hover{background:#fff8f2}
+.freshCardIndex{color:var(--red)}
+.freshApproach{background:#173e2c}
+.freshApproach .freshEyebrow,.freshApproach h2 em{color:#ffcc91}
+.freshMenu{background:#fff2e1}
+.freshClosing{background:var(--red);color:#fff}
+.freshClosing .freshEyebrow,.freshClosing .freshTextLink{color:#fff}
+.freshClosing .freshButton{background:#fff;color:var(--red-dark)}
+.freshClosing .freshButton:hover{background:#fff0df}
+.freshClosing:after{border-color:#ffffff30}
+.freshHeroVisual:after{inset:48% 0 0;background:linear-gradient(transparent,rgba(10,19,13,.72))}
+.freshSlide img{filter:brightness(1.08) saturate(1.04)}
+.freshMenu figure img,.menuPagePhoto img,.pageHeroMedia img[src*="hot-meals"]{object-position:center 73%}
