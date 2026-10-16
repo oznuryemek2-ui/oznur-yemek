@@ -14,3 +14,10 @@ These are licensed stock photographs, not Öznur Yemek facilities, employees, co
 Revision: the serpme breakfast (meal.webp) and banquet table (table.webp) are retained only for version history and are no longer used on current pages. Current service photography depicts bulk hot meals and canteen portioning. A small CSS brightness/saturation adjustment is applied to homepage slides; no people, food, branding or facilities have been generated or altered.
 
 Licenses: https://www.pexels.com/license/ and https://unsplash.com/license . Downloaded from their image CDNs, resized and converted to WebP for self-hosting. Original photographs remain unaltered apart from format/size and responsive CSS cropping.
+
+## Premium preview photography
+
+- chef-service.webp — Amanda Lim, https://www.pexels.com/photo/person-in-brown-long-sleeve-chef-uniform-preparing-food-on-buffet-table-8178760/ — Pexels License.
+- corporate-service.webp — Thiago Patrevita, https://www.pexels.com/photo/four-man-cooking-1121482/ — Pexels License.
+
+These real photographs illustrate a service setting; they are not presented as Öznur employees or premises. No logo or person has been fabricated. The premium preview uses responsive CSS crops and WebP compression.

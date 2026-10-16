@@ -8,46 +8,96 @@ export const metadata: Metadata = {
   title: "İskenderun & Hatay Toplu Yemek ve Catering",
   description: "İskenderun ve Hatay’da fabrika, şantiye ve kurumlara toplu yemek ve catering. Türkiye geneli projeler için yerinde üretim, taşımalı ve paket yemek. Teklif alın.",
   alternates: { canonical: "/" },
-  openGraph: { title: "İskenderun & Hatay Toplu Yemek ve Catering | Öznur Yemek", description: "Fabrika, şantiye ve kurumlar için planlı yemek hizmetleri.", url: "/", type: "website", locale: "tr_TR", siteName: "Öznur Yemek", images: [{ url: "/images/editorial/canteen-service.webp", alt: "Yemekhane servis hattı — temsili fotoğraf" }] },
-  twitter: { card: "summary_large_image", title: "Toplu Yemek ve Catering | Öznur Yemek", description: "İskenderun, Hatay ve Türkiye genelindeki kurumsal projeler için yemek çözümleri.", images: ["/images/editorial/canteen-service.webp"] },
+  openGraph: {
+    title: "İskenderun & Hatay Toplu Yemek ve Catering | Öznur Yemek",
+    description: "Fabrika, şantiye ve kurumlar için planlı yemek hizmetleri.",
+    url: "/", type: "website", locale: "tr_TR", siteName: "Öznur Yemek",
+    images: [{ url: "/images/editorial/corporate-service.webp", alt: "Kurumsal yemek servisinden temsili bir fotoğraf" }],
+  },
+  twitter: {
+    card: "summary_large_image", title: "Toplu Yemek ve Catering | Öznur Yemek",
+    description: "İskenderun, Hatay ve Türkiye genelindeki kurumsal projeler için yemek çözümleri.",
+    images: ["/images/editorial/corporate-service.webp"],
+  },
 };
-const services = [
-  ["01", "Yerinde üretim", "Mutfağınızda, çalışma düzeninize uygun üretim ve servis planı.", "/hizmetler/yerinde-uretim"],
-  ["02", "Taşımalı yemek", "Hazırlıktan teslimata, öğün saatlerinize göre planlanan yemek hizmeti.", "/hizmetler/tasimali-yemek"],
-  ["03", "Paket yemek", "Saha ekipleri ve dağıtım noktaları için pratik, porsiyonlu çözümler.", "/hizmetler/paket-yemek"],
-  ["04", "Davet & organizasyon", "Kurumsal etkinlikleriniz için menü, hazırlık ve servis koordinasyonu.", "/hizmetler/kurumsal-catering"],
-  ["05", "İftar organizasyonları", "Ramazan programlarınıza uygun toplu iftar ve paketli yemek planlaması.", "/hizmetler#iftar"],
-];
-const sectors = [
-  ["factory", "Fabrika & üretim", "Vardiyaya uygun öğün planı", "/hizmetler/fabrika-yemek-hizmeti"],
-  ["construction", "Şantiye & proje", "Saha koşullarına uygun hizmet", "/hizmetler/santiye-yemek-hizmeti"],
-  ["office", "Ofis & kurum", "Günlük personel yemeği", "/hizmetler/toplu-yemek"],
-  ["port", "Liman & enerji", "Operasyon saatlerine uyum", "/calisma-alanlarimiz"],
+
+function ServiceIcon({ type }: { type: "kitchen" | "delivery" | "package" }) {
+  return <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    {type === "kitchen" ? <><path d="M14 29h36v18a7 7 0 0 1-7 7H21a7 7 0 0 1-7-7V29Zm-5 5h5m36 0h5M12 23h40M25 17c-6-6 6-7 0-13m14 13c-6-6 6-7 0-13"/><path d="M27 22v-4h10v4"/></> : null}
+    {type === "delivery" ? <><path d="M5 15h34v32H5V15Zm34 12h11l9 12v8H39V27Z"/><circle cx="17" cy="48" r="6"/><circle cx="49" cy="48" r="6"/><path d="M45 32v8h13M10 23h21M10 30h15"/></> : null}
+    {type === "package" ? <><rect x="6" y="12" width="52" height="40" rx="5"/><path d="M6 25h52M29 25v27M40 25v27M15 19h34"/><path d="M14 34h7m-7 7h7m14-7h0m12 0h4m-4 7h4"/></> : null}
+  </svg>;
+}
+
+const models = [
+  { type: "kitchen", title: "Yerinde üretim", note: "Mutfağınızda, ekibiniz için.", href: "/hizmetler/yerinde-uretim", text: "Mutfak altyapınıza ve çalışma düzeninize göre üretim, ekip ve servis planlaması.", image: "/images/editorial/chef-service.webp", alt: "Sıcak yemek servisinde porsiyon hazırlığı — temsili fotoğraf" },
+  { type: "delivery", title: "Taşımalı yemek", note: "Öğün saatinize uygun plan.", href: "/hizmetler/tasimali-yemek", text: "Hazırlıktan sevkiyata, yemeklerin servis noktanıza ulaştırılmasının koordinasyonu.", image: "/images/editorial/hot-meals.webp", alt: "Toplu servis için sıcak yemek kaplarında pilav — temsili fotoğraf" },
+  { type: "package", title: "Paket yemek", note: "Sahanıza uygun, pratik çözüm.", href: "/hizmetler/paket-yemek", text: "Saha ekipleri ve farklı dağıtım noktaları için porsiyonlu yemek ve dağıtım planı." },
 ] as const;
+const sectors = [
+  { type: "factory", name: "Fabrikalar", text: "Vardiyalara uygun personel yemeği.", href: "/hizmetler/fabrika-yemek-hizmeti" },
+  { type: "construction", name: "Şantiyeler", text: "Saha koşullarına göre yemek hizmeti.", href: "/hizmetler/santiye-yemek-hizmeti" },
+  { type: "office", name: "Ofisler & kurumlar", text: "İş gününüze eşlik eden düzenli öğünler.", href: "/hizmetler/toplu-yemek" },
+  { type: "port", name: "Liman & enerji", text: "Operasyon saatlerine uyumlu planlama.", href: "/calisma-alanlarimiz" },
+] as const;
+
 export default function Home() {
-  return <main id="main-content" className="freshHome">
-    <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify({"@context":"https://schema.org","@type":"WebSite","@id":"https://www.oznuryemek.com/#website",name:"Öznur Yemek",url:"https://www.oznuryemek.com/",inLanguage:"tr-TR",publisher:{"@id":"https://www.oznuryemek.com/#business"}}).replace(/</g,"\\u003c")}}/>
-    <section className="freshHero">
-      <div className="wrap freshHeroGrid">
-        <div className="freshHeroCopy">
-          <p className="freshEyebrow"><span/> İSKENDERUN’DAN, PROJENİZE</p>
-          <h1>İyi yemek.<br/>Düzenli hizmet.<br/><em>Güçlü bir iş ortağı.</em></h1>
-          <p className="freshLead">İskenderun ve Hatay’da toplu yemek ve catering. Fabrikanızdan şantiyenize, her öğünü işinizin düzenine göre planlıyoruz.</p>
-          <div className="freshActions"><Link className="freshButton" href="/teklif">Projeniz için teklif alın <span>↗</span></Link><Link className="freshTextLink" href="/ornek-menu">Örnek menüyü inceleyin <span>→</span></Link></div>
-          <div className="freshHeroFoot"><span>Yerinde üretim</span><span>Taşımalı yemek</span><span>Paket yemek</span></div>
+  return <main id="main-content" className="premiumHome">
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+      "@context": "https://schema.org", "@type": "WebSite", "@id": "https://www.oznuryemek.com/#website",
+      name: "Öznur Yemek", url: "https://www.oznuryemek.com/", inLanguage: "tr-TR", publisher: { "@id": "https://www.oznuryemek.com/#business" },
+    }).replace(/</g, "\\u003c") }}/>
+
+    <section className="xHero">
+      <HeroSlider />
+      <div className="wrap xHeroInner">
+        <div className="xHeroCopy">
+          <p className="xEyebrow xEyebrowLight"><span/> TOPLU YEMEK & KURUMSAL CATERING</p>
+          <h1>İşinizin temposuna<br/><strong>lezzet katıyoruz.</strong></h1>
+          <p className="xHeroLead">İskenderun ve Hatay’da fabrikalara, şantiyelere ve kurumlara toplu yemek. Üretimden servise, projenizin ihtiyacına göre planlıyoruz.</p>
+          <div className="xActions">
+            <Link href="/teklif" className="xButton xButtonRed">Projeniz için teklif alın <span>↗</span></Link>
+            <Link href="/ornek-menu" className="xButton xButtonGlass">Örnek menüyü görün <span>→</span></Link>
+          </div>
+          <div className="xHeroChecks"><span>✓ Planlı üretim</span><span>✓ Düzenli servis</span><span>✓ Projeye özel çözüm</span></div>
         </div>
-        <div className="freshHeroVisual"><HeroSlider/><div className="freshPhotoLabel"><span>HER ÖĞÜNDE AYNI ÖZEN</span><b>Lezzetle başlayan,<br/>planlamayla güçlenen hizmet.</b></div></div>
+        <div className="xHeroSignature"><span>ÖZNUR YEMEK</span><b>Herkes için lezzet.<br/>Her yerde hizmet.</b></div>
       </div>
     </section>
-    <div className="freshLocation"><div className="wrap"><span>İskenderun <i/> Hatay</span><p>Türkiye genelindeki kurumsal ve şantiye projeleri için sahaya özel planlama.</p><Link href="/turkiye-geneli-kurumsal-yemek">Hizmet kapsamı ↗</Link></div></div>
-    <section className="wrap freshSection" id="hizmetler">
-      <div className="freshSectionHead"><div><p className="freshEyebrow">01 / HİZMETLERİMİZ</p><h2>İşinize uygun<br/>yemek çözümü.</h2></div><p>Kişi sayınız, mutfak altyapınız ve çalışma saatleriniz ne olursa olsun; önce ihtiyacınızı dinliyor, hizmet modelini birlikte belirliyoruz.</p></div>
-      <div className="freshServiceGrid">{services.map(([n,title,text,href])=><Link className="freshServiceCard" href={href} key={n}><span className="freshCardIndex">{n}<span>↗</span></span><h3>{title}</h3><p>{text}</p><span className="freshCardLink">Hizmeti inceleyin →</span></Link>)}<Link className="freshServiceCard freshServiceGuide" href="/rehber/toplu-yemek-fiyatlari"><span className="freshCardIndex">TEKLİF REHBERİ <span>↗</span></span><h3>Doğru teklif,<br/>net bir ihtiyaçla başlar.</h3><p>Toplu yemek fiyatını etkileyen kalemleri ve teklif karşılaştırırken dikkat edilecekleri inceleyin.</p><span className="freshCardLink">Rehberi okuyun →</span></Link></div>
+
+    <div className="wrap xServiceDock">
+      {models.map(model => <Link href={model.href} key={model.type}><ServiceIcon type={model.type}/><div><b>{model.title}</b><span>{model.note}</span></div><span className="xDockArrow">↗</span></Link>)}
+      <a className="xDockContact" href="tel:+905466953914"><small>PROJENİZİ KONUŞALIM</small><b>0546 695 39 14</b><span>Doğrudan iletişim ↗</span></a>
+    </div>
+
+    <section className="wrap xSection xServices">
+      <div className="xSectionHead"><div><p className="xEyebrow">HİZMET MODELLERİMİZ</p><h2>Doğru hizmet modeli.<br/><span>Sorunsuz bir iş günü.</span></h2></div><p>Kişi sayınız, öğün kapsamınız ve sahanızın koşulları farklı olabilir. Yemek hizmetinizi işinizin düzenine göre şekillendiriyoruz.</p></div>
+      <div className="xServiceCards">
+        {models.map((model, index) => <article className="xServiceCard" key={model.type}>
+          {"image" in model ? <Link href={model.href} className="xServicePhoto" aria-label={`${model.title} hizmetini inceleyin`}><Image src={model.image} alt={model.alt} fill sizes="(max-width:700px) 100vw, 33vw"/><span className="xPhotoCaption">Temsili fotoğraf</span></Link> : <div className="xServiceGraphic"><ServiceIcon type={model.type}/><span>SAHANIZIN<br/>HER NOKTASINA.</span></div>}
+          <div className="xServiceBody"><span className="xServiceNumber">0{index + 1}</span><h3>{model.title}</h3><p>{model.text}</p><Link href={model.href}>Hizmeti inceleyin <span>↗</span></Link></div>
+        </article>)}
+      </div>
+      <div className="xMoreServices"><p>Özel günleriniz için de yanınızdayız.</p><Link href="/hizmetler/kurumsal-catering">Davet & organizasyon <span>↗</span></Link><Link href="/hizmetler#iftar">İftar organizasyonları <span>↗</span></Link></div>
     </section>
-    <section className="freshApproach"><div className="wrap freshApproachGrid"><figure><Image src="/images/editorial/ingredients.webp" alt="Taze sebze ve mantarlar — temsili fotoğraf" width={1067} height={1600} sizes="(max-width: 760px) 100vw, 45vw"/><figcaption>Temsili fotoğraf · Pexels</figcaption></figure><div><p className="freshEyebrow">02 / YAKLAŞIMIMIZ</p><h2>İyi bir öğünün<br/>arkasında iyi bir<br/><em>plan vardır.</em></h2><p>Menüden tedarike, hazırlıktan servise kadar her adımı bir bütün olarak ele alıyoruz. Amacımız, ekibinizin yemeğini günlük operasyonunuzun güvenilir bir parçası haline getirmek.</p><ul><li><b>Menüye özen</b><span>Öğün kapsamına ve çalışma düzenine uygun planlama.</span></li><li><b>Süreçte disiplin</b><span>Üretim, sevkiyat ve servis adımlarının koordinasyonu.</span></li><li><b>İletişimde açıklık</b><span>Hizmet kapsamı ve saha ihtiyaçlarının birlikte belirlenmesi.</span></li></ul><Link className="freshTextLink" href="/kalite-hijyen">Kalite & hijyen yaklaşımımız →</Link></div></div></section>
-    <section className="wrap freshSection"><div className="freshSectionHead"><div><p className="freshEyebrow">03 / ÇALIŞMA ALANLARIMIZ</p><h2>Her sahanın<br/>ritmini biliyoruz.</h2></div><p>Farklı sektörler, farklı ihtiyaçlar. Vardiyalarınızı, mola saatlerinizi ve servis koşullarınızı birlikte değerlendiriyoruz.</p></div><div className="freshSectors">{sectors.map(([icon,title,text,href])=><Link key={icon} href={href}><WorkAreaIcon type={icon}/><h3>{title}</h3><p>{text}</p><span aria-hidden="true">↗</span></Link>)}</div><Link className="freshTextLink" href="/calisma-alanlarimiz">Tüm çalışma alanları →</Link></section>
-    <section className="freshMenu"><div className="wrap freshMenuGrid"><div><p className="freshEyebrow">04 / ÖRNEK MENÜ</p><h2>Tanıdık lezzetler.<br/><em>Özenli bir plan.</em></h2><p>Aylık örnek kahvaltı ve yemek menülerini inceleyin. Projenizin kişi sayısı, öğün kapsamı ve özel ihtiyaçlarına göre menü planını birlikte oluşturalım.</p><Link className="freshButton" href="/ornek-menu">Aylık menüyü inceleyin <span>↗</span></Link><p className="freshSmall">Menüler örnektir; hizmet kapsamına göre düzenlenir.</p></div><figure><Image src="/images/editorial/hot-meals.webp" alt="Toplu servis için hazırlanmış pilav ve sıcak yemekler — temsili fotoğraf" width={1800} height={1200} sizes="(max-width: 760px) 100vw, 50vw"/><figcaption>Temsili toplu yemek sunumu · Adil Khan Marwat / Pexels</figcaption></figure></div></section>
-    <section className="wrap freshSection freshProcess"><div><p className="freshEyebrow">05 / BİRLİKTE BAŞLAYALIM</p><h2>İhtiyacınızı anlatın.<br/>Planı birlikte çıkaralım.</h2></div><ol>{[["İhtiyacınızı öğrenelim","Kişi sayısı, lokasyon, vardiya ve öğün bilgilerinizi paylaşın."],["Hizmet modelini belirleyelim","Mutfak, taşıma ve servis koşullarını birlikte değerlendirelim."],["Size özel teklif hazırlayalım","Menü ve hizmet kapsamını netleştirerek ilerleyelim."]].map(([title,text])=><li key={title}><h3>{title}</h3><p>{text}</p></li>)}</ol></section>
-    <section className="freshClosing"><div className="wrap"><p className="freshEyebrow">ÖZNUR YEMEK / HERKES İÇİN LEZZET</p><h2>Bir sonraki öğünü<br/>birlikte planlayalım.</h2><div className="freshActions"><Link href="/teklif" className="freshButton">Teklif talebi oluşturun <span>↗</span></Link><a className="freshTextLink" href="tel:+905466953914">0546 695 39 14 ↗</a></div></div></section>
+
+    <section className="xAbout"><div className="wrap xAboutGrid">
+      <div className="xAboutVisual"><Image src="/images/editorial/chef-service.webp" alt="Servis sırasında sıcak yemeğin porsiyonlanması — temsili fotoğraf" fill sizes="(max-width:850px) 100vw, 45vw"/><span className="xPhotoCaption">Temsili servis fotoğrafı · Amanda Lim / Pexels</span><div className="xCapacity"><b>3.000</b><span>kişi / öğün<br/>üretim kapasitesi</span></div></div>
+      <div className="xAboutCopy"><p className="xEyebrow">ÖZNUR YEMEK İLE</p><h2>İyi bir öğün,<br/><span>iyi bir operasyonla başlar.</span></h2><p>Bir öğünün arkasında doğru tedarik, dikkatli hazırlık ve zamanında servis vardır. Öznur Yemek olarak bütün bu adımları aynı planın parçaları olarak ele alıyoruz.</p><div className="xPrinciples">{[["01", "Menüye özen", "Öğün kapsamına ve çalışma düzenine uygun menü planı."],["02", "Süreçte disiplin", "Üretim, sevkiyat ve servis arasında düzenli koordinasyon."],["03", "İletişimde açıklık", "Hizmet kapsamının ve saha ihtiyaçlarının birlikte belirlenmesi."]].map(([n,title,text])=><div key={n}><span>{n}</span><div><h3>{title}</h3><p>{text}</p></div></div>)}</div><Link href="/kalite-hijyen" className="xUnderLink">Kalite & hijyen yaklaşımımız <span>↗</span></Link></div>
+    </div></section>
+
+    <section className="xSectorBand"><div className="wrap">
+      <div className="xSectionHead"><div><p className="xEyebrow xEyebrowLight">ÇALIŞMA ALANLARIMIZ</p><h2>Her sahanın ihtiyacı farklı.<br/><span>Özenimiz aynı.</span></h2></div><Link href="/calisma-alanlarimiz" className="xUnderLink">Tüm çalışma alanları <span>↗</span></Link></div>
+      <div className="xSectors">{sectors.map(sector=><Link href={sector.href} key={sector.type}><WorkAreaIcon type={sector.type}/><h3>{sector.name}</h3><p>{sector.text}</p><span>↗</span></Link>)}</div>
+      <p className="xSectorNote">Okullar · Hastaneler · Kamu kurumları · Diğer kurumsal projeler</p>
+    </div></section>
+
+    <section className="wrap xSection xReferences"><div className="xSectionHead"><div><p className="xEyebrow">SAHADAN GELEN DENEYİM</p><h2>Güven, birlikte<br/><span>çalışarak kazanılır.</span></h2></div><p>Çelikhane yapımından şantiye operasyonlarına, farklı saha koşullarında edinilmiş proje deneyimi.</p></div><div className="xReferenceCards"><Link href="/referanslar"><span>ENDÜSTRİYEL PROJE</span><h3>Tosyalı Çelikhane</h3><p>5 yıllık saha deneyimi.</p><b>↗</b></Link><Link href="/referanslar"><span>İNŞAAT & ŞANTİYE</span><h3>TOKİ projeleri</h3><p>Farklı proje koşullarında yemek hizmeti.</p><b>↗</b></Link><Link href="/referanslar"><span>BÖLGESEL DENEYİM</span><h3>İskenderun & Hatay</h3><p>Sanayi, liman ve kurumsal operasyonlar.</p><b>↗</b></Link></div></section>
+
+    <section className="xMenuSection"><div className="wrap xMenuGrid"><div className="xMenuIntro"><p className="xEyebrow">ÖRNEK AYLIK MENÜ</p><h2>Menüde çeşitlilik.<br/><span>Planlamada denge.</span></h2><p>Tanıdık lezzetleri, çalışma düzeninize uygun bir öğün planında buluşturalım. Ekim ayı örnek kahvaltı ve yemek menülerimizi inceleyin.</p><Link href="/ornek-menu" className="xButton xButtonRed">Aylık menüyü inceleyin <span>↗</span></Link><Link href="/rehber/toplu-yemek-fiyatlari" className="xUnderLink">Toplu yemek teklif rehberi <span>→</span></Link></div><div className="xMenuVisual"><div className="xMenuPhoto"><Image src="/images/editorial/hot-meals.webp" alt="Toplu sıcak yemek servisi — temsili fotoğraf" fill sizes="(max-width:850px) 100vw, 45vw"/><span className="xPhotoCaption">Temsili toplu yemek sunumu</span></div><div className="xMenuCard"><div><span>14 EKİM 2026</span><small>ÖRNEK ÖĞÜN</small></div><h3>Özenle planlanan<br/>bir öğün.</h3><ul><li><span>Ana yemek</span><b>Tepsi kebabı</b></li><li><span>Yardımcı yemek</span><b>Bulgur pilavı</b></li><li><span>Eşlik</span><b>Çorba</b></li><li><span>Tamamlayıcı</span><b>Meyve</b></li></ul><p>Menüler projeye göre düzenlenir.</p></div></div></div></section>
+
+    <section className="wrap xSection xProcess"><div className="xSectionHead"><div><p className="xEyebrow">NASIL BAŞLAYALIM?</p><h2>İhtiyacınız netleşsin.<br/><span>Planınız hazır olsun.</span></h2></div><p>İskenderun ve Hatay’daki yerel hizmetlerimiz ile Türkiye genelindeki proje bazlı çözümlerimizi birlikte değerlendirelim.</p></div><ol>{[["İhtiyacınızı dinleyelim", "Kişi sayısı, lokasyon, öğün ve vardiya bilgilerinizi paylaşın."],["Sahanızı değerlendirelim", "Mutfak, taşıma ve servis koşullarına uygun modeli belirleyelim."],["Teklifinizi hazırlayalım", "Menü ve hizmet kapsamını netleştirerek ilerleyelim."]].map(([title,text],i)=><li key={title}><span>0{i+1}</span><h3>{title}</h3><p>{text}</p></li>)}</ol><Link href="/turkiye-geneli-kurumsal-yemek" className="xUnderLink">Türkiye geneli proje planlaması <span>↗</span></Link></section>
+
+    <section className="xFinal"><div className="wrap"><div><p className="xEyebrow xEyebrowLight">PROJENİZ İÇİN HAZIRIZ</p><h2>Yemek işini<br/>birlikte planlayalım.</h2></div><div><p>Kişi sayınızı, çalışma düzeninizi ve hizmet noktanızı paylaşın. Size uygun çözümü birlikte oluşturalım.</p><div className="xActions"><Link href="/teklif" className="xButton xButtonWhite">Teklif talebi oluşturun <span>↗</span></Link><a href="https://wa.me/905466953914" className="xButton xButtonGlass" target="_blank" rel="noreferrer">WhatsApp <span>↗</span></a></div></div></div></section>
   </main>;
 }
