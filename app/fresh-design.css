@@ -1204,3 +1204,5 @@ a,button,input,textarea,select{
 @media(max-width:760px){.menuScrollHint{display:block;font-size:11px;color:var(--muted);margin:14px 0 10px}}
 .footerColumn>b{color:#f7f6ee}
 .footerOfficialBrand>.footerBrandLockup{width:220px;height:auto;max-width:100%;background:#fff;padding:10px 12px;border-radius:4px}
+
+.footerIdentity p{color:#c1c9bf}
