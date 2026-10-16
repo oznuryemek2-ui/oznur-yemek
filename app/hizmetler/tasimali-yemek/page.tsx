@@ -15,7 +15,7 @@ export default function Page() {
     intro="Mutfağı bulunmayan veya üretimi dışarıdan almak isteyen işletmeler için porsiyon ve servis düzenine göre planlanan taşımalı yemek hizmeti."
     image="/images/editorial/buffet.webp"
     imageMobile="/images/editorial/buffet.webp"
-    imageAlt="İskenderun taşımalı sıcak yemek sevkiyat aracı"
+    imageAlt="Servis kaplarında çeşitli sıcak yemekler — temsili fotoğraf"
     serviceType="Taşımalı Yemek Hizmeti"
     sectionTitle="Servis saatine göre üretim ve lojistiği birlikte planlıyoruz."
     detail="Taşımalı yemek hizmetinde üretim programı, rota ve teslimat saatleri kurumun çalışma düzenine göre belirlenir. Amaç yalnızca yemeği ulaştırmak değil; öğünün doğru zamanda, düzenli ve servis edilebilir biçimde sahaya ulaşmasını sağlamaktır."

@@ -76,7 +76,7 @@ export default function NationalCorporateMeals() {
         text="İskenderun ve Hatay merkezli Öznur Yemek, Türkiye'nin farklı bölgelerindeki kurumsal projeler için kişi sayısına ve saha koşullarına göre toplu yemek, yerinde üretim ve personel yemeği modellerini planlar."
         image="/images/editorial/buffet.webp"
         imageMobile="/images/editorial/buffet.webp"
-        imageAlt="Öznur Yemek kurumsal yemek üretimi ve büyük ölçekli proje servisi"
+        imageAlt="Servis kaplarında çeşitli sıcak yemekler — temsili fotoğraf"
       />
       <section className="section wrap storyGrid">
         <div>

@@ -26,7 +26,7 @@ export default function Page() {
       text="Kişi başı tabldot fiyatını araştırırken menü, porsiyon, öğün ve servis kapsamını birlikte karşılaştırın. İskenderun ve Hatay’daki işletmeler ile Türkiye geneli projeler için teklif hazırlık rehberi."
       image="/images/editorial/buffet.webp"
       imageMobile="/images/editorial/buffet.webp"
-      imageAlt="Öznur Yemek kurumsal yemek üretim ve servis hazırlığı"
+      imageAlt="Servis kaplarında çeşitli sıcak yemekler — temsili fotoğraf"
     />
     <section className="section wrap storyGrid">
       <div><p className="eyebrow red">KİŞİ BAŞI MALİYET</p><h2>Toplu yemek ve tabldot fiyatları nasıl belirlenir?</h2></div>

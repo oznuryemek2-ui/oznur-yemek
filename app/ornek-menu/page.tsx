@@ -103,7 +103,8 @@ function MenuTable({
         <p>{subtitle}</p>
       </div>
     </div>
-    <div className="menuTableWrap" aria-label={title}>
+    <p className="menuScrollHint">Tüm sütunları görmek için tabloyu yana kaydırabilirsiniz.</p>
+    <div className="menuTableWrap" role="region" tabIndex={0} aria-label={title}>
       <table className={`monthlyMenuTable ${kind === "breakfast" ? "breakfastTable" : "mealTable"}`}>
         <thead><tr>{headers.map(h=><th key={h}>{h}</th>)}</tr></thead>
         <tbody>
@@ -123,7 +124,7 @@ export default function Menu(){
       title="Lezzetli, dengeli ve güvenilir öğün planı."
       text="Ekim 2026 kahvaltı ve yemek menülerimizi gün gün inceleyin."
       image="/images/editorial/meal.webp"
-      imageAlt="Profesyonel mutfakta özenle hazırlanmış dengeli kurumsal öğünler"
+      imageAlt="Türk kahvaltısı sunumu — temsili fotoğraf"
     />
 
     <section className="section wrap menuPage menuPageFull">

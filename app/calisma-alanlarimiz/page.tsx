@@ -102,7 +102,7 @@ export default function WorkAreasPage() {
         title="Her sektörün çalışma düzenine uygun yemek operasyonu."
         text="Fabrikalardan şantiyelere, okullardan enerji projelerine kadar farklı çalışma ortamlarının ihtiyaçlarına göre üretim, lojistik ve servis süreçlerini planlıyoruz."
         image="/images/editorial/buffet.webp"
-        imageAlt="Kurumsal yemek operasyonunda saha ve sevkiyat hazırlığı"
+        imageAlt="Servis kaplarında çeşitli sıcak yemekler — temsili fotoğraf"
       />
 
       <section className="workAreasIntro">

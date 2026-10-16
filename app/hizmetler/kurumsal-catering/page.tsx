@@ -15,7 +15,7 @@ export default function Page() {
     intro="Toplantı, açılış, şirket etkinliği, toplu davet ve dönemsel organizasyonlarda kişi sayısı ile etkinlik akışına göre oluşturulan yemek ve servis çözümü."
     image="/images/editorial/table.webp"
     imageMobile="/images/editorial/table.webp"
-    imageAlt="İskenderun kurumsal catering ve organizasyon servisi"
+    imageAlt="Davet masasında çeşitli yemekler — temsili fotoğraf"
     serviceType="Kurumsal Catering Hizmeti"
     sectionTitle="Menüden servise kadar etkinliğin yemek operasyonunu planlıyoruz."
     detail="Kurumsal catering hizmetinde menü seçimi, üretim miktarı, servis zamanı ve saha koşulları birlikte değerlendirilir. Etkinliğin niteliğine göre toplu sıcak yemek, ikram veya paketli servis modellerinden uygun olanı oluşturuyoruz."

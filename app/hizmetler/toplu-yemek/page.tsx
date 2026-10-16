@@ -15,7 +15,7 @@ export default function Page() {
     intro="Fabrika, şantiye, ofis, okul, kamu kurumu ve yoğun saha operasyonları için kişi sayısına ve çalışma düzenine göre planlanan toplu yemek hizmeti."
     image="/images/editorial/buffet.webp"
     imageMobile="/images/editorial/buffet.webp"
-    imageAlt="İskenderun kurumsal toplu yemek üretimi ve servis operasyonu"
+    imageAlt="Servis kaplarında çeşitli sıcak yemekler — temsili fotoğraf"
     serviceType="Toplu Yemek Hizmeti"
     sectionTitle="Tabldot ve günlük personel yemeği için planlı üretim."
     detail="Toplu yemek hizmetinde yalnızca menüyü değil; hammadde tedariği, üretim, porsiyonlama, sevkiyat, servis ve saha kontrolünü birlikte ele alıyoruz. Tabldot ve günlük personel yemeğinde menü çeşitliliğini, öğün sayısını ve vardiya saatlerini işletmenin çalışma düzenine göre birlikte planlıyoruz. Fiyat teklifi; kişi sayısı, menü içeriği, üretim modeli, teslimat noktası ve servis kapsamı değerlendirilerek hazırlanır. Aylık örnek menümüz, seçenekleri görüşmek için bir başlangıç sunar."

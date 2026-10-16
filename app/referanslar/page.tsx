@@ -50,7 +50,7 @@ export default function References(){
       title="Büyük projelerde, güçlü iş ortağı."
       text="Tosyalı Holding Çelikhane, TOKİ projeleri ve İskenderun bölgesinde farklı sektörlerde saha deneyimi."
       image="/images/editorial/buffet.webp"
-      imageAlt="Profesyonel mutfak ekibi proje operasyonunda"
+      imageAlt="Servis kaplarında çeşitli sıcak yemekler — temsili fotoğraf"
       />
     <section className="section wrap refsPage">
       <div className="refsLead">

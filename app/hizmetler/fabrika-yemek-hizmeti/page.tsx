@@ -15,7 +15,7 @@ export default function Page() {
     intro="Fabrika, üretim tesisi, sanayi işletmesi ve vardiyalı çalışma alanları için kişi sayısı ve vardiya düzenine göre planlanan kurumsal yemek hizmeti."
     image="/images/editorial/buffet.webp"
     imageMobile="/images/editorial/buffet.webp"
-    imageAlt="İskenderun fabrika personel yemek hizmeti"
+    imageAlt="Servis kaplarında çeşitli sıcak yemekler — temsili fotoğraf"
     serviceType="Fabrika ve Personel Yemek Hizmeti"
     sectionTitle="Vardiyalı üretime uygun yemek operasyonu kuruyoruz."
     detail="Fabrika yemek hizmetinde günlük kişi sayısı, vardiya saatleri, servis noktaları ve tesis altyapısı birlikte değerlendirilir. İhtiyaca göre taşımalı sıcak yemek veya işletme mutfağında yerinde üretim modeli uygulanır. Menü planlama, üretim, porsiyonlama, sevkiyat ve servis süreçleri tek operasyon altında yönetilir."

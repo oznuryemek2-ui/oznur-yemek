@@ -15,7 +15,7 @@ export default function Page() {
     intro="Toplu servis altyapısının uygun olmadığı çalışma alanları için porsiyonlanmış, düzenli ve dağıtımı kolay paket yemek modeli."
     image="/images/editorial/table.webp"
     imageMobile="/images/editorial/table.webp"
-    imageAlt="İskenderun kurumsal paket yemek üretimi"
+    imageAlt="Davet masasında çeşitli yemekler — temsili fotoğraf"
     serviceType="Paket Yemek Hizmeti"
     sectionTitle="Dağıtımı kolay, operasyonu kontrollü bir servis modeli."
     detail="Paket yemek hizmeti; servis hattı kurmanın mümkün olmadığı şantiyelerde, vardiyalı ekiplerde, saha çalışmalarında ve dönemsel yoğunluklarda pratik bir çözümdür. Menü, porsiyonlama ve teslimat adımları kişi sayısı ile tüketim saatine göre planlanır."

@@ -15,7 +15,7 @@ export default function Page() {
     intro="Uygun mutfak altyapısı bulunan fabrika, tesis ve kurumlarda personel, üretim ve servis süreçlerini sahada yönettiğimiz yerinde üretim yemek modeli."
     image="/images/editorial/buffet.webp"
     imageMobile="/images/editorial/buffet.webp"
-    imageAlt="İskenderun yerinde üretim kurumsal yemek mutfağı"
+    imageAlt="Servis kaplarında çeşitli sıcak yemekler — temsili fotoğraf"
     serviceType="Yerinde Üretim Yemek Hizmeti"
     sectionTitle="Üretimi doğrudan işletmenizin içinde planlıyoruz."
     detail="Yerinde üretim modelinde menü planlamasından hammadde tedariğine, mutfak organizasyonundan servise kadar süreç işletmenin kendi sahasında yürütülür. Bu model özellikle yüksek kişi sayısına sahip ve sürekli yemek hizmeti gereken tesislerde üretim ile servis arasındaki süreyi kısaltır."

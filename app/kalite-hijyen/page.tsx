@@ -32,7 +32,7 @@ export default function Quality(){
       title="Güvenli gıda, sağlıklı gelecek."
       text="Üretimden servise kadar kalite ve hijyen, operasyonumuzun ayrılmaz parçasıdır."
       image="/images/editorial/ingredients.webp"
-      imageAlt="Endüstriyel mutfakta profesyonel gıda güvenliği ve kalite denetimi"
+      imageAlt="Taze sebzeler — temsili fotoğraf"
       />
 
     <section className="section wrap qualityPageGrid">

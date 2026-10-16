@@ -15,7 +15,7 @@ export default function Page() {
     intro="İskenderun ve Hatay’daki inşaat, altyapı ve proje sahaları için personel sayısı, öğün saatleri ve saha erişimi birlikte değerlendirilerek yemek operasyonu planlanır."
     image="/images/editorial/buffet.webp"
     imageMobile="/images/editorial/buffet.webp"
-    imageAlt="Öznur Yemek şantiye ve saha yemek sevkiyatı"
+    imageAlt="Servis kaplarında çeşitli sıcak yemekler — temsili fotoğraf"
     serviceType="Şantiye Yemek Hizmeti"
     sectionTitle="Değişen ekip sayısı ve vardiyalar için sahaya uygun plan."
     detail="Şantiye yemeğinde yalnızca günlük toplam sayı yeterli değildir: her öğünde sahada bulunacak personel, servis noktaları ve giriş saatleri de bilinmelidir. Mutfak ve yemekhane altyapısı uygunsa yerinde üretim; uygun sevkiyat koşullarında taşımalı yemek değerlendirilir. Ayrı noktalarda çalışan ekipler için paket yemek seçeneği ele alınır. Proje başlangıcında kişi sayısı değişikliklerinin ne zaman bildirileceği ve teslimat sorumluları netleştirilir."

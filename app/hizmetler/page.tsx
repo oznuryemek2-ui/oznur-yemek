@@ -14,9 +14,6 @@ const items=[
     kicker:"FABRİKA & PERSONEL YEMEK HİZMETİ",
     title:"İskenderun ve Hatay’daki fabrikalara vardiya düzenine uygun personel yemeği.",
     text:"Fabrika, üretim tesisi, depo ve sanayi işletmeleri için taşımalı veya yerinde üretim modeliyle düzenli kurumsal yemek operasyonu.",
-    imageDesktop:"/images/editorial/buffet.webp",
-    imageMobile:"/images/editorial/buffet.webp",
-    imageAlt:"İskenderun fabrika ve personel yemek hizmeti",
     href:"/hizmetler/fabrika-yemek-hizmeti",
     bullets:["Vardiya saatlerine uygun servis","Taşımalı veya yerinde üretim","İskenderun ve Hatay saha planlaması"]
   },
@@ -27,9 +24,6 @@ const items=[
     kicker:"YERİNDE ÜRETİM YEMEK HİZMETİ",
     title:"İhtiyaçlarınıza uygun menüler ve tam donanımlı mutfak kurulumu.",
     text:"İhtiyaçlarınıza uygun menüler, profesyonel ekip ve tam donanımlı mutfak kurulumu.",
-    imageDesktop:"/images/editorial/buffet.webp",
-    imageMobile:"/images/editorial/buffet.webp",
-    imageAlt:"Öznur Yemek markalı profesyonel endüstriyel mutfakta yerinde üretim",
     href:"/hizmetler/yerinde-uretim",
     bullets:["İhtiyaca uygun menü","Profesyonel ekip","Tam donanımlı mutfak kurulumu"]
   },
@@ -39,9 +33,6 @@ const items=[
     kicker:"TAŞIMALI YEMEK HİZMETİ",
     title:"Zamanında, sıcak ve taze teslimat.",
     text:"Geniş ve modern araç filomuzla yemeklerinizi zamanında, sıcak ve taze olarak ulaştırıyoruz.",
-    imageDesktop:"/images/editorial/buffet.webp",
-    imageMobile:"/images/editorial/buffet.webp",
-    imageAlt:"Öznur Yemek markalı araçla sıcak yemek sevkiyat operasyonu",
     href:"/hizmetler/tasimali-yemek",
     bullets:["Geniş ve modern araç filosu","Zamanında teslimat","Sıcak ve taze ulaştırma"]
   },
@@ -51,9 +42,6 @@ const items=[
     kicker:"PAKET YEMEK HİZMETİ",
     title:"Hijyenik ve pratik paket yemek çözümü.",
     text:"Vakum paketleme ile daha hijyenik, düzenli ve pratik toplu yemek çözümleri sunuyoruz.",
-    imageDesktop:"/images/editorial/table.webp",
-    imageMobile:"/images/editorial/table.webp",
-    imageAlt:"Öznur Yemek logolu paketlerle hijyenik paket yemek üretim hattı",
     href:"/hizmetler/paket-yemek",
     bullets:["Vakum paketleme","Hijyenik servis","Planlı ve pratik dağıtım"]
   },
@@ -63,9 +51,6 @@ const items=[
     kicker:"DAVET & ORGANİZASYON",
     title:"Kurumsal ve özel organizasyonlar için planlı servis.",
     text:"Kurumsal davetler, toplantılar ve toplu etkinliklerde kişi sayısı ve etkinlik akışına uygun üretim ve servis planı oluşturuyoruz.",
-    imageDesktop:"/images/editorial/table.webp",
-    imageMobile:"/images/editorial/table.webp",
-    imageAlt:"Öznur Yemek markalı kurumsal davet ve organizasyon açık büfesi",
     href:"/hizmetler/kurumsal-catering",
     bullets:["Etkinliğe özel menü planı","Üretim ve servis koordinasyonu","Kurumsal ve toplu organizasyonlar"]
   },
@@ -75,9 +60,6 @@ const items=[
     kicker:"İFTAR & RAMAZAN ORGANİZASYONLARI",
     title:"Ramazan dönemine özel toplu iftar çözümleri.",
     text:"Toplu iftar programları için menü, üretim, paketleme, sevkiyat ve yerinde servis süreçlerini tek plan altında yönetiyoruz.",
-    imageDesktop:"/images/editorial/meal.webp",
-    imageMobile:"/images/editorial/meal.webp",
-    imageAlt:"Öznur Yemek markalı Ramazan iftar büfesi ve profesyonel servis",
     bullets:["Toplu iftar menüleri","Paketli yemek ve sevkiyat","Yerinde servis organizasyonu"]
   }
 ];
@@ -90,7 +72,7 @@ export default function Services(){
       text="İskenderun ve Hatay’da fabrika personel yemeği, toplu yemek, yerinde üretim, taşımalı yemek, paket yemek ve kurumsal catering hizmetleri sunuyoruz."
       image="/images/editorial/buffet.webp"
       imageMobile="/images/editorial/buffet.webp"
-      imageAlt="Öznur Yemek profesyonel tabaklama, üretim ve kurumsal yemek servisi"
+      imageAlt="Servis kaplarında çeşitli sıcak yemekler — temsili fotoğraf"
     />
     <section className="section wrap serviceDetailList">
       {items.map((x,i)=>

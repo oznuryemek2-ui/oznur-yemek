@@ -32,7 +32,7 @@ export default function CorporatePage(){
       title="İnsan odaklı, deneyimli bir kurumsal yemek iş ortağı."
       text="Öznur Yemek, kurumsal ve toplu yemek hizmetlerinde kaliteli, hijyenik ve sürdürülebilir çözümler sunar."
       image="/images/editorial/buffet.webp"
-      imageAlt="Öznur Yemek profesyonel üretim mutfağı"
+      imageAlt="Servis kaplarında çeşitli sıcak yemekler — temsili fotoğraf"
       />
 
     <section className="section wrap storyGrid">
