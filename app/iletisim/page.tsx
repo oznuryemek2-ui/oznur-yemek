@@ -12,7 +12,7 @@ const mapHref =
 
 export default function ContactPage() {
   return (
-    <main className="contactPage">
+    <main id="main-content" className="contactPage">
       <section className="contactHero">
         <div className="wrap contactHeroGrid">
           <div className="contactHeroIntro">

@@ -68,15 +68,15 @@ const structuredData = [
 
 export default function NationalCorporateMeals() {
   return (
-    <main>
+    <main id="main-content">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }} />
       <PageHero
         eyebrow="TÜRKİYE GENELİ PROJE ÇÖZÜMLERİ"
         title="Türkiye genelinde fabrika, şantiye ve kurumlara yemek hizmeti."
         text="İskenderun ve Hatay merkezli Öznur Yemek, Türkiye'nin farklı bölgelerindeki kurumsal projeler için kişi sayısına ve saha koşullarına göre toplu yemek, yerinde üretim ve personel yemeği modellerini planlar."
-        image="/images/site/brand-responsive/services-hero-desktop.webp"
-        imageMobile="/images/site/brand-responsive/services-hero-mobile.webp"
-        imageAlt="Öznur Yemek kurumsal yemek üretimi ve büyük ölçekli proje servisi"
+        image="/images/editorial/buffet.webp"
+        imageMobile="/images/editorial/buffet.webp"
+        imageAlt="Servis kaplarında çeşitli sıcak yemekler — temsili fotoğraf"
       />
       <section className="section wrap storyGrid">
         <div>

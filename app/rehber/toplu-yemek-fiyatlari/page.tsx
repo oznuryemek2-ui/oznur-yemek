@@ -18,15 +18,15 @@ export default function Page() {
       { "@type": "ListItem", position: 2, name: "Toplu Yemek Fiyatları ve Teklif Rehberi", item: `${siteUrl}${path}` },
     ],
   };
-  return <main>
+  return <main id="main-content">
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb).replace(/</g, "\\u003c") }} />
     <PageHero
       eyebrow="TOPLU YEMEK TEKLİF REHBERİ"
       title="Toplu yemek fiyatını, hizmetin tamamıyla değerlendirin."
       text="Kişi başı tabldot fiyatını araştırırken menü, porsiyon, öğün ve servis kapsamını birlikte karşılaştırın. İskenderun ve Hatay’daki işletmeler ile Türkiye geneli projeler için teklif hazırlık rehberi."
-      image="/images/site/brand-responsive/services-hero-desktop.webp"
-      imageMobile="/images/site/brand-responsive/services-hero-mobile.webp"
-      imageAlt="Öznur Yemek kurumsal yemek üretim ve servis hazırlığı"
+      image="/images/editorial/buffet.webp"
+      imageMobile="/images/editorial/buffet.webp"
+      imageAlt="Servis kaplarında çeşitli sıcak yemekler — temsili fotoğraf"
     />
     <section className="section wrap storyGrid">
       <div><p className="eyebrow red">KİŞİ BAŞI MALİYET</p><h2>Toplu yemek ve tabldot fiyatları nasıl belirlenir?</h2></div>

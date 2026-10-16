@@ -96,13 +96,13 @@ const areas: Array<{
 
 export default function WorkAreasPage() {
   return (
-    <main className="workAreasPage">
+    <main id="main-content" className="workAreasPage">
       <PageHero
         eyebrow="ÇALIŞMA ALANLARIMIZ"
         title="Her sektörün çalışma düzenine uygun yemek operasyonu."
         text="Fabrikalardan şantiyelere, okullardan enerji projelerine kadar farklı çalışma ortamlarının ihtiyaçlarına göre üretim, lojistik ve servis süreçlerini planlıyoruz."
-        image="/images/site/hero-loading.svg"
-        imageAlt="Kurumsal yemek operasyonunda saha ve sevkiyat hazırlığı"
+        image="/images/editorial/buffet.webp"
+        imageAlt="Servis kaplarında çeşitli sıcak yemekler — temsili fotoğraf"
       />
 
       <section className="workAreasIntro">

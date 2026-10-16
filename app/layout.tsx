@@ -4,6 +4,7 @@ import "./globals.css";
 import "./redesign.css";
 import "./oznur-home.css";
 import "./customer-revisions.css";
+import "./fresh-design.css";
 import { Footer, Header } from "./components/SiteChrome";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.oznuryemek.com";
@@ -52,13 +53,13 @@ export const metadata: Metadata = {
     type: "website",
     locale: "tr_TR",
     siteName: "Öznur Yemek",
-    images: ["/images/site/generated/slider-cooking.webp"],
+    images: ["/images/editorial/table.webp"],
   },
   twitter: {
     card: "summary_large_image",
     title: "Toplu Yemek ve Catering | Öznur Yemek",
     description: "İskenderun ve Hatay’da toplu yemek ve catering; Türkiye genelindeki kurumsal ve şantiye projeleri için yemek çözümleri.",
-    images: ["/images/site/generated/slider-cooking.webp"],
+    images: ["/images/editorial/table.webp"],
   },
 };
 
@@ -69,7 +70,7 @@ const localBusinessSchema = {
   name: "Öznur Yemek",
   url: siteUrl,
   logo: `${siteUrl}/images/site/oznur-logo.png`,
-  image: `${siteUrl}/images/site/generated/slider-cooking.webp`,
+  image: `${siteUrl}/images/site/oznur-logo.png`,
   description:
     "İskenderun ve Hatay merkezli kurumsal yemek, toplu yemek, yerinde üretim, taşımalı yemek, paket yemek ve catering hizmetleri.",
   telephone: "+90 546 695 3914",
@@ -131,6 +132,7 @@ export default function RootLayout({
             __html: JSON.stringify(localBusinessSchema).replace(/</g, "\\u003c"),
           }}
         />
+        <a className="skipLink" href="#main-content">İçeriğe geç</a>
         <Header />
         {children}
         <Footer />

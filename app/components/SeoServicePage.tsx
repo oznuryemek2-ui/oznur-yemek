@@ -49,7 +49,7 @@ export default function SeoServicePage(props: SeoServicePageProps) {
   };
 
   return (
-    <main>
+    <main id="main-content">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify([serviceSchema, breadcrumbSchema]).replace(/</g, "\\u003c") }}

@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import MobileNav from "./MobileNav";
 import ResponsiveSiteImage from "./ResponsiveSiteImage";
@@ -111,6 +110,7 @@ export function Footer() {
         </div>
       </div>
 
+      <p className="wrap footerPhotoNote">Yemek ve sunum fotoğrafları temsilidir; Öznur Yemek’in tesislerini, ekibini veya tamamlanmış projelerini göstermez.</p>
       <div className="wrap footerBottom">
         <span>© {new Date().getFullYear()} Öznur Yemek</span>
         <span>Herkes için lezzet. Her yerde hizmet.</span>
@@ -147,13 +147,14 @@ export function PageHero({
             <ResponsiveSiteImage
               desktopSrc={image}
               mobileSrc={imageMobile}
-              alt={imageAlt}
+              alt={image.includes("ingredients") ? "Taze sebzeler — temsili fotoğraf" : image.includes("meal") ? "Türk kahvaltısı sunumu — temsili fotoğraf" : image.includes("table") ? "Davet masasında çeşitli yemekler — temsili fotoğraf" : "Servis kaplarında çeşitli sıcak yemekler — temsili fotoğraf"}
               className="responsiveSiteImg"
               pictureClassName="responsiveSitePicture"
               priority
               desktopSizes="52vw"
               mobileSizes="100vw"
             />
+            <span className="pagePhotoNote">Temsili fotoğraf</span>
           </div>
         ) : null}
       </div>
