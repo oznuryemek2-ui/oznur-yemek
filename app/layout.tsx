@@ -5,6 +5,7 @@ import "./redesign.css";
 import "./oznur-home.css";
 import "./customer-revisions.css";
 import "./fresh-design.css";
+import "./premium-design.css";
 import { Footer, Header } from "./components/SiteChrome";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.oznuryemek.com";
