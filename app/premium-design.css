@@ -236,3 +236,178 @@ body,button,input,select,textarea{font-family:var(--sans)}body{background:#fff;c
  .xWorkflowSteps b{font-size:11px}
 }
 @media(prefers-reduced-motion:reduce){.xSectors>a{transition:none}.xSectors>a:hover{transform:none}}
+
+
+/* V3 — photographic clarity and mobile composition (18 October 2026).
+   Keep existing typography/branding; correct dark hero and obscured menu photo. */
+.xHero:before {
+  background:
+    linear-gradient(90deg, rgba(12,23,30,.93) 0%, rgba(12,23,30,.76) 26%, rgba(12,23,30,.36) 57%, rgba(12,23,30,.06) 90%),
+    linear-gradient(0deg, rgba(12,23,30,.36), transparent 36%);
+}
+.xHero .freshSlide img { filter:brightness(1.045) saturate(1.06); }
+.xMenuPhoto img { object-fit:cover; object-position:center 63%; filter:none; }
+.xMenuPhoto { background:#dedbd5; }
+.xMenuCard { isolation:isolate; }
+
+/* Phone: separate the copy from the photography instead of blackening the whole picture.
+   The photograph now gets its own full-bleed viewport-width panel. */
+@media(max-width:700px) {
+  .xHero {
+    display:flex;
+    flex-direction:column;
+    min-height:0;
+    overflow:hidden;
+    background:#14232a;
+  }
+  .xHero:before { display:none; }
+  .xHeroInner {
+    display:block;
+    order:0;
+    min-height:0;
+    padding:40px 0 30px;
+    width:calc(100% - 40px);
+    z-index:2;
+  }
+  .xHeroCopy { max-width:100%; }
+  .xHero h1 { margin-bottom:20px; }
+  .xHeroLead { max-width:600px; margin-bottom:22px; }
+  .xHeroChecks { flex-wrap:wrap; margin-top:24px; row-gap:10px; }
+  .xHero .freshSlider {
+    position:relative;
+    inset:auto;
+    left:auto;
+    right:auto;
+    top:auto;
+    bottom:auto;
+    order:1;
+    display:block;
+    width:100%;
+    height:clamp(280px,73vw,360px);
+    min-height:280px;
+    margin:0;
+    z-index:1;
+    background:#233137;
+    overflow:hidden;
+  }
+  .xHero .freshSlide { position:absolute; inset:0; }
+  .xHero .freshSlide img {
+    object-fit:cover;
+    filter:brightness(1.06) saturate(1.08);
+  }
+  .xHero .freshSlider:after {
+    content:"";
+    position:absolute;
+    inset:52% 0 0;
+    background:linear-gradient(transparent,rgba(5,14,20,.54));
+    pointer-events:none;
+    z-index:1;
+  }
+  .xHero .freshSliderControls {
+    position:absolute;
+    left:20px;
+    right:20px;
+    bottom:20px;
+    max-width:none;
+    width:auto;
+    display:flex;
+    align-items:end;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:12px;
+    z-index:3;
+    pointer-events:auto;
+  }
+  .xHero .freshSliderControls>div { margin:0; }
+  .xHero .freshSliderControls>span {
+    font-size:10px;
+    line-height:1.45;
+    color:#fff;
+    max-width:160px;
+    text-align:right;
+    text-shadow:0 1px 4px #000b;
+  }
+  .xHero .freshSliderControls button {
+    min-width:41px;
+    min-height:41px;
+    width:41px;
+    height:41px;
+    background:rgba(13,24,31,.62);
+    border-color:rgba(255,255,255,.8);
+  }
+  .xHero .freshSliderControls button[aria-pressed=true] { color:#15202a; background:#fff; }
+  .xServiceDock { margin-top:0; border-radius:0 0 7px 7px; box-shadow:0 12px 30px #16202410; }
+  /* Stop the sample menu from covering its own image on phones. */
+  .xMenuGrid { display:grid; grid-template-columns:minmax(0,1fr); gap:28px; }
+  .xMenuVisual {
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+    width:100%;
+    min-height:0;
+    padding:0;
+    margin:0;
+    gap:0;
+    isolation:isolate;
+  }
+  .xMenuPhoto {
+    position:relative;
+    inset:auto;
+    left:auto;
+    top:auto;
+    right:auto;
+    bottom:auto;
+    z-index:0;
+    width:100%;
+    height:auto;
+    aspect-ratio:16 / 10;
+    flex:none;
+    overflow:hidden;
+    border-radius:10px 10px 0 0;
+    background:#e3e0db;
+  }
+  .xMenuPhoto img {
+    object-fit:cover;
+    object-position:center 64%;
+    filter:none;
+  }
+  .xMenuPhoto .xPhotoCaption {
+    top:auto;
+    bottom:0;
+    background:linear-gradient(transparent,rgba(9,21,25,.62));
+    padding:32px 14px 12px;
+    color:white;
+    font-size:11px;
+  }
+  .xMenuCard {
+    position:relative;
+    z-index:1;
+    flex:none;
+    width:100%;
+    max-width:100%;
+    margin:0;
+    padding:24px 22px 27px;
+    box-shadow:0 8px 24px #1d222610;
+    border-top:4px solid var(--red);
+    border-radius:0 0 10px 10px;
+    transform:none;
+  }
+  .xMenuCard>div { align-items:center; gap:15px; }
+  .xMenuCard h3 { font-size:23px; line-height:1.3; margin:18px 0 16px; }
+  .xMenuCard li { gap:12px; padding:10px 0; }
+  .xMenuCard>p { margin-top:15px; }
+  /* The fixed contact bar should not cover the last part of the page. */
+  body { padding-bottom:env(safe-area-inset-bottom,0px); }
+  .premiumHome { overflow:clip; }
+}
+@media(max-width:360px) {
+  .xHero,.xHeroInner { min-height:0; }
+  .xHeroInner { padding-top:34px; padding-bottom:28px; }
+  .xHero .freshSlider { height:280px; }
+  .xHero .freshSliderControls { left:12px; right:12px; bottom:13px; gap:5px; }
+  .xHero .freshSliderControls button { width:35px; height:35px; min-width:35px; min-height:35px; }
+  .xHero .freshSliderControls>span { max-width:130px; font-size:9px; }
+  .xMenuCard { padding:20px 17px 24px; }
+  .xMenuCard li { font-size:11px; }
+}
