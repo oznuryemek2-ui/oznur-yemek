@@ -398,7 +398,7 @@ body,button,input,select,textarea{font-family:var(--sans)}body{background:#fff;c
   .xMenuCard li { gap:12px; padding:10px 0; }
   .xMenuCard>p { margin-top:15px; }
   /* The fixed contact bar should not cover the last part of the page. */
-  body { padding-bottom:env(safe-area-inset-bottom,0px); }
+  body { padding-bottom:calc(70px + env(safe-area-inset-bottom,0px)); }
   .premiumHome { overflow:clip; }
 }
 @media(max-width:360px) {
