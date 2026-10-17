@@ -16,7 +16,7 @@ export default function HeroSlider(){
     return ()=>window.clearInterval(timer);
   },[paused,hovered]);
   return <div className="freshSlider" aria-roledescription="slayt gösterisi" aria-label="Yemek sunumları" onMouseEnter={()=>setHovered(true)} onMouseLeave={()=>setHovered(false)} onFocusCapture={()=>setPaused(true)}>
-    {slides.map((s,i)=><div className={`freshSlide ${active===i?"isActive":""}`} aria-hidden={active!==i} key={s.src}><Image src={s.src} alt={s.alt} style={{objectPosition:s.position}} fill sizes="(max-width:700px) 100vw, 70vw" priority={i===0} quality={85}/></div>)}
+    {slides.map((s,i)=><div className={`freshSlide ${active===i?"isActive":""}`} aria-hidden={active!==i} key={s.src}><Image src={s.src} alt={s.alt} style={{objectPosition:s.position}} fill sizes="(max-width:700px) 100vw, 70vw" priority={i===0} quality={92}/></div>)}
     <div className="freshSliderControls"><div>{slides.map((s,i)=><button key={s.src} type="button" aria-label={`${i+1}. fotoğrafı göster`} aria-pressed={active===i} onClick={()=>{setActive(i);setPaused(true);}}>{String(i+1).padStart(2,"0")}</button>)}<button type="button" className="freshPause" aria-label={paused?"Slayt gösterisini başlat":"Slayt gösterisini duraklat"} onClick={()=>setPaused(p=>!p)}>{paused?"▷":"Ⅱ"}</button></div><span>Temsili fotoğraf · {slides[active].credit}</span></div>
   </div>;
 }
