@@ -18,3 +18,93 @@ body,button,input,select,textarea{font-family:var(--sans)}body{background:#fff;c
 
 /* Keep visual overlays from covering the slideshow controls. */
 .xHero .freshSlider{z-index:0}.xHero:before{z-index:1}.xHeroInner{z-index:2;pointer-events:none}.xHeroCopy{pointer-events:auto}.xHeroSignature{display:none}
+
+/* October 17 refinement: preserve layout while improving legibility, depth and mobile tap targets. */
+:root{--red:#c91f34;--red-dark:#9d1428;--ink:#192022;--muted:#525f63}
+.desktopNav{gap:clamp(11px,1.55vw,22px)}
+.desktopNav>a:not(.navCta){font-size:13px;font-weight:700;letter-spacing:-.015em}
+.navCta{font-size:13px;font-weight:800}
+.premiumHome{font-feature-settings:"kern" 1}
+.xEyebrow{font-size:12px;letter-spacing:.12em}
+.xHero{background:#172228}
+.xHero h1{font-size:clamp(50px,5.1vw,72px);line-height:1.08;letter-spacing:-.057em}
+.xHero h1 strong{color:#ff6673}
+.xHeroLead{font-size:17px;line-height:1.75;color:#f4f6f5;max-width:580px}
+.xHero:before{background:linear-gradient(90deg,#111c22 0%,#111c22f5 26%,#111c22b0 52%,#111c221a 85%),linear-gradient(0deg,#111c22bb,transparent 47%)}
+.xHeroChecks{font-size:12px;gap:24px;font-weight:700;color:#f2f4f4}
+.xButton{font-size:14px;min-height:54px;padding:15px 23px}
+.xServiceDock b{font-size:15px}
+.xServiceDock a>div>span{font-size:11px}
+.xDockContact small{font-size:10px}
+.xDockContact>span{font-size:11px}
+.xSectionHead>p,.xAboutCopy>p:not(.xEyebrow),.xMenuIntro>p:not(.xEyebrow){font-size:16px;line-height:1.8}
+.xServiceBody>p{font-size:14px;line-height:1.8}
+.xServiceBody>a,.xMoreServices a,.xUnderLink{font-size:13px}
+.xPrinciples p,.xSectors p,.xReferenceCards p,.xProcess li p{font-size:13px}
+.xPhotoCaption,.xHero .freshSliderControls>span{font-size:11px}
+.xMenuCard li,.xMenuCard li>span{font-size:12px}
+.xMenuCard small,.xMenuCard>p{font-size:11px}
+.xTrustStrip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-bottom:1px solid var(--line);padding-block:32px;margin-top:24px}
+.xTrustStrip>div{display:flex;gap:10px;align-items:baseline;flex-direction:column;padding:3px 34px;border-left:1px solid var(--line)}
+.xTrustStrip>div:first-child{padding-left:0;border:0}
+.xTrustStrip strong{font-size:clamp(23px,2.8vw,34px);line-height:1.18;letter-spacing:-.04em;font-weight:800;color:var(--red)}
+.xTrustStrip span{font-size:13px;line-height:1.6;color:var(--muted);font-weight:600}
+.xServices{padding-top:65px}
+.xServicePhoto,.xServiceGraphic{height:230px}
+.xAboutVisual{border-radius:6px}
+.xServiceCard{border-radius:6px}
+.xSectorBand{background:#1d2a2e}
+.xFinal{background:#b71c30}
+.footerColumn a,.footerColumn p,.footerIdentity p{font-size:13px;line-height:1.7}
+.footerPhotoNote{font-size:11px}
+.footerBottom{font-size:12px}
+.xHero .freshSliderControls button{min-height:44px;min-width:44px}
+@media(min-width:701px) and (max-width:1150px){
+ .desktopNav{gap:11px}
+ .desktopNav>a:not(.navCta){font-size:11px}
+ .xTrustStrip>div{padding-inline:22px}
+ .xHero h1{font-size:clamp(46px,4.8vw,58px)}
+}
+@media(max-width:700px){
+ .xHero h1{font-size:clamp(37px,9.5vw,50px);line-height:1.12}
+ .xHeroLead{font-size:14px;line-height:1.75}
+ .xHero{min-height:680px}
+ .xHeroInner{min-height:680px;padding-top:48px}
+ .xHero:before{background:linear-gradient(180deg,#111c22f5 0%,#111c22ee 31%,#111c22ac 61%,#111c2285 100%)}
+ .xEyebrow{font-size:11px}
+ .xButton{font-size:12px;min-height:49px;padding:13px 16px}
+ .xHeroChecks{font-size:11px;gap:11px 14px;line-height:1.6}
+ .xTrustStrip{grid-template-columns:1fr 1fr;gap:0;padding:23px 0 16px;margin-top:14px}
+ .xTrustStrip>div{padding:13px 15px;border-left:1px solid var(--line);border-bottom:1px solid var(--line)}
+ .xTrustStrip>div:first-child{padding-left:0}
+ .xTrustStrip>div:last-child{grid-column:1/-1;border-left:0;border-bottom:0;padding:16px 0 3px}
+ .xTrustStrip strong{font-size:25px}
+ .xTrustStrip>div:last-child strong{font-size:21px}
+ .xTrustStrip span{font-size:11px}
+ .xSectionHead>p,.xAboutCopy>p:not(.xEyebrow),.xMenuIntro>p:not(.xEyebrow){font-size:14px}
+ .xServiceBody>p{font-size:14px}
+ .xServiceBody>a,.xMoreServices a,.xUnderLink{font-size:12px}
+ .xPrinciples p,.xSectors p,.xReferenceCards p,.xProcess li p{font-size:12px}
+ .xSectors h3{font-size:16px}
+ .xSectors p{font-size:12px}
+ .xPhotoCaption,.xHero .freshSliderControls>span{font-size:10px}
+ .xHero .freshSliderControls button{min-width:42px;min-height:42px}
+ .xHero .freshSliderControls{bottom:48px}
+ .xServiceDock a>div>span{font-size:10px}
+ .xServiceDock b{font-size:13px}
+ .xDockContact small{font-size:9px}
+ .xDockContact>span{font-size:10px}
+ .xServicePhoto,.xServiceGraphic{height:225px}
+ .xMenuCard li,.xMenuCard li>span{font-size:11px}
+ .footerColumn a,.footerColumn p,.footerIdentity p{font-size:12px}
+ .footerPhotoNote{font-size:11px}
+ .footerBottom{font-size:11px}
+}
+@media(max-width:360px){
+ .xHero{min-height:725px}
+ .xHeroInner{min-height:725px}
+ .xHero h1{font-size:36px}
+ .xTrustStrip strong{font-size:22px}
+ .xTrustStrip span{font-size:10px}
+ .xHero .freshSliderControls button{min-width:37px;min-height:37px}
+}
