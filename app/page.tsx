@@ -31,7 +31,7 @@ function ServiceIcon({ type }: { type: "kitchen" | "delivery" | "package" }) {
 
 const models = [
   { type: "kitchen", title: "Yerinde üretim", note: "Mutfağınızda, ekibiniz için.", href: "/hizmetler/yerinde-uretim", text: "Mutfak altyapınıza ve çalışma düzeninize göre üretim, ekip ve servis planlaması.", image: "/images/editorial/chef-service.webp", alt: "Sıcak yemek servisinde porsiyon hazırlığı — temsili fotoğraf" },
-  { type: "delivery", title: "Taşımalı yemek", note: "Öğün saatinize uygun plan.", href: "/hizmetler/tasimali-yemek", text: "Hazırlıktan sevkiyata, yemeklerin servis noktanıza ulaştırılmasının koordinasyonu.", image: "/images/editorial/hot-meals.webp", alt: "Toplu servis için sıcak yemek kaplarında pilav — temsili fotoğraf" },
+  { type: "delivery", title: "Taşımalı yemek", note: "Planlı sevkiyat ve servis.", href: "/hizmetler/tasimali-yemek", text: "Hazırlıktan sevkiyata, yemeklerin servis noktanıza ulaştırılmasının koordinasyonu.", image: "/images/editorial/hot-meals.webp", alt: "Toplu servis için sıcak yemek kaplarında pilav — temsili fotoğraf" },
   { type: "package", title: "Paket yemek", note: "Sahanıza uygun, pratik çözüm.", href: "/hizmetler/paket-yemek", text: "Saha ekipleri ve farklı dağıtım noktaları için porsiyonlu yemek ve dağıtım planı." },
 ] as const;
 const sectors = [
@@ -53,13 +53,13 @@ export default function Home() {
       <div className="wrap xHeroInner">
         <div className="xHeroCopy">
           <p className="xEyebrow xEyebrowLight"><span/> TOPLU YEMEK & KURUMSAL CATERING</p>
-          <h1>İşinizin temposuna<br/><strong>lezzet katıyoruz.</strong></h1>
-          <p className="xHeroLead">İskenderun ve Hatay’da fabrikalara, şantiyelere ve kurumlara toplu yemek. Üretimden servise, projenizin ihtiyacına göre planlıyoruz.</p>
+          <h1>Güçlü üretim.<br/><strong>Zamanında servis.</strong></h1>
+          <p className="xHeroLead">İskenderun ve Hatay’da fabrika, şantiye ve kurumlara toplu yemek hizmeti. Yerinde üretimden taşımalı ve paket yemeğe kadar her öğünü işinizin düzenine göre planlıyoruz.</p>
           <div className="xActions">
             <Link href="/teklif" className="xButton xButtonRed">Projeniz için teklif alın <span>↗</span></Link>
             <Link href="/ornek-menu" className="xButton xButtonGlass">Örnek menüyü görün <span>→</span></Link>
           </div>
-          <div className="xHeroChecks"><span>✓ Planlı üretim</span><span>✓ Düzenli servis</span><span>✓ Projeye özel çözüm</span></div>
+          <div className="xHeroChecks"><span>✓ Yerinde üretim</span><span>✓ Taşımalı yemek</span><span>✓ Paket yemek</span></div>
         </div>
         <div className="xHeroSignature"><span>ÖZNUR YEMEK</span><b>Herkes için lezzet.<br/>Her yerde hizmet.</b></div>
       </div>
@@ -69,6 +69,12 @@ export default function Home() {
       {models.map(model => <Link href={model.href} key={model.type}><ServiceIcon type={model.type}/><div><b>{model.title}</b><span>{model.note}</span></div><span className="xDockArrow">↗</span></Link>)}
       <a className="xDockContact" href="tel:+905466953914"><small>PROJENİZİ KONUŞALIM</small><b>0546 695 39 14</b><span>Doğrudan iletişim ↗</span></a>
     </div>
+
+    <section className="wrap xTrustStrip" aria-label="Öznur Yemek operasyon deneyimi">
+      <div><strong>3.000</strong><span>Kişi / öğün üretim kapasitesi</span></div>
+      <div><strong>5 yıl</strong><span>Çelikhane projesi saha deneyimi</span></div>
+      <div><strong>İskenderun · Hatay</strong><span>Türkiye geneli projeye özel çözümler</span></div>
+    </section>
 
     <section className="wrap xSection xServices">
       <div className="xSectionHead"><div><p className="xEyebrow">HİZMET MODELLERİMİZ</p><h2>Doğru hizmet modeli.<br/><span>Sorunsuz bir iş günü.</span></h2></div><p>Kişi sayınız, öğün kapsamınız ve sahanızın koşulları farklı olabilir. Yemek hizmetinizi işinizin düzenine göre şekillendiriyoruz.</p></div>
