@@ -74,9 +74,9 @@ export default function NationalCorporateMeals() {
         eyebrow="TÜRKİYE GENELİ PROJE ÇÖZÜMLERİ"
         title="Türkiye genelinde fabrika, şantiye ve kurumlara yemek hizmeti."
         text="İskenderun ve Hatay merkezli Öznur Yemek, Türkiye'nin farklı bölgelerindeki kurumsal projeler için kişi sayısına ve saha koşullarına göre toplu yemek, yerinde üretim ve personel yemeği modellerini planlar."
-        image="/images/editorial/buffet.webp"
-        imageMobile="/images/editorial/buffet.webp"
-        imageAlt="Servis kaplarında çeşitli sıcak yemekler — temsili fotoğraf"
+        image="https://images.pexels.com/photos/30635719/pexels-photo-30635719.jpeg?auto=compress&cs=tinysrgb&w=1800"
+        imageMobile="https://images.pexels.com/photos/30635719/pexels-photo-30635719.jpeg?auto=compress&cs=tinysrgb&w=1800"
+        imageAlt="Toplu yemek dağıtımı için hazırlanan porsiyonlu yemek kapları — temsili fotoğraf"
       />
       <section className="section wrap storyGrid">
         <div>
