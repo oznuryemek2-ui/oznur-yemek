@@ -101,8 +101,8 @@ export default function WorkAreasPage() {
         eyebrow="ÇALIŞMA ALANLARIMIZ"
         title="Her sektörün çalışma düzenine uygun yemek operasyonu."
         text="Fabrikalardan şantiyelere, okullardan enerji projelerine kadar farklı çalışma ortamlarının ihtiyaçlarına göre üretim, lojistik ve servis süreçlerini planlıyoruz."
-        image="/images/editorial/buffet.webp"
-        imageAlt="Servis kaplarında çeşitli sıcak yemekler — temsili fotoğraf"
+        image="https://images.pexels.com/photos/36627086/pexels-photo-36627086.jpeg?auto=compress&cs=tinysrgb&w=1800"
+        imageAlt="Kurumlara yönelik toplu yemek servis tepsileri — temsili fotoğraf"
       />
 
       <section className="workAreasIntro">
