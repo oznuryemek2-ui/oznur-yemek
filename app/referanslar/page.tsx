@@ -49,8 +49,8 @@ export default function References(){
       eyebrow="REFERANSLARIMIZ"
       title="Büyük projelerde, güçlü iş ortağı."
       text="Tosyalı Holding Çelikhane, TOKİ projeleri ve İskenderun bölgesinde farklı sektörlerde saha deneyimi."
-      image="/images/editorial/buffet.webp"
-      imageAlt="Servis kaplarında çeşitli sıcak yemekler — temsili fotoğraf"
+      image="https://images.pexels.com/photos/15753262/pexels-photo-15753262.jpeg?auto=compress&cs=tinysrgb&w=1800"
+      imageAlt="Endüstriyel yemek üretiminde çalışan mutfak ekibi — temsili fotoğraf"
       />
     <section className="section wrap refsPage">
       <div className="refsLead">
