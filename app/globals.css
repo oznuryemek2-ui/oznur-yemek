@@ -345,6 +345,6 @@ td:first-child{font-weight:800;color:var(--red)}
 
 /* Photo clarity for professional catering imagery */
 .pageHeroMedia img,.corporatePhoto img,.qualityVisualImage img,.xServicePhoto img,.xMenuPhoto img {
-  filter: brightness(1.08) contrast(1.025) saturate(1.045);
+  filter: brightness(1.08) contrast(1.025) saturate(1.045) !important;
 }
-.xHero .freshSlide img {filter:brightness(1.13) contrast(1.03) saturate(1.07)}
+.xHero .freshSlide img {filter:brightness(1.13) contrast(1.03) saturate(1.07) !important}
