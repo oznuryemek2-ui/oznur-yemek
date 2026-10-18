@@ -21,3 +21,27 @@ Licenses: https://www.pexels.com/license/ and https://unsplash.com/license . Dow
 - corporate-service.webp — Thiago Patrevita, https://www.pexels.com/photo/four-man-cooking-1121482/ — Pexels License.
 
 These real photographs illustrate a service setting; they are not presented as Öznur employees or premises. No logo or person has been fabricated. The premium preview uses responsive CSS crops and WebP compression.
+
+
+## 18 October 2026 — image-source audit
+
+The site now also uses Pexels CDN photography on several pages. These are representative stock photographs, NOT the actual people, fleet, facilities or client projects of Öznur Yemek. All original page sources are documented here.
+
+| Photo ID | Credit | Representative subject |
+| --- | --- | --- |
+| 15671276 | Luis Becerra Fotógrafo | Professional kitchen team |
+| 15671275 | Luis Becerra Fotógrafo | Kitchen production |
+| 7426527 | Sony Feo | Kitchen crew wearing protective equipment |
+| 15753262 | Teresa Jang | Cooks working in a professional kitchen |
+| 36982121 | rakhmat suwandi | Hot dishes in metal service trays |
+| 36627086 | Valeria Boltneva | Bulk hot meal serving trays |
+| 30635719 | IARA MELO | Multiple prepared meal containers |
+| 5779378 | RDNE Stock project | Preparing takeaway food containers |
+| 5779747 | RDNE Stock project | Chef putting on protective gloves |
+| 5779750 | RDNE Stock project | Food preparation with gloves |
+| 11040957 | Simberto Brauserich | Generic commercial delivery van |
+| 28999496 | Quang Nguyen Vinh | Event buffet |
+
+Source URLs use the form `https://www.pexels.com/photo/<slug>-<id>/` and CDN URLs use `https://images.pexels.com/photos/<id>/pexels-photo-<id>.jpeg`. License: https://www.pexels.com/license/ .
+
+Never label these images as photographs of Öznur Yemek staff, its own delivery vehicles or completed projects without supporting provenance.
