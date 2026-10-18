@@ -156,18 +156,17 @@ img{max-width:100%}
 .storyGrid{display:grid;grid-template-columns:.78fr 1.22fr;gap:92px}
 .storyGrid h2,.serviceDetailCopy h2,.qualityPageGrid h2,.refsLead h2,.menuPageIntro h2,.quotePage h1,.ctaBand h2{font-size:clamp(42px,4.5vw,64px);font-weight:500;letter-spacing:-.06em;line-height:1.04;margin:0}
 .storyGrid>div:last-child{color:var(--muted);font-size:17px;line-height:1.85}
-.valuesSection{background:#fff;border-block:1px solid var(--line);padding:74px 0}
-.valuesGrid{display:grid;grid-template-columns:repeat(4,1fr)}
-.valuesGrid article{padding:25px 30px;border-right:1px solid var(--line)}
-.valuesGrid article:first-child{padding-left:0}
-.valuesGrid article:last-child{border:0}
-.valuesGrid span{color:var(--red);font-family:var(--display);font-size:22px}
-.valuesGrid h3{font-size:24px;font-weight:500;margin:14px 0 7px}
-.valuesGrid p{color:var(--muted);margin:0}
-.corporateImageSplit{display:grid;grid-template-columns:1.05fr .95fr;gap:90px;align-items:center}
-.corporatePhoto{margin:0}
-.corporatePhoto img{width:100%;height:540px;object-fit:cover}
-.corporatePhoto figcaption{font-size:10px;color:var(--muted);margin-top:7px}
+.valuesSection{background:#f7f5f1;border-block:1px solid #e9e3db;padding:68px 0}
+.valuesGrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.valuesGrid article{min-width:0;min-height:208px;padding:28px 24px 25px;background:#fff;border:1px solid #e7e1d9;border-radius:16px;box-shadow:0 10px 28px rgba(32,25,20,.035);display:flex;flex-direction:column;align-items:flex-start}
+.valueIcon{width:56px;height:56px;display:grid;place-items:center;border-radius:13px;background:#fae9e9;border:1px solid #f4d7d9;color:var(--red)}
+.valueIcon svg{width:30px;height:30px;display:block}
+.valuesGrid h3{font-size:clamp(18px,1.8vw,24px);font-weight:750;line-height:1.18;letter-spacing:-.035em;margin:18px 0 8px}
+.valuesGrid p{font-size:14px;line-height:1.55;color:var(--muted);margin:0}
+.corporateImageSplit{display:grid;grid-template-columns:1.05fr .95fr;gap:72px;align-items:center}
+.corporatePhoto{margin:0;overflow:hidden;border-radius:16px;background:#ece8e1}
+.corporatePhoto img{width:100%;height:520px;display:block;object-fit:cover;object-position:center 45%}
+.corporatePhoto figcaption{padding:10px 15px;background:#fff;font-size:11px;color:var(--muted)}
 .corporateImageSplit h2{font-size:clamp(40px,4.3vw,60px);font-weight:500;letter-spacing:-.055em;line-height:1.05;margin:0}
 .corporateImageSplit p:not(.eyebrow){color:var(--muted);line-height:1.85}
 
@@ -318,9 +317,15 @@ td:first-child{font-weight:800;color:var(--red)}
   .pageHeroGrid{gap:36px}
   .pageHeroMedia{height:330px}
   .section{padding-block:74px}
-  .valuesGrid,.darkInfoGrid,.standardCards{grid-template-columns:1fr}
-  .valuesGrid article{padding:22px 0;border-right:0;border-bottom:1px solid var(--line)}
-  .corporatePhoto img{height:360px}
+  .valuesGrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  .darkInfoGrid,.standardCards{grid-template-columns:1fr}
+  .valuesSection{padding:36px 0}
+  .valuesGrid article{min-height:184px;padding:18px 14px 20px}
+  .valuesGrid h3{font-size:19px;margin:14px 0 7px}
+  .valuesGrid p{font-size:12px;line-height:1.55}
+  .valueIcon{width:46px;height:46px;border-radius:11px}
+  .valueIcon svg{width:27px;height:27px}
+  .corporatePhoto img{height:330px;object-position:center 43%}
   .serviceDetailList{gap:74px}
   .serviceDetail{gap:30px}
   .serviceDetailImage{height:340px}
