@@ -70,9 +70,9 @@ export default function Services(){
       eyebrow="HİZMET MODELLERİMİZ"
       title="Her ihtiyaca uygun, esnek çözümler."
       text="İskenderun ve Hatay’da fabrika personel yemeği, toplu yemek, yerinde üretim, taşımalı yemek, paket yemek ve kurumsal catering hizmetleri sunuyoruz."
-      image="/images/editorial/buffet.webp"
-      imageMobile="/images/editorial/buffet.webp"
-      imageAlt="Servis kaplarında çeşitli sıcak yemekler — temsili fotoğraf"
+      image="https://images.pexels.com/photos/36982121/pexels-photo-36982121.jpeg?auto=compress&cs=tinysrgb&w=1800"
+      imageMobile="https://images.pexels.com/photos/36982121/pexels-photo-36982121.jpeg?auto=compress&cs=tinysrgb&w=1800"
+      imageAlt="Toplu yemek servisine hazır sıcak yemek çeşitleri — temsili fotoğraf"
     />
     <section className="section wrap serviceDetailList">
       {items.map((x,i)=>
