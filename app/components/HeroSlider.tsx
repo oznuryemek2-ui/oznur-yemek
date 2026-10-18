@@ -2,9 +2,9 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 const slides = [
-  {src:"/images/editorial/chef-service.webp",alt:"Sıcak yemek servisinde porsiyon hazırlığı — temsili fotoğraf",credit:"Amanda Lim / Pexels",position:"center 55%"},
-  {src:"/images/editorial/corporate-service.webp",alt:"Kurumsal ortamda yemek servis hattı — temsili fotoğraf",credit:"Thiago Patrevita / Pexels",position:"center"},
-  {src:"/images/editorial/hot-meals.webp",alt:"Toplu servis için sıcak yemek hazırlığı — temsili fotoğraf",credit:"Adil Khan Marwat / Pexels",position:"center 72%"},
+  {src:"https://images.pexels.com/photos/15671276/pexels-photo-15671276.jpeg?auto=compress&cs=tinysrgb&w=1800",alt:"Profesyonel mutfakta toplu yemek hazırlayan ekip — temsili fotoğraf",credit:"Luis Becerra Fotógrafo / Pexels",position:"center"},
+  {src:"https://images.pexels.com/photos/36982121/pexels-photo-36982121.jpeg?auto=compress&cs=tinysrgb&w=1800",alt:"Toplu yemek servisine hazır çeşitli sıcak yemek tepsileri — temsili fotoğraf",credit:"rakhmat suwandi / Pexels",position:"center"},
+  {src:"https://images.pexels.com/photos/30635719/pexels-photo-30635719.jpeg?auto=compress&cs=tinysrgb&w=1800",alt:"Toplu dağıtım için porsiyonlu yemek kapları — temsili fotoğraf",credit:"IARA MELO / Pexels",position:"center"},
 ];
 export default function HeroSlider(){
   const [active,setActive]=useState(0);
