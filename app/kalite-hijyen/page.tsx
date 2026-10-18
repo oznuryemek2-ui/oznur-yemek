@@ -31,8 +31,8 @@ export default function Quality(){
       eyebrow="KALİTE & HİJYEN STANDARTLARIMIZ"
       title="Güvenli gıda, sağlıklı gelecek."
       text="Üretimden servise kadar kalite ve hijyen, operasyonumuzun ayrılmaz parçasıdır."
-      image="/images/editorial/ingredients.webp"
-      imageAlt="Taze sebzeler — temsili fotoğraf"
+      image="https://images.pexels.com/photos/5779747/pexels-photo-5779747.jpeg?auto=compress&cs=tinysrgb&w=1800"
+      imageAlt="Profesyonel mutfakta eldiven giyerek hijyen hazırlığı yapan aşçı — temsili fotoğraf"
       />
 
     <section className="section wrap qualityPageGrid">
@@ -48,7 +48,7 @@ export default function Quality(){
 
     <section className="qualityVisualBand">
       <div className="qualityVisualImage">
-        <Image src="/images/editorial/ingredients.webp" alt="Taze sebze ve mantarlar — temsili fotoğraf" fill quality={82} sizes="(max-width:900px) 100vw,45vw"/>
+        <Image src="https://images.pexels.com/photos/5779750/pexels-photo-5779750.jpeg?auto=compress&cs=tinysrgb&w=1800" alt="Endüstriyel mutfakta eldivenli sebze hazırlığı — temsili fotoğraf" fill quality={82} sizes="(max-width:900px) 100vw,45vw"/>
       </div>
       <div className="qualityVisualCopy">
         <p className="eyebrow light">OPERASYON GÜCÜMÜZ</p>
