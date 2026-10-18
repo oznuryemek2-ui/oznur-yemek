@@ -50,8 +50,8 @@ export default function CorporatePage(){
       eyebrow="BİZ KİMİZ?"
       title="İnsan odaklı, deneyimli bir kurumsal yemek iş ortağı."
       text="Öznur Yemek, kurumsal ve toplu yemek hizmetlerinde kaliteli, hijyenik ve sürdürülebilir çözümler sunar."
-      image="/images/editorial/buffet.webp"
-      imageAlt="Servis kaplarında çeşitli sıcak yemekler — temsili fotoğraf"
+      image="https://images.pexels.com/photos/15671276/pexels-photo-15671276.jpeg?auto=compress&cs=tinysrgb&w=1800"
+      imageAlt="Toplu yemek hazırlayan profesyonel mutfak ekibi — temsili fotoğraf"
       />
 
     <section className="section wrap storyGrid">
@@ -83,8 +83,8 @@ export default function CorporatePage(){
 
     <section className="section wrap corporateImageSplit">
       <figure className="corporatePhoto">
-        <Image src="https://images.pexels.com/photos/5793763/pexels-photo-5793763.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Profesyonel mutfakta taze malzemeleri hazırlayan aşçı, temsili fotoğraf" width={1200} height={900} quality={85} sizes="(max-width:900px) 100vw,50vw"/>
-        <figcaption>Temsili mutfak hazırlık fotoğrafı · Tima Miroshnichenko / Pexels</figcaption>
+        <Image src="https://images.pexels.com/photos/7426527/pexels-photo-7426527.jpeg?auto=compress&cs=tinysrgb&w=1800" alt="Hijyen kurallarına uygun şekilde yemek hazırlayan profesyonel mutfak ekibi — temsili fotoğraf" width={1200} height={900} quality={85} sizes="(max-width:900px) 100vw,50vw"/>
+        <figcaption>Temsili mutfak ekibi · Sony Feo / Pexels</figcaption>
       </figure>
       <div>
         <p className="eyebrow red">NEDEN ÖZNUR YEMEK?</p>
