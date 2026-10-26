@@ -62,7 +62,7 @@ export default function ContactPage() {
             <h2>İskenderun&apos;dan, sahaya yakın.</h2>
             <p>
               Denizciler Mah. Nurol Aş. İnş. Müh.<br />
-              Halik Aksu Sk. No:9<br />
+              Halit Aksu Sk. No:9<br />
               İskenderun / Hatay
             </p>
             <a href={mapHref} target="_blank" rel="noreferrer">Yol tarifi al <b>↗</b></a>
