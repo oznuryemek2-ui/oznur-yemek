@@ -311,7 +311,7 @@ body,button,input,select,textarea{font-family:var(--sans)}body{background:#fff;c
     max-width:none;
     width:auto;
     display:flex;
-    align-items:end;
+    align-items:flex-end;
     justify-content:space-between;
     flex-wrap:wrap;
     gap:12px;

@@ -54,13 +54,13 @@ export const metadata: Metadata = {
     type: "website",
     locale: "tr_TR",
     siteName: "Öznur Yemek",
-    images: ["/images/editorial/canteen-service.webp"],
+    images: ["/images/editorial/corporate-service.webp"],
   },
   twitter: {
     card: "summary_large_image",
     title: "Toplu Yemek ve Catering | Öznur Yemek",
     description: "İskenderun ve Hatay’da toplu yemek ve catering; Türkiye genelindeki kurumsal ve şantiye projeleri için yemek çözümleri.",
-    images: ["/images/editorial/canteen-service.webp"],
+    images: ["/images/editorial/corporate-service.webp"],
   },
 };
 
